@@ -1,1 +1,153 @@
-Hi
+<!doctype html>
+<html>
+
+<head>
+    <title>Archive Dive</title>
+    <!-- CSS -->
+    <link rel="stylesheet" href="./assets/styles.css">
+    <link rel="stylesheet" href="./assets/index.css">
+    <link rel="stylesheet" href="./assets/sideFilter.css">
+    <link rel="stylesheet" href="./assets/album.css">
+
+    <!-- fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href='http://fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap" rel="stylesheet">
+
+    <!-- libraries -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src='threex.volumetricspotlight.js'></script>
+</head>
+
+<body>
+    <!--original part 1 body-->
+    <div id="devicescene-overlay">
+        <!-- test -->
+        <div id="intro-container">
+            <h1>The HistoryMakers Digital Archive:</h1>
+            <h2>A Reimagined Introduction</h2>
+            <div id="intro-start-button" class="button">Start</div>
+        </div>
+
+        <div id="label-sentence" class="center-cont hide-from-intro">
+            <span id="label-maker" class="label-value"></span><span class="label-value">Makers</span> from the
+            <span id="label-region" class="label-value"></span> born in <span id="label-decade" class="label-value"></span>
+        </div>
+
+        <div id="overlay-container">
+
+            <div class="center-cont">
+                <div id="overlay-ui">
+                    <div id="name-box">
+                        <p id="name-box-category"></p>
+                        <p id="name-box-name"></p>
+                    </div>
+                    <div id="title-box" class="box">
+                        <p id="background-title" class="box-title">Background</p><br>
+                        <p><b>Name: </b><span id="name"></span></p>
+                        <p><b>Category: </b><span id="maker-type"></span></p>
+                        <p><b>Born: </b><span id="birth-year"></span></p>
+                        <!-- <p id="birth-state"></p> -->
+                    </div>
+                    <div id="fav-box" class="box">
+                        <p class="box-title">Favorites</p>
+                        <p><b>Food: </b><span id="food"></span></p>
+                        <p><b>Color: </b><span id="color"></span></p>
+                        <p><b>Time of Year: </b><span id="time-of-year"></span></p>
+                        <p><b>Vacation Spot: </b><span id="vacation-spot"></span></p>
+                    </div>
+                    <div id="transcript-box" class="box">
+                        <p class="box-title">Transcript</p>
+                        <p id="transcript" class="box-box"></p>
+                    </div>
+                    <div id="playlist-box" class="box">
+                        <p class="box-title">Other Matches</p>
+                        <p id="playlist" class="box-box"></p>
+                    </div>
+                </div>
+            </div>
+            <div class="center-cont" id="center-vid"></div>
+        </div>
+    </div>
+
+    <!---->
+    <!--overlap UI for part 2-->
+    <div id="cardscene-overlay">
+        <!-- side filter -->
+        <nav id="side-filter" class="navigation">
+            <ul class="mainmenu">
+                <li class="filter-group">
+                    <a class="filter-name">Category</a>
+                    <h3 class="cur-filter-value" id="cur-filter-value-1">?</h1>
+                        <ul id="filter-root-1" class="submenu"></ul>
+                </li>
+                <li class="filter-group">
+                    <a class="filter-name">Birth Region</a>
+                    <h3 class="cur-filter-value" id="cur-filter-value-2">?</h1>
+                        <ul id="filter-root-2" class="submenu"></ul>
+                </li>
+                <li class="filter-group">
+                    <a class="filter-name">Birth Decade</a>
+                    <h3 class="cur-filter-value" id="cur-filter-value-3">?</h1>
+                        <ul id="filter-root-3" class="submenu"></ul>
+                </li>
+            </ul>
+        </nav>
+
+        <!--overlap buttons -->
+        <button id="goto-archive-btn">
+            <a  style ="color: white;" href="https://da-thehistorymakers-org.cmu.idm.oclc.org/home">Digital Archive</a>
+        </button>
+        <button id="back-part1-btn" class="btn">
+            Return
+        </button>
+
+        <!--album overlay-->
+        <div id="album-area">
+            <div id="album-root" class="container">
+                <div id="album-cd"></div>
+                <div id="album-cover">
+                    <div id="album-cover-bio-area">
+                        <img id="album-cover-bio-img" src="./assets/glass2.png">
+                    </div>
+                    <div id="album-cover-info-area">
+                        <!--first row of info-->
+                        <div class="row" style="position: relative;">
+                            <div id="album-cover-name" class="col-9">
+                                <h1 id="album-cover-fristname" class="hm-font">FirstName</h1>
+                                <h1 id="album-cover-lastname" class="hm-font">LastName</h1>
+                            </div>
+                            <!--play album btn-->
+                            <div id="album-cover-play-btn-bg">
+                                <div id="album-cover-play-btn"></div>
+                            </div>
+                            <div class="triangle-right"></div>
+                        </div>
+                        <!--second row of info-->
+                        <div class="row">
+                            <div class="col-7">
+                                <h4 id="album-cover-birthdate" class="hm-font">NYC</h4>
+                            </div>
+                            <div class="col-5">
+                                <h4 id="album-cover-region" class="hm-font">NYC</h4>
+                            </div>
+                        </div>
+                    </div>
+                    <button id="hide-ablum-btn" class="btn btn-primary">Back</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--three js & 3D space-->
+    <div id="cardscene-canvas"></div>
+    <div id="devicescene-canvas"></div>
+    <script src="main.js"></script>
+</body>
+
+</html>

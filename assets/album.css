@@ -1,0 +1,104 @@
+#album-area {
+    position: fixed;
+    left: -35%;
+    top: 50%;
+}
+
+#album-root {
+    position: relative;
+}
+
+#album-cover {
+    position: absolute;
+    transform: translate(-50%, -50%);
+    height: 700px;
+    width: 500px;
+    border: 3px solid;
+    border-image-source: linear-gradient(45deg, #E7AD9E, #312D6A);
+    border-image-slice: 1;
+}
+
+#album-cover-bio-area {
+    position: relative;
+    height: 494px;
+    width: 494px;
+    overflow: hidden;
+}
+
+#album-cover-bio-img {
+    position: absolute;
+    height: 550px;
+    width: 550px;
+    top: -5%;
+    left: -5%;
+}
+
+#album-cover-info-area {
+    height: 200px;
+    background: rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(27px);
+}
+
+#album-cover-play-btn-bg {
+    position: absolute;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background-color: #682052;
+    top: 5%;
+    right: 5%;
+}
+
+#album-cover-play-btn {
+    position: relative;
+    width: 30px;
+    height: 35px;
+    left: 35%;
+    top: 25%;
+    background-image: url("./images/playTriangle.png");
+    background-size: 100%, 100%;
+    background-repeat: no-repeat;
+}
+
+#album-cover-fristname {
+    position: relative;
+    left: 10%;
+    font-size: 300%;
+}
+
+#album-cover-lastname {
+    position: relative;
+    left: 10%;
+    font-size: 300%;
+}
+
+#album-cover-birthdate {
+    position: relative;
+    left: 20%;
+    margin-top: 10%;
+    font-size: 150%;
+}
+
+#album-cover-region {
+    position: absolute;
+    right: 10%;
+    margin-top: 10%;
+    font-size: 150%;
+}
+
+#album-cd {
+    position: absolute;
+    left: 20px;
+    transform: translate(-50%, -50%);
+    height: 690px;
+    width: 690px;
+    /* background-image: url(./disc.png);
+    background-repeat: no-repeat;
+    background-size: 690px 690px; */
+}
+
+#hide-ablum-btn {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+}
