@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="./assets/index.css">
     <link rel="stylesheet" href="./assets/sideFilter.css">
     <link rel="stylesheet" href="./assets/album.css">
+    <link rel="stylesheet" href="./assets/scrollFilter.css">
 
     <!-- fonts -->
     <link rel="preconnect" href="https://fonts.gstatic.com">
@@ -26,7 +27,7 @@
 
 <body>
     <!--original part 1 body-->
-    <div id="devicescene-overlay">
+    <div id="devicescene-overlay" hidden>
         <!-- test -->
         <div id="intro-container">
             <h1>The HistoryMakers Digital Archive:</h1>
@@ -75,7 +76,71 @@
         </div>
     </div>
 
-    <!---->
+    <!--scroll filter overlay-->
+    <div id="wheelscene-overlay">
+        <button id="explore-btn" class="btn btn-primary hm-font">
+            View All
+            <span id="match-number" class="hm-font">            
+            </span>
+        </button>
+
+        <p id="name-info" class="hm-font">
+            name
+        </p>
+
+        <p id="occupation-info" class="hm-font">
+            occupation
+        </p>
+
+        <div id="fav-info" class="hm-font">
+            Favorite Color:
+            <p id="fav-color-info">Blue</p>
+
+            Favorite Food:
+            <p id="fav-food-info">Blue</p>
+
+            Favorite Season:
+            <p id="fav-season-info">Blue</p>
+
+            Favorite Vacation Spot:
+            <p id="fav-spot-info">Blue</p>
+        </div>
+
+        <p id="quote-info" class="hm-font">
+            info
+        </p>
+
+        <div id="scroll-filter-1">
+            <div class="scroll-filter-container">
+                <div id="scroll-filter-body-1" class="scroll-filter-body row">
+                </div>
+            </div>
+            <div>
+                On <input id="scroll-filter-switch-1" type="checkbox" checked />
+            </div>
+        </div>
+
+        <div id="scroll-filter-2">
+            <div class="scroll-filter-container">
+                <div id="scroll-filter-body-2" class="scroll-filter-body row">
+                </div>
+            </div>
+            <div>
+                On <input id="scroll-filter-switch-2" type="checkbox" checked />
+            </div>
+        </div>
+
+        <div id="scroll-filter-3">
+            <div class="scroll-filter-container">
+                <div id="scroll-filter-body-3" class="scroll-filter-body row">
+                </div>
+            </div>
+            <div>
+                On <input id="scroll-filter-switch-3" type="checkbox" checked />
+            </div>
+        </div>
+    </div>
+
     <!--overlap UI for part 2-->
     <div id="cardscene-overlay">
         <!-- side filter -->
@@ -147,6 +212,7 @@
     <!--three js & 3D space-->
     <div id="cardscene-canvas"></div>
     <div id="devicescene-canvas"></div>
+    <div id="wheelscene-canvas"></div>
     <script src="main.js"></script>
 </body>
 
