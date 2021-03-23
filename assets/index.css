@@ -1,27 +1,32 @@
 .hm-font {
     color: white;
     font-family: 'Oswald';
-    font-weight: bold;
     font-style: normal;
 }
 
-#explore-btn {
-    position: fixed;
-    top: 5%;
+#randomize-filter-btn {
+    position: absolute;
     left: 50%;
     transform: translate(-50%, 0%);
 }
 
 #quote-info {
     position: fixed;
-    top: 0%;
-    left: 0%;
+    top: 53%;
+    left: 50%;
+    text-align: center;
+    font-size: x-large;
+    transform: translate(-50%, -50%);
 }
 
 #name-info {
     position: fixed;
-    top: 10%;
-    left: 0%;
+    top: 48%;
+    left: 50%;
+    text-align: center;
+    color: #B0B0B0;
+    font-size: x-large;
+    transform: translate(-50%, -50%);
 }
 
 #occupation-info {
@@ -32,8 +37,23 @@
 
 #fav-info {
     position: fixed;
-    top: 20%;
+    top: 10%;
     right: 0%;
+}
+
+#wheelscene {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-image: url('./bg.png');
+    background-size: 100% 100%;
+}
+
+#wheelscene-canvas {
+    position: absolute;
+    top: -30%;
+    width: 100%;
+    height: 100%;
 }
 
 #cardscene-canvas {

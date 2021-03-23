@@ -76,67 +76,76 @@
         </div>
     </div>
 
-    <!--scroll filter overlay-->
-    <div id="wheelscene-overlay">
-        <button id="explore-btn" class="btn btn-primary hm-font">
-            View All
+    <!--wheel scene canvas-->
+    <div id="wheelscene">
+        <div id="wheelscene-canvas"></div>
+        <!--scroll filter overlay-->
+        <div id="wheelscene-overlay">
+            <div id="name-info" class="hm-font">
+                name
+            </div>
+
             <span id="match-number" class="hm-font">            
             </span>
-        </button>
 
-        <p id="name-info" class="hm-font">
-            name
-        </p>
+            <p id="occupation-info" class="hm-font" hidden>
+                occupation
+            </p>
 
-        <p id="occupation-info" class="hm-font">
-            occupation
-        </p>
+            <div id="fav-info" class="hm-font" hidden>
+                Favorite Color:
+                <p id="fav-color-info">Blue</p>
 
-        <div id="fav-info" class="hm-font">
-            Favorite Color:
-            <p id="fav-color-info">Blue</p>
+                Favorite Food:
+                <p id="fav-food-info">Blue</p>
 
-            Favorite Food:
-            <p id="fav-food-info">Blue</p>
+                Favorite Season:
+                <p id="fav-season-info">Blue</p>
 
-            Favorite Season:
-            <p id="fav-season-info">Blue</p>
+                Favorite Vacation Spot:
+                <p id="fav-spot-info">Blue</p>
+            </div>
 
-            Favorite Vacation Spot:
-            <p id="fav-spot-info">Blue</p>
-        </div>
+            <div id="quote-info" class="hm-font">
+                info
+            </div>
 
-        <p id="quote-info" class="hm-font">
-            info
-        </p>
-
-        <div id="scroll-filter-1">
-            <div class="scroll-filter-container">
-                <div id="scroll-filter-body-1" class="scroll-filter-body row">
+            <!--footer area-->
+            <div id='wheelscene-footer'>
+                <div id="scroll-filter-1" class="scroll-filter-row row">
+                    <div class="col-2 hm-font scroll-filter-name">Maker</div>
+                    <div class=" col-9 scroll-filter-container">
+                        <div id="scroll-filter-body-1" class="scroll-filter-body row">
+                        </div>
+                    </div>
+                    <div class='col-1'>
+                        <button id="randomize-filter-1-btn" class="btn shuffle-btn"></button>
+                    </div>
                 </div>
-            </div>
-            <div>
-                On <input id="scroll-filter-switch-1" type="checkbox" checked />
-            </div>
-        </div>
 
-        <div id="scroll-filter-2">
-            <div class="scroll-filter-container">
-                <div id="scroll-filter-body-2" class="scroll-filter-body row">
+                <div id="scroll-filter-2" class="row scroll-filter-row">
+                    <div class="col-2 hm-font scroll-filter-name">Born in</div>
+                    <div class="col-9 scroll-filter-container">
+                        <div id="scroll-filter-body-2" class="scroll-filter-body row">
+                        </div>
+                    </div>
+                    <div class='col-1'>
+                        <button id="randomize-filter-2-btn" class="btn shuffle-btn"></button>
+                    </div>
                 </div>
-            </div>
-            <div>
-                On <input id="scroll-filter-switch-2" type="checkbox" checked />
-            </div>
-        </div>
 
-        <div id="scroll-filter-3">
-            <div class="scroll-filter-container">
-                <div id="scroll-filter-body-3" class="scroll-filter-body row">
+                <!--bottom bar-->
+                <div id="scroll-filter-bottom-bar" class="scroll-filter-row row">
+                    <button id="randomize-filter-btn" class="btn shuffle-btn"></button>
+
+                    <button id="explore-btn" class="btn hm-font">
+                        Explore More
+                    </button>
+
+                    <button id="visit-archive-btn" class="btn hm-font">
+                        <a href="https://da-thehistorymakers-org.cmu.idm.oclc.org/home" style="color: white;">Visit Archive</a>
+                    </button>
                 </div>
-            </div>
-            <div>
-                On <input id="scroll-filter-switch-3" type="checkbox" checked />
             </div>
         </div>
     </div>
@@ -212,7 +221,6 @@
     <!--three js & 3D space-->
     <div id="cardscene-canvas"></div>
     <div id="devicescene-canvas"></div>
-    <div id="wheelscene-canvas"></div>
     <script src="main.js"></script>
 </body>
 

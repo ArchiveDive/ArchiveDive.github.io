@@ -2,34 +2,108 @@
     position: relative;
     overflow-x: hidden;
     overflow-y: hidden;
-    width: 1000px;
-    height: 70px;
-    background-color: white;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0);
 }
 
 .scroll-filter-body {
     position: absolute;
     height: 100%;
-    background-color: rgba(81, 180, 139, 255);
+    background-color: rgba(0, 0, 0, 0);
+}
+
+.scroll-filter-row {
+    position: relative;
+    height: 70px;
+    border: 3px solid;
+    border-image-source: linear-gradient(45deg, rgba(148, 26, 29, 1), rgba(46, 45, 111, 1));
+    border-image-slice: 1;
+    background-color: rgba(0, 0, 0, 255);
+}
+
+.shuffle-btn {
+    position: absolute;
+    height: 60px;
+    width: 60px;
+    background-image: url('./images/shuffle.png');
+    background-size: 100%, 100%;
+}
+
+.scroll-filter-item {
+    color: white;
+    font-family: 'Oswald';
+    font-style: normal;
+    font-size: xx-large;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0);
+}
+
+.scroll-filter-name {
+    text-align: center;
+    font-size: xx-large;
+}
+
+#wheelscene-overlay {
+    position: fixed;
+    left: 0px;
+    top: 0px;
+}
+
+#wheelscene-footer {
+    position: fixed;
+    bottom: 0px;
+    width: 100%;
+    background: rgba(95, 93, 93, 0.5);
+}
+
+#match-number {
+    position: fixed;
+    bottom: 30%;
+    left: 50%;
+    font-size: 120px;
+    transform: translate(-50%, 0%);
+}
+
+#explore-btn {
+    position: absolute;
+    right: 0%;
+    font-size: x-large;
+    width: 200px;
+    height: 100%;
+    border-radius: 0px;
+    color: white;
+    background: linear-gradient(90deg, #F0511F 0%, #682052 100%);
+}
+
+#visit-archive-btn {
+    position: absolute;
+    right: 220px;
+    font-size: x-large;
+    width: 200px;
+    height: 100%;
+    border-radius: 0px;
+    color: white;
+    background: linear-gradient(90deg, #F0511F 0%, #682052 100%);
 }
 
 #scroll-filter-1 {
-    position: fixed;
-    bottom: 0px;
+    margin-top: 10%;
+    position: relative;
     left: 50%;
     transform: translate(-50%, 0%);
 }
 
 #scroll-filter-2 {
-    position: fixed;
-    bottom: 100px;
+    position: relative;
+    margin-top: 20px;
+    margin-bottom: 20px;
     left: 50%;
     transform: translate(-50%, 0%);
 }
 
-#scroll-filter-3 {
-    position: fixed;
-    bottom: 200px;
+#scroll-filter-bottom-bar {
+    position: relative;
+    width: 100%;
     left: 50%;
     transform: translate(-50%, 0%);
 }
