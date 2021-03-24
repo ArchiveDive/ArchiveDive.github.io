@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="./assets/sideFilter.css">
     <link rel="stylesheet" href="./assets/album.css">
     <link rel="stylesheet" href="./assets/scrollFilter.css">
+    <link rel="stylesheet" href="./assets/wheelscene.css">
 
     <!-- fonts -->
     <link rel="preconnect" href="https://fonts.gstatic.com">
@@ -81,30 +82,35 @@
         <div id="wheelscene-canvas"></div>
         <!--scroll filter overlay-->
         <div id="wheelscene-overlay">
+            <div id="fav-info" class="hm-info-box  hm-font">
+                <h1 class="hm-font">Favorites</h1>
+                <p> Color:
+                    <span id="fav-color-info">Blue</span>
+                </p>
+                <p>
+                    Food:
+                    <span id="fav-food-info">Blue</span>
+                </p>
+                <p>Season:
+                    <span id="fav-season-info">Blue</span>
+                </p>
+                <p>
+                    Vacation Spot:
+                    <span id="fav-spot-info">Blue</span>
+                </p>
+            </div>
+
+            <div id="occupation-info" class="hm-info-box  hm-font">
+                occupation
+            </div>
+
+
             <div id="name-info" class="hm-font">
                 name
             </div>
 
             <span id="match-number" class="hm-font">            
             </span>
-
-            <p id="occupation-info" class="hm-font" hidden>
-                occupation
-            </p>
-
-            <div id="fav-info" class="hm-font" hidden>
-                Favorite Color:
-                <p id="fav-color-info">Blue</p>
-
-                Favorite Food:
-                <p id="fav-food-info">Blue</p>
-
-                Favorite Season:
-                <p id="fav-season-info">Blue</p>
-
-                Favorite Vacation Spot:
-                <p id="fav-spot-info">Blue</p>
-            </div>
 
             <div id="quote-info" class="hm-font">
                 info
@@ -136,6 +142,7 @@
 
                 <!--bottom bar-->
                 <div id="scroll-filter-bottom-bar" class="scroll-filter-row row">
+                    <image id="hm-logo"></image>
                     <button id="randomize-filter-btn" class="btn shuffle-btn"></button>
 
                     <button id="explore-btn" class="btn hm-font">
@@ -222,6 +229,20 @@
     <div id="cardscene-canvas"></div>
     <div id="devicescene-canvas"></div>
     <script src="main.js"></script>
+
+
+
+    <!-- popup -->
+    <div id="popup-dialog" class="hm-info-box">
+        <h2 class="hm-font">You are entering the Digital Archive</h2>
+        <div class="row">
+            <div class="col-2"></div>
+            <button id="popup-continue-btn" class="btn col-3 hm-font">Continue</button>
+            <div class="col-2"></div>
+            <button id="popup-cancel-btn" class="btn col-3 hm-font">Go Back</button>
+            <div class="col-2"></div>
+        </div>
+    </div>
 </body>
 
 </html>

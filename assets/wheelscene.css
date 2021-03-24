@@ -1,0 +1,58 @@
+.hm-info-box {
+    background: rgba(0, 0, 0, 0.63);
+    backdrop-filter: blur(4px);
+    border: 3px solid;
+    border-image-source: linear-gradient(45deg, rgba(148, 26, 29, 1), rgba(46, 45, 111, 1));
+    border-image-slice: 1;
+}
+
+#wheelscene-canvas {
+    position: absolute;
+    top: -30%;
+    width: 100%;
+    height: 100%;
+}
+
+#quote-info {
+    position: fixed;
+    top: 53%;
+    left: 50%;
+    color: #B0B0B0;
+    text-align: center;
+    font-size: x-large;
+    transform: translate(-50%, -50%);
+}
+
+#name-info {
+    position: fixed;
+    top: 48%;
+    left: 50%;
+    text-align: center;
+    font-size: x-large;
+    transform: translate(-50%, -50%);
+}
+
+#occupation-info {
+    position: fixed;
+    font-size: xx-large;
+    width: 200px;
+    top: 40%;
+    left: 10%;
+    transform: translate(0%, -50%);
+}
+
+#fav-info {
+    position: fixed;
+    width: 250px;
+    top: 40%;
+    right: 10%;
+    transform: translate(0%, -50%);
+}
+
+#wheelscene {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-image: url('./bg.png');
+    background-size: 100% 100%;
+}

@@ -87,7 +87,7 @@
 }
 
 #scroll-filter-1 {
-    margin-top: 10%;
+    margin-top: 7%;
     position: relative;
     left: 50%;
     transform: translate(-50%, 0%);
@@ -106,4 +106,14 @@
     width: 100%;
     left: 50%;
     transform: translate(-50%, 0%);
+}
+
+#hm-logo {
+    position: absolute;
+    left: 0%;
+    width: 35%;
+    height: 100%;
+    background-image: url('../assets/images/hmlogo.png');
+    background-size: 100%, 100%;
+    background-repeat: no-repeat;
 }
