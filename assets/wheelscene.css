@@ -15,7 +15,7 @@
 
 #quote-info {
     position: fixed;
-    top: 53%;
+    top: 54%;
     left: 50%;
     color: #B0B0B0;
     text-align: center;
@@ -28,7 +28,7 @@
     top: 48%;
     left: 50%;
     text-align: center;
-    font-size: x-large;
+    font-size: 40px;
     transform: translate(-50%, -50%);
 }
 
@@ -36,15 +36,15 @@
     position: fixed;
     font-size: xx-large;
     width: 200px;
-    top: 40%;
-    left: 10%;
+    top: 50%;
+    right: 10%;
     transform: translate(0%, -50%);
 }
 
 #fav-info {
     position: fixed;
     width: 250px;
-    top: 40%;
+    top: 30%;
     right: 10%;
     transform: translate(0%, -50%);
 }

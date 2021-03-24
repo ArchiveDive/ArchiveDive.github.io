@@ -4,6 +4,20 @@
     font-style: normal;
 }
 
+.hm-font-xlarge {
+    color: white;
+    font-family: 'Oswald';
+    font-size: x-large;
+    font-style: normal;
+}
+
+.hm-font-large {
+    color: white;
+    font-family: 'Oswald';
+    font-size: large;
+    font-style: normal;
+}
+
 #popup-continue-btn {
     font-size: large;
     color: white;
