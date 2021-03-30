@@ -1,0 +1,86 @@
+.scroll-filter-container {
+    position: relative;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0);
+}
+
+.scroll-filter-body {
+    position: absolute;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0);
+    margin-left: 50px !important;
+}
+
+.scroll-filter-row {
+    position: relative;
+    height: 100px;
+    border: 3px solid;
+    border-image-source: linear-gradient(45deg, rgba(148, 26, 29, 1), rgba(46, 45, 111, 1));
+    border-image-slice: 1;
+    background-color: rgba(0, 0, 0, 255);
+}
+
+.shuffle-btn {
+    position: absolute;
+    height: 60px;
+    width: 60px;
+    background-image: url('../images/shuffle.png');
+    background-size: 100%, 100%;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.scroll-filter-item {
+    color: white;
+    font-family: 'Oswald';
+    font-style: normal;
+    font-size: xxx-large;
+    text-align: center;
+    /* background-color: rgba(0, 0, 0, 0); */
+}
+
+#scroll-filter-area {
+    position: fixed;
+    bottom: 0px;
+    width: 100%;
+    background: rgba(95, 93, 93, 0.5);
+}
+
+#scroll-filter-1 {
+    /* margin-top: 7%; */
+    margin-top: 20px;
+    margin-bottom: 20pz;
+    position: relative;
+    left: 50%;
+    transform: translate(-50%, 0%);
+}
+
+#scroll-filter-2 {
+    position: relative;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    left: 50%;
+    transform: translate(-50%, 0%);
+}
+
+.scroll-btn {
+    background: rgba(0,0,0,0) !important;
+    border:rgba(0, 0, 0, 0) !important;
+}
+
+.scroll-btn-img-left {
+    width: 34px;
+    height: 38px;
+    margin: auto;
+    background: url('../images/white-arrow-icon-left.png');
+}
+
+.scroll-btn-img-right {
+    width: 34px;
+    height: 38px;
+    margin: auto;
+    background: url('../images/white-arrow-icon-right.png');
+    transform: scaleX(-100%);
+}

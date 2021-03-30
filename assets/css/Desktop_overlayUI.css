@@ -1,0 +1,85 @@
+#hm-logo {
+    position: fixed;
+    left: 0%;
+    width: 300px;
+    height: 30px;
+    background-image: url('../images/hmlogo.png');
+    background-size: 100%, 100%;
+    background-repeat: no-repeat;
+}
+
+#go-to-archive-btn{
+    position: fixed;
+    width:150px;
+    height:50px;
+    right: 50px;
+    bottom: 30%;
+    color: white;
+    font-family: 'Oswald';
+    font-style: normal;
+    background-color:black;
+    border-radius: 0px;
+    border: 3px solid;
+    border-image-source: linear-gradient(90deg, #2E2D6F 0%, #682052 100%);
+    border-image-slice: 1;
+}
+
+#overlay-root {
+    position: fixed;
+    left: 0px;
+    top: 0px;
+}
+
+#short-bio{
+    height: 130px;
+    overflow-y: hidden;
+    overflow-x:hidden;
+}
+
+.hm-info-box {
+    background: rgba(0, 0, 0, 0.63);
+    backdrop-filter: blur(4px);
+    border: 3px solid;
+    border-image-source: linear-gradient(45deg, rgba(148, 26, 29, 1), rgba(46, 45, 111, 1));
+    border-image-slice: 1;
+}
+
+#scene-canvas {
+    position: absolute;
+    top: -35%;
+    left:-10%;
+    width: 100%;
+    height: 100%;
+}
+
+#side-info-area{
+    position: fixed;
+    top: 100px;
+    width: 20%;
+    right: 0%;
+}
+
+#fav-info-header{
+    margin-top:30px;
+    margin-bottom: 10px;
+}
+
+#achivement-info-header{
+    margin-bottom: 10px;
+}
+
+#match-number {
+    position: fixed;
+    bottom: 28%;
+    left: 40%;
+    font-size: 40px;
+    transform: translate(-50%, 0%);
+}
+
+#scene-root {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-image: url('../images/bg.png');
+    background-size: 100% 100%;
+}
