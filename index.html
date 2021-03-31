@@ -4,9 +4,10 @@
 <head>
     <title>Archive Dive</title>
     <!-- CSS -->
-    <link id = "css-index" rel="stylesheet">
-    <link id = "css-scrollFilter" rel="stylesheet">
-    <link id = "css-overlayUI" rel="stylesheet">
+    <link id="css-index" rel="stylesheet">
+    <link id="css-scrollFilter" rel="stylesheet">
+    <link id="css-overlayUI" rel="stylesheet">
+    <link id="css-overviewUI" rel="stylesheet">
 
     <!-- fonts -->
     <link rel="preconnect" href="https://fonts.gstatic.com">
@@ -30,48 +31,83 @@
 
     <!--overlay UI -->
     <div id="overlay-root">
-        <image id="hm-logo"></image>
+        <div id="hm-logo"></div>
 
-        <div id = "side-info-area">
-            <div id = "achivement-info-area">
-                <h2 id = "achivement-info-header" class="hm-font">Achivement</h2>
-                <div id = "short-bio" class="hm-font"> </div>
-            </div>
-            <div id = "fav-info-area">
-                <h2 id = "fav-info-header" class="hm-font">Favorites</h2>
-                <div> 
-                    <span class="hm-font-large">Color:</span>
-                    <span class="hm-font-light" id="fav-color-info">Blue</span>
-                </div>
-                <div>
-                    <span class="hm-font-large">Food:</span>
-                    <span class="hm-font-light" id="fav-food-info">Blue</span>
-                </div>
-                <div>
-                    <span class="hm-font-large">Season:</span>
-                    <span class="hm-font-light" id="fav-season-info">Blue</span>
-                </div>
-                <div>
-                    <span class="hm-font-large">Vacation Spot:</span>
-                    <span class="hm-font-light" id="fav-spot-info">Blue</span>
-                </div>
-            </div>
+        <div id="tab-area">
+            <button id="detailview-tab" class="tab-item selected">Detail View</button>
+            <button id="overview-tab" class="tab-item">Overview</button>
         </div>
 
         <span id="match-number" class="hm-font">
         </span>
 
-        <button id="go-to-archive-btn" >Digital Archive</button>
-        <!--footer area-->
+        <!--overlay UI : detail view-->
+        <div id="detailview-overlay-UI">
+            <!--hm info -->
+            <div id="side-info-area">
+                <div id="achivement-info-area">
+                    <h2 id="achivement-info-header" class="hm-font">Achievement</h2>
+                    <div id="short-bio" class="hm-font"> </div>
+                </div>
+                <div id="fav-info-area">
+                    <h2 id="fav-info-header" class="hm-font">Favorites</h2>
+                    <div>
+                        <span class="hm-font-large">Color:</span>
+                        <span class="hm-font-light" id="fav-color-info">Blue</span>
+                    </div>
+                    <div>
+                        <span class="hm-font-large">Food:</span>
+                        <span class="hm-font-light" id="fav-food-info">Blue</span>
+                    </div>
+                    <div>
+                        <span class="hm-font-large">Season:</span>
+                        <span class="hm-font-light" id="fav-season-info">Blue</span>
+                    </div>
+                    <div>
+                        <span class="hm-font-large">Vacation Spot:</span>
+                        <span class="hm-font-light" id="fav-spot-info">Blue</span>
+                    </div>
+                </div>
+            </div>
+
+            <button id="go-to-archive-btn">
+                Digital Archive
+            </button>
+
+            <div id="ring-control-area">
+                <button id="ring-control-left"> </button>
+                <button id="ring-control-right"> </button>
+            </div>
+        </div>
+
+        <!--overlay UI :  overview-->
+        <div id = "overview-overlay-UI">
+            <div id = "viz-control-area">
+                <h3 class="hm-font-light">Visualization</h3>
+                <div>
+                    <button id="viz-color-btn">Color</button>
+                </div>
+                <div>
+                    <button id="viz-season-btn">Season</button>
+                </div>
+                <div>
+                    <button id="viz-gender-btn">Gender</button>
+                </div>
+            </div>
+        </div>
+
+        <!--scroll filter -->
         <div id='scroll-filter-area'>
             <div id="scroll-filter-1" class="scroll-filter-row row">
                 <!--btn select dropup-->
                 <div class="col-2 btn-group dropup">
-                    <button type="button" class="btn dropdown-toggle" data-toggle="dropdown"
-                        aria-haspopup="true" aria-expanded="false">
-                        <span class = "hm-font-xxlarge" id="filter-selector-cur-value-1">Maker</span>
+                    <button type="button" class="dropdown-btn" data-toggle="dropdown" aria-haspopup="true"
+                        aria-expanded="false">
+                        <span id="filter-selector-cur-value-1">Maker</span>
+                        <div class="dropdown-arrow-img"></div>
+                        <div></div>
                     </button>
-                    <div id="filter-selector-1" class="dropdown-menu" style="background-color:black">
+                    <div id="filter-selector-1" class="dropdown-menu">
                     </div>
                 </div>
                 <!--go left btn -->
@@ -94,10 +130,12 @@
 
             <div id="scroll-filter-2" class="row scroll-filter-row">
                 <div class="col-2 btn-group dropup">
-                    <button id="filter-selector-cur-value-2" type="button" class="dropdown-btn" data-toggle="dropdown"
-                        aria-haspopup="true" aria-expanded="false">
+                    <button type="button" class="dropdown-btn" data-toggle="dropdown" aria-haspopup="true"
+                        aria-expanded="false">
+                        <span id="filter-selector-cur-value-2"></span>
+                        <div class="dropdown-arrow-img"></div>
                     </button>
-                    <div id="filter-selector-2" class="dropdown-menu" style="background-color:black">
+                    <div id="filter-selector-2" class="dropdown-menu">
                     </div>
                 </div>
 
@@ -121,21 +159,8 @@
         </div>
     </div>
 
-
     <!--three js-->
     <script src="main.js"></script>
-
-    <!-- popup -->
-    <div id="popup-dialog" class="hm-info-box">
-        <h2 class="hm-font">You are entering the Digital Archive</h2>
-        <div class="row">
-            <div class="col-2"></div>
-            <button id="popup-continue-btn" class="btn col-3 hm-font">Continue</button>
-            <div class="col-2"></div>
-            <button id="popup-cancel-btn" class="btn col-3 hm-font">Go Back</button>
-            <div class="col-2"></div>
-        </div>
-    </div>
 </body>
 
 </html>

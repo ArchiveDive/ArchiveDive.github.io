@@ -1,21 +1,33 @@
-#hm-logo {
-    position: fixed;
-    left: 50%;
-    top: 10px;
-    transform: translateX(-50%);
-    width: 700px;
-    height: 70px;
-    background-image: url('../images/hmlogo.png');
-    background-size: 100%, 100%;
-    background-repeat: no-repeat;
+#scene-canvas {
+    position: absolute;
+    top: -40%;
+    width: 100%;
+    height: 100%;
 }
 
 #overlay-root {
     position: fixed;
+    display: block;
     left: 0px;
     top: 0px;
+    width: 100%;
+    height: 80%;
+    font-family: Oswald;
 }
 
+#hm-logo {
+    position: fixed;
+    left: 50%;
+    top: 80px;
+    transform: translateX(-50%);
+    width: 700px;
+    height: 70px;
+    background-image: url('../images/thm-logo-tmp.png');
+    background-size: 100%, 100%;
+    background-repeat: no-repeat;
+    border-style: none;
+    margin: 0;
+}
 
 .hm-info-box {
     background: rgba(0, 0, 0, 0.63);
@@ -23,13 +35,6 @@
     border: 3px solid;
     border-image-source: linear-gradient(45deg, rgba(148, 26, 29, 1), rgba(46, 45, 111, 1));
     border-image-slice: 1;
-}
-
-#scene-canvas {
-    position: absolute;
-    top: -30%;
-    width: 100%;
-    height: 100%;
 }
 
 #quote-info {
@@ -60,19 +65,90 @@
     transform: translate(0%, -50%);
 }
 
-#fav-info {
-    display: none;
-    position: fixed;
-    width: 250px;
-    top: 30%;
-    right: 10%;
-    transform: translate(0%, -50%);
-}
-
 #scene-root {
     position: fixed;
     width: 100%;
     height: 100%;
     background-image: url('../images/bg.png');
     background-size: 100% 100%;
+}
+
+#go-to-archive-btn {
+    position: absolute;
+    bottom: 5%;
+    left: 50%;
+    transform: translateX(-50%); 
+    font-size: var(--main-font-size);
+    padding: 20px 50px;
+    color: white;
+    background: black;
+    border: 8px solid;
+    border-image-source: linear-gradient(90deg, #2E2D6F 0%, #682052 100%);
+    border-image-slice: 1;
+}
+
+#side-info-area {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%); 
+    width: 65%;
+    /* top: 70%; */
+    bottom: 10%;
+    font-size: 45px;
+}
+
+#achivement-info-header {
+    display: none;
+}
+
+#short-bio {
+    display: none;
+    max-height: 205px;
+    overflow-y: scroll;
+}
+
+#fav-info-area {
+    display: none;
+}
+
+#match-number {
+    position: absolute;
+    bottom: 15%;
+    left: 50%;
+    font-size: 55px;
+    color:white;
+    transform: translate(-50%, 0%);
+}
+
+/* #achivement-info-area {
+    width: 100%;
+    height: 100%;
+} */
+
+/* ring control */
+
+#ring-control-area {
+    position: absolute;
+    width: 100%;
+    bottom: 30%;
+}
+
+#ring-control-left{
+    left: 60px;
+    background: url('../images/white-arrow-icon-left.png');
+}
+
+#ring-control-right{
+    right: 60px;
+    background: url('../images/white-arrow-icon-right.png');
+    transform: scaleX(-100%);
+}
+
+#ring-control-right, #ring-control-left {
+    position: absolute;
+    width: 68px;
+    height: 76px;
+    border-color: rgba(0, 0, 0, 0);
+    background-size: 100%, 100%;
+    background-repeat: no-repeat;
 }

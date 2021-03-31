@@ -37,30 +37,3 @@
     font-size: large;
     font-style: normal;
 }
-
-#popup-continue-btn {
-    font-size: large;
-    color: white;
-    border-collapse: separate;
-    overflow: hidden;
-    border-radius: 28px;
-    border: 3px solid;
-    border-image-source: linear-gradient(45deg, rgba(148, 26, 29, 1), rgba(46, 45, 111, 1));
-    border-image-slice: 1;
-}
-
-#popup-cancel-btn {
-    font-size: large;
-    color: white;
-    border-radius: 20%;
-    border: 3px solid;
-    border-image-source: linear-gradient(45deg, rgba(148, 26, 29, 1), rgba(46, 45, 111, 1));
-    border-image-slice: 1;
-}
-
-#popup-dialog {
-    position: fixed;
-    top: 35%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-}

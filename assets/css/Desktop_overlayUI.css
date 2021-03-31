@@ -3,7 +3,7 @@
     left: 0%;
     width: 300px;
     height: 30px;
-    background-image: url('../images/hmlogo.png');
+    background-image: url('../images/thm-logo-tmp.png');
     background-size: 100%, 100%;
     background-repeat: no-repeat;
 }
@@ -72,7 +72,7 @@
     position: fixed;
     bottom: 28%;
     left: 40%;
-    font-size: 40px;
+    font-size: 25px;
     transform: translate(-50%, 0%);
 }
 
@@ -82,4 +82,63 @@
     height: 100%;
     background-image: url('../images/bg.png');
     background-size: 100% 100%;
+}
+
+#ring-control-area{
+    position: fixed;
+    left:40%;
+    bottom:30%;
+    transform: translate(-50%, 0%);
+}
+
+#ring-control-left{
+    position: relative;
+    border-color: rgba(0, 0, 0, 0);
+    top: -50px;
+    left: -150px;
+    width: 34px;
+    height: 38px;
+    margin: auto;
+    background: url('../images/white-arrow-icon-left.png');
+}
+
+#ring-control-right{
+    position: relative;
+    border-color: rgba(0, 0, 0, 0);
+    top: -50px;
+    width: 34px;
+    right: -150px;
+    height: 38px;
+    margin: auto;
+    background: url('../images/white-arrow-icon-right.png');
+    transform: scaleX(-100%);
+}
+
+#tab-area{
+    position: fixed;
+    right:0px;
+    top:30px;
+}
+
+.tab-item{
+    position: relative;
+    font-family: 'Oswald';
+    font-size: xx-large;
+    color:gray;
+    background-color: rgba(0, 0, 0, 0);
+    border-color: rgba(0, 0, 0, 0);
+}
+
+
+.tab-item.selected{
+    position: relative;
+    color:white;
+    font-weight: bold;
+    font-family: 'Oswald';
+    font-size: xx-large;
+    background-color: rgba(0, 0, 0, 0);
+    border-top: 0px solid rgba(247, 243, 243, 255);
+    border-left: 0px solid rgba(247, 243, 243, 255);
+    border-right: 0px solid rgba(247, 243, 243, 255);
+    border-bottom: 3px solid rgba(247, 243, 243, 255);
 }

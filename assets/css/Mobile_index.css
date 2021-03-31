@@ -18,16 +18,6 @@
     font-style: normal;
 }
 
-
-#match-number {
-    position: fixed;
-    top: 10%;
-    left: 50%;
-    font-size: 90px;
-    color:white;
-    transform: translate(-50%, 0%);
-}
-
 #popup-continue-btn {
     font-size: large;
     color: white;
@@ -53,4 +43,28 @@
     top: 35%;
     left: 50%;
     transform: translate(-50%, -50%);
+    padding: 20px;
+}
+
+/* popup dialog overrides */
+#popup-dialog .hm-font {
+    font-size: 50px;
+    text-align: center;
+    padding-bottom: 20px;
+}
+
+#popup-dialog .col-2 {
+    display: none !important;
+}
+
+#popup-dialog .btn {
+    min-width: 75% !important;
+    margin: auto;
+    margin-bottom: 20px;
+    /* left: 50%;
+    transform: translateX(-50%); */
+}
+
+#popup-dialog .row {
+    margin: auto !important;
 }
