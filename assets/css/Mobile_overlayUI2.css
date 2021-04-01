@@ -78,7 +78,7 @@
     bottom: 2%;
     left: 70%;
     transform: translateX(-50%); 
-    font-size: var(--main-font-size);
+    font-size: 40px;
     padding: 20px 50px;
     color: white;
     background: black;

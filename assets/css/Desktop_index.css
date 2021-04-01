@@ -3,12 +3,12 @@
 }
 
 .hm-font-light{
-    color:white;
-    font-family: 'Oswald';
+    color: white;
+    font-family: 'Source Sans Pro'; 
     font-style: normal;
-    font-weight: lighter;
+    font-size: large;
+    /* font-weight: lighter; */
 }
-
 
 .hm-font {
     color: white;

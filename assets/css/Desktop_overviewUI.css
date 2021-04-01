@@ -3,3 +3,16 @@
     bottom:40%;
     right: 0px;
 }
+
+#back-to-pie-btn{
+    position: fixed;
+    top:10%;
+    left: 0px;
+}
+
+#subset-title{
+    position: fixed;
+    top:10%;
+    left: 50%;
+    transform: translate(-50%,0%);
+}

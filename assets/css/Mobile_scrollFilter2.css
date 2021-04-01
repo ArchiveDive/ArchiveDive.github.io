@@ -27,7 +27,7 @@
     color: white;
     font-family: 'Oswald';
     font-style: normal;
-    font-size: xxx-large;
+    font-size: var(--dropdown-font-size);
     background: rgba(0,0,0,0);
     padding: 20px 0;
 }

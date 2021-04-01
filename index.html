@@ -43,11 +43,75 @@
 
         <!--overlay UI : detail view-->
         <div id="detailview-overlay-UI">
+
+            <!--scroll filter -->
+            <div id='scroll-filter-area'>
+                <div id="scroll-filter-1" class="scroll-filter-row row">
+                    <!--btn select dropup-->
+                    <div class="col-2 btn-group dropup">
+                        <button type="button" class="dropdown-btn" data-toggle="dropdown" aria-haspopup="true"
+                            aria-expanded="false">
+                            <span id="filter-selector-cur-value-1">Maker</span>
+                            <div class="dropdown-arrow-img"></div>
+                            <div></div>
+                        </button>
+                        <div id="filter-selector-1" class="dropdown-menu">
+                        </div>
+                    </div>
+                    <!--go left btn -->
+                    <button id="scroll-filter-go-left-btn-1" class="col-1 btn btn-primary scroll-btn">
+                        <div class="scroll-btn-img-left"></div>
+                    </button>
+                    <!--filter body-->
+                    <div class=" col-7 scroll-filter-container">
+                        <div id="scroll-filter-body-1" class="scroll-filter-body row">
+                        </div>
+                    </div>
+                    <!--go right btn -->
+                    <button id="scroll-filter-go-right-btn-1" class="col-1 btn btn-primary scroll-btn">
+                        <div class="scroll-btn-img-right"></div>
+                    </button>
+                    <div class='col-1'>
+                        <button id="randomize-filter-1-btn" class="btn shuffle-btn"></button>
+                    </div>
+                </div>
+
+                <div id="scroll-filter-2" class="row scroll-filter-row">
+                    <div class="col-2 btn-group dropup">
+                        <button type="button" class="dropdown-btn" data-toggle="dropdown" aria-haspopup="true"
+                            aria-expanded="false">
+                            <span id="filter-selector-cur-value-2"></span>
+                            <div class="dropdown-arrow-img"></div>
+                        </button>
+                        <div id="filter-selector-2" class="dropdown-menu">
+                        </div>
+                    </div>
+
+                    <!--go left btn -->
+                    <button id="scroll-filter-go-left-btn-2" class="col-1 btn btn-primary scroll-btn">
+                        <div class="scroll-btn-img-left"></div>
+                    </button>
+                    <div class="col-7 scroll-filter-container">
+                        <div id="scroll-filter-body-2" class="scroll-filter-body row">
+                        </div>
+                    </div>
+                    <!--go right btn -->
+                    <button id="scroll-filter-go-right-btn-2" class="col-1 btn btn-primary scroll-btn">
+                        <div class="scroll-btn-img-right"></div>
+                    </button>
+
+                    <div class='col-1'>
+                        <button id="randomize-filter-2-btn" class="btn shuffle-btn"></button>
+                    </div>
+                </div>
+            </div>
+
             <!--hm info -->
             <div id="side-info-area">
                 <div id="achivement-info-area">
                     <h2 id="achivement-info-header" class="hm-font">Achievement</h2>
-                    <div id="short-bio" class="hm-font"> </div>
+                    <div id="short-bio" class="hm-font-light"> </div>
+                    <div>...</div>
                 </div>
                 <div id="fav-info-area">
                     <h2 id="fav-info-header" class="hm-font">Favorites</h2>
@@ -81,8 +145,12 @@
         </div>
 
         <!--overlay UI :  overview-->
-        <div id = "overview-overlay-UI">
-            <div id = "viz-control-area">
+        <div id="overview-overlay-UI">
+            <div id="viz-control-area">
+                <h1 id = "subset-title" class = "hm-font"></h1>
+                
+                <button id="back-to-pie-btn">Back</button>
+
                 <h3 class="hm-font-light">Visualization</h3>
                 <div>
                     <button id="viz-color-btn">Color</button>
@@ -92,68 +160,6 @@
                 </div>
                 <div>
                     <button id="viz-gender-btn">Gender</button>
-                </div>
-            </div>
-        </div>
-
-        <!--scroll filter -->
-        <div id='scroll-filter-area'>
-            <div id="scroll-filter-1" class="scroll-filter-row row">
-                <!--btn select dropup-->
-                <div class="col-2 btn-group dropup">
-                    <button type="button" class="dropdown-btn" data-toggle="dropdown" aria-haspopup="true"
-                        aria-expanded="false">
-                        <span id="filter-selector-cur-value-1">Maker</span>
-                        <div class="dropdown-arrow-img"></div>
-                        <div></div>
-                    </button>
-                    <div id="filter-selector-1" class="dropdown-menu">
-                    </div>
-                </div>
-                <!--go left btn -->
-                <button id="scroll-filter-go-left-btn-1" class="col-1 btn btn-primary scroll-btn">
-                    <div class="scroll-btn-img-left"></div>
-                </button>
-                <!--filter body-->
-                <div class=" col-7 scroll-filter-container">
-                    <div id="scroll-filter-body-1" class="scroll-filter-body row">
-                    </div>
-                </div>
-                <!--go right btn -->
-                <button id="scroll-filter-go-right-btn-1" class="col-1 btn btn-primary scroll-btn">
-                    <div class="scroll-btn-img-right"></div>
-                </button>
-                <div class='col-1'>
-                    <button id="randomize-filter-1-btn" class="btn shuffle-btn"></button>
-                </div>
-            </div>
-
-            <div id="scroll-filter-2" class="row scroll-filter-row">
-                <div class="col-2 btn-group dropup">
-                    <button type="button" class="dropdown-btn" data-toggle="dropdown" aria-haspopup="true"
-                        aria-expanded="false">
-                        <span id="filter-selector-cur-value-2"></span>
-                        <div class="dropdown-arrow-img"></div>
-                    </button>
-                    <div id="filter-selector-2" class="dropdown-menu">
-                    </div>
-                </div>
-
-                <!--go left btn -->
-                <button id="scroll-filter-go-left-btn-2" class="col-1 btn btn-primary scroll-btn">
-                    <div class="scroll-btn-img-left"></div>
-                </button>
-                <div class="col-7 scroll-filter-container">
-                    <div id="scroll-filter-body-2" class="scroll-filter-body row">
-                    </div>
-                </div>
-                <!--go right btn -->
-                <button id="scroll-filter-go-right-btn-2" class="col-1 btn btn-primary scroll-btn">
-                    <div class="scroll-btn-img-right"></div>
-                </button>
-
-                <div class='col-1'>
-                    <button id="randomize-filter-2-btn" class="btn shuffle-btn"></button>
                 </div>
             </div>
         </div>

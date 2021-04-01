@@ -1,6 +1,7 @@
 #hm-logo {
     position: fixed;
-    left: 0%;
+    left: 10px;
+    top: 10px;
     width: 300px;
     height: 30px;
     background-image: url('../images/thm-logo-tmp.png');
@@ -12,8 +13,8 @@
     position: fixed;
     width:150px;
     height:50px;
-    right: 50px;
-    bottom: 30%;
+    right: 15%;
+    bottom: 26%;
     color: white;
     font-family: 'Oswald';
     font-style: normal;
@@ -56,11 +57,11 @@
     position: fixed;
     top: 100px;
     width: 20%;
-    right: 0%;
+    right: 5%;
 }
 
 #fav-info-header{
-    margin-top:30px;
+    margin-top:10px;
     margin-bottom: 10px;
 }
 
@@ -70,7 +71,7 @@
 
 #match-number {
     position: fixed;
-    bottom: 28%;
+    bottom: 26%;
     left: 40%;
     font-size: 25px;
     transform: translate(-50%, 0%);
