@@ -5,8 +5,8 @@
     --large-font: 60px;
     --med-font: 55px;
     --small-font: 45px;
-    --scroll-area-height: 30%;
-    --overlay-area-height: 70%;
+    --scroll-area-height: 35%;
+    --overlay-area-height: 65%;
   }
 
 /* dropdown */ 
@@ -104,10 +104,10 @@
 /* scroll filters */
 #scroll-filter-area {
     position: fixed;
-    bottom: 0px;
+    bottom: 50px;
     width: 100%;
     font-size: var(--main-font-size);
-    height: var(--scroll-area-height);
+    /* height: var(--scroll-area-height); */
 }
 
 #scroll-filter-area .row {
@@ -182,6 +182,7 @@
     font-style: normal;
     text-align: center;
     background-color: rgba(0, 0, 0, 0);
+    overflow-x: hidden;
     /* width: 2px !important; */
     /* transform: translateX(-70%); */
 }
