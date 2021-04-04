@@ -10,9 +10,27 @@
     left: 0px;
 }
 
-#subset-title{
+
+#back-to-overview-btn{
     position: fixed;
     top:10%;
-    left: 50%;
+    left: 0px;
+}
+
+#overview-match-title{
+    position: fixed;
+    font-family: 'Oswald';
+    color:white;
+    top:15%;
+    left:50%;
+    transform: translate(-50%,0%);
+}
+
+#overview-filter-title{
+    position: fixed;
+    font-family: 'Oswald';
+    color:white;
+    top:0%;
+    left:50%;
     transform: translate(-50%,0%);
 }

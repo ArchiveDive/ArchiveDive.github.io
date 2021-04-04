@@ -3,11 +3,17 @@
 
 <head>
     <title>Archive Dive</title>
+    <!-- icon -->
+    <link rel="icon" href="assets/logos/thm-logo-favicon.png">
+    <link rel="mask-icon" href="assets/logos/thm-logo-favicon.png" color="#000000">
+    <link rel="apple-touch-icon" href="assets/logos/thm-logo-favicon.png">
+
     <!-- CSS -->
     <link id="css-index" rel="stylesheet">
     <link id="css-scrollFilter" rel="stylesheet">
     <link id="css-overlayUI" rel="stylesheet">
     <link id="css-overviewUI" rel="stylesheet">
+    <link id="css-subsetviewUI" rel="stylesheet">
 
     <!-- fonts -->
     <link rel="preconnect" href="https://fonts.gstatic.com">
@@ -34,15 +40,15 @@
         <div id="hm-logo"></div>
 
         <div id="tab-area">
-            <button id="detailview-tab" class="tab-item">Detail View</button>
-            <button id="overview-tab" class="tab-item selected">Overview</button>
+            <button id="detailview-tab" class="tab-item selected">Detail View</button>
+            <button id="overview-tab" class="tab-item">Overview</button>
         </div>
-
-        <span id="match-number" class="hm-font">
-        </span>
 
         <!--overlay UI : detail view-->
         <div id="detailview-overlay-UI">
+            <!--filter titile-->
+            <span id="match-number" class="hm-font">
+            </span>
 
             <!--scroll filter -->
             <div id='scroll-filter-area'>
@@ -111,7 +117,7 @@
                 <div id="achivement-info-area">
                     <h2 id="achivement-info-header" class="hm-font">Achievement</h2>
                     <div id="short-bio" class="hm-font-light"> </div>
-                    <div>...</div>
+                    <div id="info-area-break">...</div>
                 </div>
                 <div id="fav-info-area">
                     <h2 id="fav-info-header" class="hm-font">Favorites</h2>
@@ -146,11 +152,9 @@
 
         <!--overlay UI :  overview-->
         <div id="overview-overlay-UI">
+            <h2 id="overview-filter-title" class="hm-font"></h2>
+            <h2 id="overview-match-title" class="hm-font"></h2>
             <div id="viz-control-area">
-                <h1 id = "subset-title" class = "hm-font"></h1>
-                
-                <button id="back-to-pie-btn">Back</button>
-
                 <h3 class="hm-font-light">Visualization</h3>
                 <div>
                     <button id="viz-color-btn">Color</button>
@@ -160,6 +164,48 @@
                 </div>
                 <div>
                     <button id="viz-gender-btn">Gender</button>
+                </div>
+            </div>
+
+            <button id="back-to-overview-btn">Back to overview</button>
+        </div>
+
+
+        <!--overlay UI :  subsetview-->
+        <div id="subsetview-overlay-UI">
+            <h2 id="subsetview-filter-title" class="hm-font"></h2>
+            <h2 id="subsetview-match-title" class="hm-font"></h2>
+            <button id="back-to-pie-btn">Back</button>
+
+            <!--hm info -->
+            <div id="sub-side-info-area">
+                <button id="sub-go-to-archive-btn">
+                    Digital Archive
+                </button>
+
+                <div id="sub-achivement-info-area">
+                    <h2 id="sub-achivement-info-header" class="hm-font">Achievement</h2>
+                    <div id="sub-short-bio" class="hm-font-light"> </div>
+                    <div id="sub-info-area-break">...</div>
+                </div>
+                <div id="sub-fav-info-area">
+                    <h2 id="sub-fav-info-header" class="hm-font">Favorites</h2>
+                    <div>
+                        <span class="hm-font-large">Color:</span>
+                        <span class="hm-font-light" id="sub-fav-color-info">Blue</span>
+                    </div>
+                    <div>
+                        <span class="hm-font-large">Food:</span>
+                        <span class="hm-font-light" id="sub-fav-food-info">Blue</span>
+                    </div>
+                    <div>
+                        <span class="hm-font-large">Season:</span>
+                        <span class="hm-font-light" id="sub-fav-season-info">Blue</span>
+                    </div>
+                    <div>
+                        <span class="hm-font-large">Vacation Spot:</span>
+                        <span class="hm-font-light" id="sub-fav-spot-info">Blue</span>
+                    </div>
                 </div>
             </div>
         </div>
