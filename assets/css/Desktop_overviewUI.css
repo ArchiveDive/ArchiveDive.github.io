@@ -1,36 +1,66 @@
-#viz-control-area{
+/* used for overview and subset view */
+.filter-title {
     position: fixed;
-    bottom:40%;
-    right: 0px;
+    font-family: 'Oswald';
+    color:white;
+    top: 8%;
+    left: 440%;
+    transform: translate(-50%,0%);
 }
 
-#back-to-pie-btn{
-    position: fixed;
-    top:10%;
-    left: 0px;
-}
-
-
-#back-to-overview-btn{
-    position: fixed;
-    top:10%;
-    left: 0px;
-}
-
-#overview-match-title{
+.match-title {
     position: fixed;
     font-family: 'Oswald';
     color:white;
     top:15%;
-    left:50%;
+    left:40%;
     transform: translate(-50%,0%);
 }
 
-#overview-filter-title{
+/* viz control */
+#viz-control-area {
+    font-family: Oswald;
+    color: white;
     position: fixed;
-    font-family: 'Oswald';
-    color:white;
-    top:0%;
-    left:50%;
-    transform: translate(-50%,0%);
+    width: 20%;
+    right: 0%;
+    text-align: center;
+    bottom: 4%;
+}
+#viz-header {
+    font-weight: bold;
+}
+.viz-btn {
+    border: 3px solid;
+    border-image-slice: 1;
+    border-image-source: linear-gradient(90deg, rgba(48, 44, 109, 0.8) 0%, rgba(137, 136, 135, 0.272) 48.96%, rgba(102, 32, 82, 0.8) 100%);
+    width: 200px;
+    height:50px;
+    font-size: x-large;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    background-color: rbga(0,0,0,0);
+}
+.viz-btn:hover {
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+/* back buttons */
+#back-to-pie-btn, #back-to-overview-btn{
+    position: fixed;
+    top: 10%;
+    left: 3%;
+
+    background-color: rgba(0, 0, 0, 0);
+    border-style: none;
+}
+
+.back-arrow-img {
+    width: 24px;
+    height: 36px;
+    background-image: url('../images/black-arrow-icon-left.png');
+    background-size: 100% 100%;
+}
+.back-arrow-img:hover {
+    opacity: 0.7;
 }

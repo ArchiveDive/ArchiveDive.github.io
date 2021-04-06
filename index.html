@@ -9,11 +9,13 @@
     <link rel="apple-touch-icon" href="assets/logos/thm-logo-favicon.png">
 
     <!-- CSS -->
+    <link rel="stylesheet" href="assets/css/loadingPage.css">
     <link id="css-index" rel="stylesheet">
     <link id="css-scrollFilter" rel="stylesheet">
     <link id="css-overlayUI" rel="stylesheet">
     <link id="css-overviewUI" rel="stylesheet">
     <link id="css-subsetviewUI" rel="stylesheet">
+    <link id="css-screenSizes" rel="stylesheet"> <!-- needs to go last -->
 
     <!-- fonts -->
     <link rel="preconnect" href="https://fonts.gstatic.com">
@@ -30,6 +32,10 @@
 </head>
 
 <body>
+    <div id = "loading-page">
+        <h1 style="color:white;">Loading ...</h1>
+    </div>
+
     <!--scene-->
     <div id="scene-root">
         <div id="scene-canvas"></div>
@@ -140,11 +146,11 @@
                         <span class="hm-font-light" id="fav-spot-info">Blue</span>
                     </div>
                 </div>
+                <button id="go-to-archive-btn">
+                    Digital Archive
+                </button>
+                <div class="go-to-archive-hover-popup">Opens in new tab</div>
             </div>
-
-            <button id="go-to-archive-btn">
-                Digital Archive
-            </button>
 
             <div id="ring-control-area">
                 <button id="ring-control-left"> </button>
@@ -154,36 +160,41 @@
 
         <!--overlay UI :  overview-->
         <div id="overview-overlay-UI">
-            <h2 id="overview-filter-title" class="hm-font"></h2>
-            <h2 id="overview-match-title" class="hm-font"></h2>
+            <h2 id="overview-filter-title" class="hm-font filter-title"></h2>
+            <h2 id="overview-match-title" class="hm-font match-title"></h2>
             <div id="viz-control-area">
-                <h3 class="hm-font-light">Exploration Point</h3> 
+                <h3 id="viz-header">Exploration Point</h3> 
                 <div>
-                    <button id="viz-color-btn">Color</button>
+                    <button id="viz-color-btn" class="viz-btn">Color</button>
                 </div>
                 <div>
-                    <button id="viz-season-btn">Season</button>
+                    <button id="viz-season-btn" class="viz-btn">Season</button>
                 </div>
                 <div>
-                    <button id="viz-gender-btn">Gender</button>
+                    <button id="viz-gender-btn" class="viz-btn">Gender</button>
                 </div>
             </div>
 
-            <button id="back-to-overview-btn">Back to overview</button>
+            <button id="back-to-overview-btn">
+                <div class="back-arrow-img"></div>
+            </button>
         </div>
 
 
         <!--overlay UI :  subsetview-->
         <div id="subsetview-overlay-UI">
-            <h2 id="subsetview-filter-title" class="hm-font"></h2>
-            <h2 id="subsetview-match-title" class="hm-font"></h2>
-            <button id="back-to-pie-btn">Back</button>
+            <h2 id="subsetview-filter-title" class="hm-font filter-title"></h2>
+            <h2 id="subsetview-match-title" class="hm-font match-title"></h2>
+            <button id="back-to-pie-btn">
+                <div class="back-arrow-img"></div>
+            </button>
 
             <!--hm info -->
             <div id="sub-side-info-area">
                 <button id="sub-go-to-archive-btn">
                     Digital Archive
                 </button>
+                <div class="go-to-archive-hover-popup">Opens in new tab</div>
 
                 <div id="sub-achivement-info-area">
                     <h2 id="sub-achivement-info-header" class="hm-font">Achievement</h2>

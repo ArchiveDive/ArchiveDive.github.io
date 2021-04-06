@@ -1,0 +1,102 @@
+
+/* (default) 100% windows users scale, 1920 x 969 */
+
+/* 125% windows users scale, 1536 x 754.4 */
+@media screen and (min-height: 751px) and (max-height: 960px) {
+    #side-info-area{
+        top: 15%;
+        width: 24%;
+    }
+    #tab-area-container {
+        width: 24%;
+        top: 5%;
+    }
+}
+/* 150% windows users scale, 1280 x 610 */
+@media screen and (min-height: 0px) and (max-height: 750px) {
+    /* overviw */
+    #viz-control-area {
+        width: 27%;
+    }
+
+    /* detail view */
+    #tab-area-container {
+        width: 27%;
+        top: 2%;
+    }
+    #side-info-area, #sub-side-info-area {
+        top: 14%;
+        width: 27%;
+    }
+    #short-bio, #sub-short-bio {
+        padding-bottom: 5px;
+        height: 95px;
+    }
+    #info-area-break, #sub-info-area-break {
+        height: 10px;
+    }
+    #go-to-archive-btn, #sub-go-to-archive-btn {
+        position:fixed;
+        bottom: 18%;
+        font-size: large;
+        width: 150px;
+    }
+    #match-number {
+        position:fixed;
+        bottom: 18%;
+        left: 40%;
+        font-size: 25px;
+        transform: translate(-50%, 0%);
+    }
+    
+    .scroll-filter-item, .scroll-filter-item-selected, 
+    #filter-selector-cur-value-1, #filter-selector-cur-value-2,
+    .dropdown-filter-option  {
+        font-size: 20px;
+    }
+    #filter-selector-1, #filter-selector-2 {
+        width: 82%;
+    }
+    #scroll-filter-2, #scroll-filter-1 {
+        height: 40px;
+    }
+    #scroll-filter-2 {
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+}
+
+/* narrow window */
+@media screen and (min-width: 0px) and (max-width: 1100px) {
+    #ring-control-area {
+        left: 50%;
+    }
+    #achivement-info-area, #fav-info-area {
+        display: none;
+    }
+    #match-number {
+        left: 50%;
+    }
+    #go-to-archive-btn {
+        display: block;
+        position: fixed;
+        bottom: 25%;
+        left: 50%;
+        font-size: 20px;
+        transform: translate(-50%, 0%);
+        font-size: large;
+    }
+    .go-to-archive-hover-popup {
+        display: block;
+        position: fixed;
+        bottom: 15%;
+        left: 50%;
+        font-size: 20px;
+        padding: 20px;
+        transform: translate(-50%, 0%);
+        font-size: large;
+    }
+    #scene-canvas {
+        left: 0%;
+    }
+}

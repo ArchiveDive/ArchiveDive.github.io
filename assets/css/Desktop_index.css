@@ -58,3 +58,20 @@
 ::-webkit-scrollbar-thumb:hover {
     background: #555; 
 }
+
+/* Go to archive popup */
+.go-to-archive-hover-popup {
+    opacity: 0.0;
+
+    width: 200px;
+    text-align: center;
+    position: fixed;
+    color: white;
+    position: fixed;
+    bottom: 26%;
+    padding: 10px;
+    font-family: 'Source Sans Pro';
+    font-style: normal;
+    font-size: large;
+    background-color: rgba(100,100,100);
+}

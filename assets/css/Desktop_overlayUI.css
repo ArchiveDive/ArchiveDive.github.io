@@ -1,7 +1,7 @@
 #hm-logo {
     position: fixed;
-    left: 10px;
-    top: 10px;
+    left: 1.5%;
+    top: 3%;
     width: 300px;
     height: 30px;
     background-image: url('../logos/thm-logo-grey.svg');
@@ -68,7 +68,6 @@
     position: fixed;
     width: 200px;
     height:50px;
-    right: 15%;
     bottom: 20%;
     color: white;
     font-family: 'Oswald';
@@ -81,10 +80,14 @@
     border-image-slice: 1;
     box-shadow: 0px 4px 4px rgb(0 0 0 / 25%) !important;
 }
-
 #go-to-archive-btn:hover {
-    background-color: rgba(0, 0, 0, 0.7);
+    background-color: rgba(255,255,255, 0.1);
 }
+/* dialog popup */
+#go-to-archive-btn:hover + div {
+    opacity: 1.0;
+}
+
 
 #match-number {
     position: fixed;
@@ -98,10 +101,11 @@
     position: fixed;
     width: 100%;
     height: 100%;
-    background-image: url('../images/bg.png');
+    background-image: url('../images/bg_detailView.png');
     background-size: 100% 100%;
 }
 
+/* ring arrows */
 #ring-control-area{
     position: fixed;
     left:40%;
@@ -138,6 +142,7 @@
     opacity: 0.5;
 }
 
+/* tabs */
 #tab-area-container{
     position: fixed;
     top:30px;
@@ -155,18 +160,20 @@
 
 .tab-item{
     position: relative;
-    width: 40%;
+    width: 48%;
     font-family: 'Oswald';
     font-size: x-large;
     color:gray;
     background-color: rgba(0, 0, 0, 0);
     border-color: rgba(0, 0, 0, 0);
 }
-
+.tab-item:hover {
+    color: white;
+}
 
 .tab-item.selected{
     position: relative;
-    width: 55%;
+    width: 48%;
     color:white;
     font-weight: bold;
     font-family: 'Oswald';
@@ -176,63 +183,4 @@
     border-left: 0px solid rgba(247, 243, 243, 255);
     border-right: 0px solid rgba(247, 243, 243, 255);
     border-bottom: 3px solid rgba(247, 243, 243, 255);
-}
-
-/* (default) 100% windows users scale, 1920 x 969 */
-
-/* 125% windows users scale, 1536 x 754.4 */
-@media screen and (min-height: 751px) and (max-height: 960px) {
-    #side-info-area{
-        top: 15%;
-        width: 24%;
-    }
-    #tab-area-container {
-        width: 24%;
-    }
-}
-/* 150% windows users scale, 1280 x 610 */
-@media screen and (min-height: 0px) and (max-height: 750px) {
-    #tab-area-container {
-        width: 27%;
-    }
-    #side-info-area{
-        top: 13%;
-        width: 27%;
-    }
-    #short-bio {
-        padding-bottom: 5px;
-        height: 95px;
-    }
-    #info-area-break {
-        height: 10px;
-    }
-    #go-to-archive-btn{
-        position:fixed;
-        bottom: 18%;
-        font-size: large;
-        width: 150px;
-    }
-    #match-number {
-        position:fixed;
-        bottom: 18%;
-        left: 40%;
-        font-size: 25px;
-        transform: translate(-50%, 0%);
-    }
-    
-    .scroll-filter-item, .scroll-filter-item-selected, 
-    #filter-selector-cur-value-1, #filter-selector-cur-value-2,
-    .dropdown-filter-option  {
-        font-size: 20px;
-    }
-    #filter-selector-1, #filter-selector-2 {
-        width: 82%;
-    }
-    #scroll-filter-2, #scroll-filter-1 {
-        height: 40px;
-    }
-    #scroll-filter-2 {
-        margin-top: 10px;
-        margin-bottom: 10px;
-    }
 }
