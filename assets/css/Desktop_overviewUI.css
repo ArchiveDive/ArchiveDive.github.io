@@ -2,24 +2,28 @@
 .filter-title {
     position: fixed;
     font-family: 'Oswald';
-    color:white;
+    color:lightgrey;
+    font-weight: bold;
     top: 5%;
     left: 40%;
     transform: translate(-50%,0%);
-
+    height: 38px;
     padding: 10px;
-    background-color: rgba(0, 0, 0, 0.6)
+    background-color: rgba(0, 0, 0, 0.6);
+    font-size: 25px;
 }
 
 .match-title {
     position: fixed;
     font-family: 'Oswald';
+    font-weight: bold;
     top:10%;
     left:40%;
-    font-size: x-large;
+    font-size: 25px;
     transform: translate(-50%,0%);
-    
+    height: 38px;
     padding: 10px;
+    color: white;
     background-color: rgba(0, 0, 0, 0.6)
 }
 
@@ -37,40 +41,45 @@
     font-weight: bold;
 }
 .viz-btn {
-    border: 3px solid;
-    border-image-slice: 1;
-    border-image-source: linear-gradient(90deg, rgba(48, 44, 109, 0.8) 0%, rgba(137, 136, 135, 0.272) 48.96%, rgba(102, 32, 82, 0.8) 100%);
     width: 200px;
     height:50px;
     font-size: x-large;
     margin-top: 10px;
     margin-bottom: 10px;
-    background-color: rgba(0,0,0,0);
-    color: white; /* remove later */
+    background-color: #3B363F;
+    color: white;
+    border-style: none;
 }
 .viz-btn:hover {
     /* background-color: rgba(0, 0, 0, 0.1); */
     background-color: rgba(255,255,255, 0.1);
 }
+.viz-btn:focus {
+    background: linear-gradient(90deg, #2E2D6F 0%, #682052 100%);
+}
 
 /* back buttons */
-#back-to-pie-btn, #back-to-overview-btn{
+.back-btn{
     position: fixed;
     top: 10%;
     left: 3%;
-
     background-color: rgba(0, 0, 0, 0);
     border-style: none;
+    color: white;
+    font-family: 'Oswald';
+    font-size: x-large;
+    display: inline;
+    vertical-align: middle;
+}
+.back-btn:hover {
+    opacity: 0.7;
 }
 
 .back-arrow-img {
-    /* width: 24px;
-    height: 36px; */
+    display: inline-block;
     width: 48px;
     height: 48px;
     background-image: url('../images/white-arrow-icon-left.png');
     background-size: 100% 100%;
-}
-.back-arrow-img:hover {
-    opacity: 0.7;
+    transform: translateY(22%);
 }

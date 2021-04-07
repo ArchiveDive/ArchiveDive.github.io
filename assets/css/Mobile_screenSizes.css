@@ -1,0 +1,8 @@
+@media screen and (min-device-width: 700px){
+    .scroll-filter-row {
+        height: 180px;
+    }
+    .scroll-filter-item, .scroll-filter-item-selected {
+        padding-top: 2px !important;
+    }
+}

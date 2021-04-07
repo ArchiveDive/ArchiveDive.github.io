@@ -11,35 +11,57 @@
         width: 24%;
         top: 5%;
     }
+    .header-dash-line {
+        display: none;
+    }
 }
 /* 150% windows users scale, 1280 x 610 */
 @media screen and (min-height: 0px) and (max-height: 750px) {
-    /* overviw */
+    #hm-logo {
+        width: 200px;
+        height: 20px;
+    }
+    /* overview */
     #viz-control-area {
         width: 27%;
     }
-
+    .filter-title {
+        transform: translate(-50%, 10px);
+    }
+    .match-title {
+        transform: translate(-50%, 20px);
+    }
+    .header-dash-line {
+        display: none;
+    }
     /* detail view */
     #tab-area-container {
         width: 27%;
         top: 2%;
     }
-    #side-info-area, #sub-side-info-area {
+    #side-info-area {
         top: 14%;
         width: 27%;
     }
-    #short-bio, #sub-short-bio {
+    #sub-side-info-area {
+        width: 27%;
+    }
+    #short-bio, {
         padding-bottom: 5px;
         height: 95px;
+    }
+    #sub-short-bio {
+        height: 130px;
+        padding-bottom: 20px;
     }
     #info-area-break, #sub-info-area-break {
         height: 10px;
     }
-    #go-to-archive-btn, #sub-go-to-archive-btn {
+    .digital-archive-btn {
         position:fixed;
         bottom: 18%;
-        font-size: large;
-        width: 150px;
+        /* font-size: large; */
+        /* width: 150px; */
     }
     #match-number {
         position:fixed;
@@ -71,20 +93,19 @@
     #ring-control-area {
         left: 50%;
     }
-    #achivement-info-area, #fav-info-area {
+    #side-info-area {
         display: none;
     }
     #match-number {
         left: 50%;
     }
-    #go-to-archive-btn {
+    .digital-archive-btn {
         display: block;
         position: fixed;
         bottom: 25%;
         left: 50%;
         font-size: 20px;
         transform: translate(-50%, 0%);
-        font-size: large;
     }
     .go-to-archive-hover-popup {
         display: block;
@@ -98,5 +119,11 @@
     }
     #scene-canvas {
         left: 0%;
+    }
+}
+
+@media screen and (min-width: 0px) and (max-width: 850px) {
+    #scroll-filter-area {
+        width: 90%;
     }
 }

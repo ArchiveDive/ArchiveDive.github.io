@@ -17,7 +17,7 @@
 
 #short-bio{
     height: 130px;
-    padding-right: 10px;
+    padding-right: 20px;
     padding-bottom: 50px;
     overflow-x: hidden;
 }
@@ -64,30 +64,6 @@
     margin-bottom: 10px;
 }
 
-#go-to-archive-btn{
-    position: fixed;
-    width: 200px;
-    height:50px;
-    bottom: 20%;
-    color: white;
-    font-family: 'Oswald';
-    font-style: normal;
-    font-size: x-large;
-    background-color: rgba(0, 0, 0, 0.4);
-    border-radius: 0px;
-    border: 3px solid;
-    border-image-source: linear-gradient(90deg, #2E2D6F 0%, #682052 100%);
-    border-image-slice: 1;
-    box-shadow: 0px 4px 4px rgb(0 0 0 / 25%) !important;
-}
-#go-to-archive-btn:hover {
-    background-color: rgba(255,255,255, 0.1);
-}
-/* dialog popup */
-#go-to-archive-btn:hover + div {
-    opacity: 1.0;
-}
-
 #match-number {
     position: fixed;
     bottom: 20%;
@@ -116,7 +92,7 @@
     position: fixed;
     border-color: rgba(0, 0, 0, 0);
     top: -50px;
-    left: -150px;
+    left: -200px;
     width: 34px;
     height: 38px;
     margin: auto;
@@ -131,7 +107,7 @@
     border-color: rgba(0, 0, 0, 0);
     top: -50px;
     width: 34px;
-    right: -150px;
+    right: -200px;
     height: 38px;
     margin: auto;
     background: url('../images/white-arrow-icon-right.png');
