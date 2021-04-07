@@ -42,7 +42,7 @@
     </div>
 
     <!--overlay UI -->
-    <div id="overlay-root">
+    <div id="overlay-root" style="display:none">
         <div id="hm-logo"></div>
 
         <div id="tab-area-container">
@@ -123,7 +123,7 @@
             <!--hm info -->
             <div id="side-info-area">
                 <div id="achivement-info-area">
-                    <h2 id="achivement-info-header" class="hm-font">Achievement</h2>
+                    <h2 id="achivement-info-header" class="hm-font">Description</h2>
                     <div id="short-bio" class="hm-font-light fade-bottom"> </div>
                     <div id="info-area-break">...</div>
                 </div>
@@ -195,30 +195,11 @@
                     Digital Archive
                 </button>
                 <div class="go-to-archive-hover-popup">Opens in new tab</div>
-
+                <div id="sub-name-info" hidden></div>
                 <div id="sub-achivement-info-area">
-                    <h2 id="sub-achivement-info-header" class="hm-font">Achievement</h2>
+                    <h2 id="sub-achivement-info-header" class="hm-font">Description</h2>
                     <div id="sub-short-bio" class="hm-font-light fade-bottom"> </div>
                     <div id="sub-info-area-break">...</div>
-                </div>
-                <div id="sub-fav-info-area">
-                    <h2 id="sub-fav-info-header" class="hm-font">Favorites</h2>
-                    <div>
-                        <span class="hm-font-large">Color:</span>
-                        <span class="hm-font-light" id="sub-fav-color-info">Blue</span>
-                    </div>
-                    <div>
-                        <span class="hm-font-large">Food:</span>
-                        <span class="hm-font-light" id="sub-fav-food-info">Blue</span>
-                    </div>
-                    <div>
-                        <span class="hm-font-large">Season:</span>
-                        <span class="hm-font-light" id="sub-fav-season-info">Blue</span>
-                    </div>
-                    <div>
-                        <span class="hm-font-large">Vacation Spot:</span>
-                        <span class="hm-font-light" id="sub-fav-spot-info">Blue</span>
-                    </div>
                 </div>
             </div>
         </div>

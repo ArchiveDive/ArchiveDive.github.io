@@ -3,18 +3,24 @@
     position: fixed;
     font-family: 'Oswald';
     color:white;
-    top: 8%;
-    left: 440%;
+    top: 5%;
+    left: 40%;
     transform: translate(-50%,0%);
+
+    padding: 10px;
+    background-color: rgba(0, 0, 0, 0.6)
 }
 
 .match-title {
     position: fixed;
     font-family: 'Oswald';
-    color:white;
-    top:15%;
+    top:10%;
     left:40%;
+    font-size: x-large;
     transform: translate(-50%,0%);
+    
+    padding: 10px;
+    background-color: rgba(0, 0, 0, 0.6)
 }
 
 /* viz control */
@@ -39,10 +45,12 @@
     font-size: x-large;
     margin-top: 10px;
     margin-bottom: 10px;
-    background-color: rbga(0,0,0,0);
+    background-color: rgba(0,0,0,0);
+    color: white; /* remove later */
 }
 .viz-btn:hover {
-    background-color: rgba(0, 0, 0, 0.1);
+    /* background-color: rgba(0, 0, 0, 0.1); */
+    background-color: rgba(255,255,255, 0.1);
 }
 
 /* back buttons */
@@ -56,9 +64,11 @@
 }
 
 .back-arrow-img {
-    width: 24px;
-    height: 36px;
-    background-image: url('../images/black-arrow-icon-left.png');
+    /* width: 24px;
+    height: 36px; */
+    width: 48px;
+    height: 48px;
+    background-image: url('../images/white-arrow-icon-left.png');
     background-size: 100% 100%;
 }
 .back-arrow-img:hover {
