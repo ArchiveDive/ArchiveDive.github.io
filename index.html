@@ -47,7 +47,7 @@
 
         <div id="tab-area-container">
             <div id="tab-area">
-                <button id="detailview-tab" class="tab-item selected">Detail View</button>
+                <button id="detailview-tab" class="tab-item selected">Detailed View</button>
                 <button id="overview-tab" class="tab-item">Overview</button>
             </div>
         </div>
@@ -72,6 +72,8 @@
                         <div id="filter-selector-1" class="dropdown-menu">
                         </div>
                     </div>
+                    <!-- region filter help buttons -->
+                    <button id="help-btn"><div id="help-btn-img"></div></button>
                     <!--go left btn -->
                     <button id="scroll-filter-go-left-btn-1" class="col-1 btn btn-primary scroll-btn">
                         <div class="scroll-btn-img-left"></div>
@@ -124,7 +126,7 @@
             <div id="side-info-area">
                 <div class="header-dash-line"></div>
                 <div id="achivement-info-area">
-                    <h2 id="achivement-info-header" class="hm-font">Description</h2>
+                    <h2 id="achivement-info-header" class="hm-font">Biography </h2>
                     <div id="short-bio" class="hm-font-light fade-bottom"> </div>
                     <div id="info-area-break">...</div>
                 </div>
@@ -157,6 +159,12 @@
                 <button id="ring-control-left"> </button>
                 <button id="ring-control-right"> </button>
             </div>
+
+            <!-- region filter help overlay -->
+            <div id="help-overlay">
+                <div id="region-map"></div>
+                <button id="close-help-overlay-btn"><div id="close-help-overlay-btn-img"></div></button>
+            </div>
         </div>
 
         <!--overlay UI :  overview-->
@@ -164,12 +172,12 @@
             <h2 id="overview-filter-title" class="hm-font filter-title"></h2>
             <h2 id="overview-match-title" class="hm-font match-title"></h2>
             <div id="viz-control-area">
-                <h3 id="viz-header">Exploration Point</h3> 
+                <h3 id="viz-header">Explore By</h3> 
                 <div>
-                    <button id="viz-color-btn" class="viz-btn">Color</button>
+                    <button id="viz-color-btn" class="viz-btn">Favorite Color</button>
                 </div>
                 <div>
-                    <button id="viz-season-btn" class="viz-btn">Season</button>
+                    <button id="viz-season-btn" class="viz-btn">Favorite Season</button>
                 </div>
                 <div>
                     <button id="viz-gender-btn" class="viz-btn">Gender</button>
@@ -199,7 +207,7 @@
                 <div class="header-dash-line"></div>
                 <div id="sub-name-info"></div>
                 <div id="sub-achivement-info-area">
-                    <h2 id="sub-achivement-info-header" class="hm-font">Description</h2>
+                    <h2 id="sub-achivement-info-header" class="hm-font">Biography </h2>
                     <div id="sub-short-bio" class="hm-font-light fade-bottom"> </div>
                     <div id="sub-info-area-break">...</div>
                 </div>

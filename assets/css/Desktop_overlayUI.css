@@ -70,6 +70,7 @@
     left: 40%;
     font-size: 25px;
     transform: translate(-50%, 0%);
+    text-align: center;
 }
 
 #scene-root {
@@ -152,10 +153,67 @@
     color:white;
     font-weight: bold;
     font-family: 'Oswald';
-    font-size: xx-large;
+    /* font-size: xx-large; */
     background-color: rgba(0, 0, 0, 0);
     border-top: 0px solid rgba(247, 243, 243, 255);
     border-left: 0px solid rgba(247, 243, 243, 255);
     border-right: 0px solid rgba(247, 243, 243, 255);
     border-bottom: 3px solid rgba(247, 243, 243, 255);
+}
+
+/* help overlay */
+#help-btn {
+    display: none;
+    position: fixed;
+    bottom: 50px;
+    left: 30px;
+    border-style: none;
+    background-color: rgba(0, 0, 0, 0);
+}
+#help-btn-img {
+    width: 34px;
+    height: 34px;
+    background: url('../images/help-icon.png');
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+}
+
+#close-help-overlay-btn {
+    display: none;
+    positioN: fixed;
+    top: 50px;
+    right: 30px;
+    border-style: none;
+    background-color: rgba(0, 0, 0, 0);
+}
+#close-help-overlay-btn-img {
+    width: 30px;
+    height: 30px;
+    background: url('../images/white-x-icon.png');
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+}
+
+#help-overlay {
+    display: none;
+    width: 100%;
+    height: 100%;
+    left: 0px;
+    top: 0px;
+    background-color: rgba(0,0,0,0.8);
+    position: fixed;
+    pointer-events: auto;
+    backdrop-filter: blur(5px);
+}
+
+#region-map {
+    width: 50%;
+    height: 70%;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    position: fixed;
+    background: url('../images/map-placeholder.png');
+    background-size: 100%;
+    background-repeat: no-repeat;
 }
