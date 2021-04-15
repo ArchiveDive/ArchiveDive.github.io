@@ -1,13 +1,25 @@
-/* vars */
-:root {
-    --main-font-size: 45px;
-    --dropdown-font-size: 45px;
-    --large-font: 60px;
-    --med-font: 55px;
-    --small-font: 45px;
-    --scroll-area-height: 35%;
-    --overlay-area-height: 65%;
-  }
+/* area and rows */
+
+#scroll-filter-area {
+    position: fixed;
+    bottom: 10px;
+    width: 100%;
+    font-size: var(--med-font-size);
+    /* height: var(--scroll-area-height); */
+}
+
+#scroll-filter-area .row {
+    flex-wrap: nowrap !important;
+    margin-left: 0px !important;
+}
+
+.scroll-filter-row {
+    position: relative;
+    height: 12vh;
+    height: calc(var(--vh) * 12);
+    /* min-height: 10rem;
+    max-height: 16rem; */
+}
 
 /* dropdown */ 
 #filter-selector-1, #filter-selector-2 {
@@ -27,7 +39,7 @@
     color: white;
     font-family: 'Oswald';
     font-style: normal;
-    font-size: var(--dropdown-font-size);
+    font-size: var(--med-font-size);
     background: rgba(0,0,0,0);
     padding: 20px 0;
 }
@@ -41,7 +53,7 @@
     color: white;
     font-family: 'Oswald';
     font-style: normal;
-    font-size: xxx-large;
+    /* font-size: xxx-large; */
     text-align: center;
 
     display: inline-block !important;
@@ -102,19 +114,6 @@
 }
 
 /* scroll filters */
-#scroll-filter-area {
-    position: fixed;
-    bottom: 10px;
-    width: 100%;
-    font-size: var(--main-font-size);
-    /* height: var(--scroll-area-height); */
-}
-
-#scroll-filter-area .row {
-    flex-wrap: nowrap !important;
-    margin-left: 0px !important;
-}
-
 #scroll-filter-area .col-1 {
     display: none;
 }
@@ -135,11 +134,6 @@
     /* position: absolute; */
     /* width: 100%; */
     transform: translateY(100%)
-}
-
-.scroll-filter-row {
-    position: relative;
-    height: 260px;
 }
 
 .scroll-filter-container {

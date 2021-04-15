@@ -1,60 +1,58 @@
 /* used for overview and subset view */
-.filter-title {
+.title-area {
     position: fixed;
     font-family: 'Oswald';
-    color:lightgrey;
     font-weight: bold;
-    top: 5%;
-    left: 40%;
-    transform: translate(-50%,0%);
-    height: 38px;
-    padding: 10px;
-    background-color: rgba(0, 0, 0, 0.6);
-    font-size: 25px;
+    display: inline-block;
+    left: 50%;
+    top: 10%;
+    transform: translateX(-50%);
+    margin: auto;
+    text-align: center;
 }
-
+.filter-title {
+    position: relative;
+    font-size:var(--match-num-font-size);
+    color: #6c6c6c;
+}
 .match-title {
-    position: fixed;
-    font-family: 'Oswald';
-    font-weight: bold;
-    top:10%;
-    left:40%;
-    font-size: 25px;
-    transform: translate(-50%,0%);
-    height: 38px;
-    padding: 10px;
-    color: white;
-    background-color: rgba(0, 0, 0, 0.6)
+    position: relative;
+    font-size: var(--match-num-font-size);
+    color:#dfdfdf;
+}
+.title-area span {
+    background-color: rgba(0, 0, 0, 0.6);
 }
 
 /* viz control */
 #viz-control-area {
-    font-family: Oswald;
-    color: white;
     position: fixed;
-    width: 20%;
-    right: 0%;
     text-align: center;
+    width: 100%;
     bottom: 4%;
 }
 #viz-header {
     font-weight: bold;
+    font-size: var(--tab-font-size);
 }
 .viz-btn {
-    width: 200px;
-    height:50px;
-    font-size: x-large;
-    margin-top: 10px;
-    margin-bottom: 10px;
+    width: 13vw;
+    min-width: 190px;
+    max-width: 300px;
+    height: 5vh;
+    min-height: 40px;
+    max-height: 55px;
+    margin-top: 1vh;
     background-color: #3B363F;
-    color: white;
     border-style: none;
+    font-weight: bold;
+    font-size: var(--button-size);
+    color: var(--off-white);
 }
 .viz-btn:hover {
-    /* background-color: rgba(0, 0, 0, 0.1); */
-    background-color: rgba(255,255,255, 0.1);
+    background: linear-gradient(90deg, #2E2D6F 0%, #682052 100%);
 }
-.viz-btn:focus {
+.viz-btn-selected {
     background: linear-gradient(90deg, #2E2D6F 0%, #682052 100%);
 }
 
@@ -81,5 +79,5 @@
     height: 48px;
     background-image: url('../images/white-arrow-icon-left.png');
     background-size: 100% 100%;
-    transform: translateY(22%);
+    transform: translateY(30%);
 }

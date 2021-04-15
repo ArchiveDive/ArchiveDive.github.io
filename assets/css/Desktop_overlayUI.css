@@ -1,12 +1,8 @@
-#hm-logo {
+/*placeholder*/
+#explore-more-btn{
     position: fixed;
-    left: 1.5%;
-    top: 3%;
-    width: 300px;
-    height: 30px;
-    background-image: url('../logos/thm-logo-grey.svg');
-    background-size: 100%, 100%;
-    background-repeat: no-repeat;
+    bottom: 30%;
+    left: 30%;
 }
 
 #overlay-root {
@@ -15,62 +11,20 @@
     top: 0px;
 }
 
-#short-bio{
-    height: 130px;
-    padding-right: 20px;
-    padding-bottom: 50px;
-    overflow-x: hidden;
-}
-
-/* limited browser support*/
-.fade-bottom {
-    -webkit-mask-image: -webkit-gradient(linear, center top, center bottom, 
-        color-stop(0.75,  rgba(0,0,0,1)),
-        color-stop(1.00,  rgba(0,0,0,0)));
-    mask-image: -webkit-gradient(linear, center top, center bottom, 
-        color-stop(0.75,  rgba(0,0,0,1)),
-        color-stop(1.00,  rgba(0,0,0,0)));
-}
-
-.hm-info-box {
-    background: rgba(0, 0, 0, 0.63);
-    backdrop-filter: blur(4px);
-    border: 3px solid;
-    border-image-source: linear-gradient(45deg, rgba(148, 26, 29, 1), rgba(46, 45, 111, 1));
-    border-image-slice: 1;
-}
-
-#scene-canvas {
-    position: absolute;
-    top: -35%;
-    left:-10%;
-    width: 100%;
-    height: 100%;
-}
-
-#side-info-area{
-    position: fixed;
-    top: 200px;
-    width: 20%;
-    right: 5%;
-}
-
-#fav-info-header{
-    margin-top: 10px;
-    margin-bottom: 10px;
-}
-
-#achivement-info-header{
-    margin-bottom: 10px;
+#middle-display-area {
+    width: 100vw;
 }
 
 #match-number {
     position: fixed;
-    bottom: 20%;
-    left: 40%;
-    font-size: 25px;
-    transform: translate(-50%, 0%);
+    font-weight: bold;
     text-align: center;
+    color: #dfdfdf;
+    bottom: 20vh;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    font-size: var(--match-num-font-size);
+    width: 80vw;
 }
 
 #scene-root {
@@ -81,23 +35,88 @@
     background-size: 100% 100%;
 }
 
+/* Side info */
+#side-info-area{
+    /* display:none; */
+    position: fixed;
+    width: 30vw; /* TODO, make bigger after you can control canvas */
+    right: 5%;
+}
+
+.hm-info-box {
+    font-size: var(--info-text-font-size);
+    font-family: "Source Sans Pro";
+    color: #FEFEFEC4;
+}
+
+#achivement-info-area {
+    display: none;
+    height: 40%;
+    /* display: block; */
+}
+
+#achivement-info-header{
+    margin-bottom: 10px;
+    font-weight: bold;
+    font-size: var(--info-header-font-size);
+}
+
+#short-bio{
+    height: 130px;
+    padding-right: 20px;
+    padding-bottom: 50px;
+    overflow-x: hidden;
+}
+
+#fav-info-area {
+    display: none;
+    /* display: block; */
+    height: 40%;
+}
+
+#fav-info-header{
+    display:block;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-weight: bold;
+    font-size: var(--info-header-font-size);
+}
+
+.fav-tag {
+    font-weight: bold;
+    font-family: "Oswald";
+    color: white;
+}
+
 /* ring arrows */
 #ring-control-area{
     position: fixed;
-    left:40%;
+    left: 50%;
     bottom:30%;
     transform: translate(-50%, 0%);
+}
+
+#ring-control-right, #ring-control-left {
+    height: 5vh;
+    min-height: 30px;
+    max-height: 47px;
+    width: 5vh;
+    min-width: 30px;
+    max-width: 47px;
+    top: -50px;
 }
 
 #ring-control-left{
     position: fixed;
     border-color: rgba(0, 0, 0, 0);
-    top: -50px;
+    /* top: -50px; */
     left: -200px;
-    width: 34px;
-    height: 38px;
+    /* width: 34px;
+    height: 38px; */
     margin: auto;
     background: url('../images/white-arrow-icon-left.png');
+    background-size: 100%;
+    background-repeat: no-repeat;
 }
 #ring-control-left:hover {
     opacity: 0.5;
@@ -106,73 +125,36 @@
 #ring-control-right{
     position: fixed;
     border-color: rgba(0, 0, 0, 0);
-    top: -50px;
-    width: 34px;
+    /* top: -50px; */
     right: -200px;
-    height: 38px;
+    /* width: 34px; */
+    /* height: 38px; */
     margin: auto;
     background: url('../images/white-arrow-icon-right.png');
     transform: scaleX(-100%);
+    background-size: 100%;
+    background-repeat: no-repeat;
 }
 #ring-control-right:hover {
     opacity: 0.5;
-}
-
-/* tabs */
-#tab-area-container{
-    position: fixed;
-    top:30px;
-    padding: 0px;
-    right: 5%;
-    width: 20%;
-    text-align: justify;
-}
-
-#tab-area {
-    width: 100%;
-    height: 100%;
-    margin: 0px;
-}
-
-.tab-item{
-    position: relative;
-    width: 48%;
-    font-family: 'Oswald';
-    font-size: x-large;
-    color:gray;
-    background-color: rgba(0, 0, 0, 0);
-    border-color: rgba(0, 0, 0, 0);
-}
-.tab-item:hover {
-    color: white;
-}
-
-.tab-item.selected{
-    position: relative;
-    width: 48%;
-    color:white;
-    font-weight: bold;
-    font-family: 'Oswald';
-    /* font-size: xx-large; */
-    background-color: rgba(0, 0, 0, 0);
-    border-top: 0px solid rgba(247, 243, 243, 255);
-    border-left: 0px solid rgba(247, 243, 243, 255);
-    border-right: 0px solid rgba(247, 243, 243, 255);
-    border-bottom: 3px solid rgba(247, 243, 243, 255);
 }
 
 /* help overlay */
 #help-btn {
     display: none;
     position: fixed;
-    bottom: 50px;
+    bottom: 135%;
     left: 30px;
     border-style: none;
     background-color: rgba(0, 0, 0, 0);
 }
 #help-btn-img {
-    width: 34px;
-    height: 34px;
+    height: 3vh;
+    min-height: 25px;
+    max-height: 34px;
+    width: 3vh;
+    min-width: 25px;
+    max-width: 34px;
     background: url('../images/help-icon.png');
     background-size: 100% 100%;
     background-repeat: no-repeat;

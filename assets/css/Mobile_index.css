@@ -1,3 +1,32 @@
+/* landscape css */
+#landscape-page{
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('../images/bg_detailView.png');
+    background-size: 100% 100%;
+}
+
+#landscape-page h1{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* vars */
+:root {
+    --delta: calc(0.008 * 100vh);
+    --med-font-size: calc(var(--delta) + 2rem);
+    --large-font-size: calc(var(--delta) + 2rem);
+    --dropdown-font-size: 45px;
+    --scroll-area-height: 35%;
+    --overlay-area-height: 65%;
+  }
+  
 .hm-font {
     color: white;
     font-family: 'Oswald';

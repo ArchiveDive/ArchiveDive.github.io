@@ -1,9 +1,22 @@
 #sub-side-info-area{
+    display:none;
     position: fixed;
-    top: 20%;
-    width: 20%;
+    width: 30vw;
+    max-height: 60vh;
     right: 5%;
+    top: 50vh;
+    transform: translateY(-50%);
 }
+
+#sub-name-info{
+    font-size: var(--info-header-font-size);
+    font-weight: bold;
+    right: 0px;
+    margin-bottom: 5vh;
+}
+/* 
+#sub-achivement-info-area {
+} */
 
 #sub-achivement-info-header{
     display: none;
@@ -15,19 +28,16 @@
     padding-right: 20px;
     padding-bottom: 50px;
     overflow-x: hidden;
-}
-
-#sub-name-info{
-    font-size: 30px;
-    font-family: 'Oswald';
-    color:white;
-    right: 0px;
-    margin-bottom: 5%;
+    margin-bottom: 5vh;
+    font-size: var(--info-text-font-size);
 }
 
 #sub-fav-info-header{
     margin-top: 10px;
     margin-bottom: 10px;
+}
+#sub-go-to-archive-btn{
+    position: unset;
 }
 /* 
 #sub-go-to-archive-btn{
