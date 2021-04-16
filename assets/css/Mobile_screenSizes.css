@@ -1,8 +1,34 @@
 /* Tablets */
 @media screen and (min-device-width: 700px){
     :root {
-        --med-font-size: calc(var(--delta) + 1rem);
+        --med-font-size: 1.5rem;
+        --large-font-size: 2rem;
+
+        --filter-height: calc(var(--vh) * 10);
+        --filter-item-padding-y: calc(var(--filter-height) / 16);
+        --filter-item-padding-x: calc(var(--filter-height) / 4);
+        --selected-item-width: 20vw;
+        /* --filter-item-shift: 0px; */
+
+        --ring-ctrl-area-y: 35%;
+        --ring-ctrl-padding-x: 24%;
+        --dropdown-arrow-size-min: 20px;
+        --dropdown-arrow-size-max: 25px;
     }
+
+    #hm-logo {
+        width: 40vw;
+        height: 4vw;
+    }
+
+    .scroll-filter-body {
+        transform: translateX(5vw);
+    }
+
+    .dropdown-arrow-img {
+        right: 3%;
+    }
+    
 
     /* .scroll-filter-row {
         height: 180px;

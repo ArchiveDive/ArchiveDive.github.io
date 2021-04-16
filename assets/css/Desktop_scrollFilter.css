@@ -8,14 +8,14 @@
 
 /* dropdown */
 #filter-selector-1, #filter-selector-2 {
-    border: 2px solid;
-    border-image-slice: 1;
-    border-image-source: linear-gradient(180deg, rgba(50, 39, 37, 0.8) 0%, rgba(137, 136, 135, 0.8) 48.96%, rgba(29, 27, 63, 0.8) 100%);
-    background: rgb(30,30,30);
+    border: 2px solid rgba(200,200,200, 0.3);
+    border-radius: 0px;
+    background: var(--item-bkgd-color);
     padding: 0px;
-    width: 86%;
+    width: 84%;
     min-width: 10%;
     position: fixed;
+    text-align: left;
 }
 
 .dropdown-btn {
@@ -30,7 +30,7 @@
     display: inline-block !important;
     width:100%;
 
-    background: rgba(41, 41, 41, 0.37);
+    background: var(--item-bkgd-color);
     border-style: none;
 }
 
@@ -62,8 +62,8 @@
     max-height: 22px;
     right: 30px;
     top: 50%;
-    transform: translateY(-50%) rotate(90deg);
-    background: url('../images/white-arrow-icon-right.png');
+    transform: translateY(-50%);
+    background: var(--down-arrow-icon-url);
     background-size: 100%, 100%;
     background-repeat: no-repeat;
 }
@@ -102,10 +102,12 @@
     position: absolute;
     height: 100%;
     width: 70%;
-    background-color: rgba(41, 41, 41, 0.37);
+    /* background-color: rgba(41, 41, 41, 0.37); */
+    background-color: var(--item-bkgd-color)
 }
 .shuffle-btn:hover {
-    background-color: rgba(255, 255, 255, 0.1);
+    /* background-color: rgba(255, 255, 255, 0.1); */
+    background-color: var(--hover-bkgd-color);
 }
 
 .shuffle-btn-img {
@@ -116,7 +118,7 @@
     width: 5vh;
     min-width: 30px;
     max-width: 50px;
-    background-image: url('../images/shuffle.png');
+    background-image: var(--shuffle-icon-url);
     background-size: 70%;
     background-repeat: no-repeat;
     background-position: center;
@@ -160,23 +162,29 @@
     padding: 0px;
 }
 .scroll-btn-img-left {
-    background: url('../images/white-arrow-icon-left.png');
+    background: var(--left-arrow-icon-url);
     background-size: 100%;
     background-repeat: no-repeat;
 }
 
 .scroll-btn-img-right {
-    background: url('../images/white-arrow-icon-right.png');
+    background: var(--right-arrow-icon-url);
     background-size: 100%;
     background-repeat: no-repeat;
 }
 .scroll-btn-img-right, .scroll-btn-img-left {
-    height: 3.5vh;
+    /* height: 3.5vh;
     min-height: 23px;
     max-height: 30px;
     width: 3vh;
     min-width: 20px;
-    max-width: 27px;
+    max-width: 27px; */
+    height: var(--scroll-arrow-size);
+    min-height: var(--scroll-arrow-size-min);
+    max-height: var(--scroll-arrow-size-max);
+    width: var(--scroll-arrow-size);
+    min-width: var(--scroll-arrow-size-min);
+    max-width: var(--scroll-arrow-size-max);
     margin: auto;
     margin-top: -3px;
 }
@@ -184,36 +192,41 @@
 /* style the center */
 .scroll-btn, .scroll-filter-container {
     /* display: none !important; */
-    background: rgba(41, 41, 41, 0.37) !important;
+    /* background: rgba(41, 41, 41, 0.37) !important; */
+    background-color: var(--item-bkgd-color);
     border-style: none;
 }
 
 /* TODO cleanup */
-#scroll-filter-go-right-btn-1, #scroll-filter-go-right-btn-2, .scroll-filter-container {
+/* #scroll-filter-go-right-btn-1, #scroll-filter-go-right-btn-2, .scroll-filter-container {
     border-style: none;
 }
 
 #scroll-filter-go-left-btn-1, #scroll-filter-go-left-btn-2, .scroll-filter-container {
     border-style: none;
-}
+} */
 
 
 /* hover */
 .dropdown-btn:hover {
-    background-color: rgba(255, 255, 255, 0.12);
+    /* background-color: rgba(255, 255, 255, 0.12); */
+    background-color: var(--hover-bkgd-color);
 }
 .scroll-btn:hover {
-    background-color: rgba(255, 255, 255, 0.12) !important;
+    /* background-color: rgba(255, 255, 255, 0.12) !important; */
+    background-color: var(--hover-bkgd-color) !important;
 }
 .scroll-filter-item-selected:hover {
     cursor: context-menu; /* avoid type cursor */
 }
 .scroll-filter-item:hover {
-    background: rgba(255, 255, 255, 0.08);
+    /* background: rgba(255, 255, 255, 0.08); */
+    background-color: var(--hover-bkgd-color);
     cursor: pointer;
 }
 .dropdown-filter-option:hover {
-    background-color: rgba(255, 255, 255, 0.08);
+    /* background-color: rgba(255, 255, 255, 0.08); */
+    background-color: var(--hover-bkgd-color);
 }
 
 /* custom columns */

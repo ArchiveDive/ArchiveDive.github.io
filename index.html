@@ -17,12 +17,11 @@
 
     <!-- libraries -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.6.0/jquery.js"></script>
+    <script id="jq-script" src="https://cdn.bootcdn.net/ajax/libs/jquery/3.6.0/jquery.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
     <!-- CSS -->
-    <link rel="stylesheet" href="assets/css/loadingPage.css">
     <link id="css-index" rel="stylesheet">
     <link id="css-scrollFilter" rel="stylesheet">
     <link id="css-overlayUI" rel="stylesheet">
@@ -34,17 +33,44 @@
 </head>
 
 <body>
-    <div id = "loading-page">
-        <h1 style="color:white;">Loading ...</h1>
+    <!--to eliminate the latency of css file loading, put the style here directly-->
+    <style>
+        #loading-page {
+            position: fixed;
+            z-index: 1;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url('../images/bg_detailView.png');
+            background-size: 100% 100%;
+        }
+
+        #loading-page h1 {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+        }
+    </style>
+
+    <div id="loading-page">
+        <!-- <h1 style="color:white;">Loading ...</h1> -->
+        <div id="loading-page-startwords" style="color:white; font-size:100px">Placeholder of Introduce words... </div>
+        <div id="loading-page-processbar" style="display:none; color:white; font-size:100px">Placeholder of
+            ProcessBar...HistoryMaker 3000+ </div>
     </div>
 
-    <div id = "landscape-page" style="display:none">
+    <!-- loading page scripts -->
+    <script src='./loadingPage.js'></script>
+
+    <div id="landscape-page" style="display:none">
         <h1 style="color:white;">Please rotate your phone</h1>
     </div>
 
     <!--scene-->
     <div id="scene-root">
-        <div id="scene-canvas"></div>
+        <div id="scene-canvas" style="display:none"></div>
     </div>
 
     <!--overlay UI -->
@@ -54,7 +80,7 @@
         <!--overlay UI : detail view-->
         <div id="detailview-overlay-UI">
 
-            <button id="explore-more-btn" class="digital-archive-btn">
+            <button id="explore-more-btn" class="custom-btn">
                 Explore more
             </button>
 
@@ -91,10 +117,10 @@
                             </div>
                         </div>
                     </div>
-                    <button id="go-to-archive-btn" class="digital-archive-btn">
+                    <button id="go-to-archive-btn" class="digital-archive-btn custom-btn">
                         Learn More
+                        <span class="tooltip-text">Opens in new tab</span>
                     </button>
-                    <div class="go-to-archive-hover-popup">Opens in new tab</div>
                 </div>
 
                 <div id="ring-control-area">
@@ -118,7 +144,9 @@
                         </div>
                     </div>
                     <!-- region filter help buttons -->
-                    <button id="help-btn"><div id="help-btn-img"></div></button>
+                    <button id="help-btn">
+                        <div id="help-btn-img"></div>
+                    </button>
                     <!--go left btn -->
                     <button id="scroll-filter-go-left-btn-1" class="col-1 btn btn-primary scroll-btn">
                         <div class="scroll-btn-img-left"></div>
@@ -174,7 +202,9 @@
             <!-- region filter help overlay -->
             <div id="help-overlay">
                 <div id="region-map"></div>
-                <button id="close-help-overlay-btn"><div id="close-help-overlay-btn-img"></div></button>
+                <button id="close-help-overlay-btn">
+                    <div id="close-help-overlay-btn-img"></div>
+                </button>
             </div>
         </div>
 
@@ -185,7 +215,7 @@
                 <h2 class="match-title"><span id="overview-match-title"></span></h2>
             </div>
             <div id="viz-control-area">
-                <h3 id="viz-header">Explore By</h3> 
+                <h3 id="viz-header">Explore By</h3>
                 <div>
                     <button id="viz-color-btn" class="viz-btn">Favorite Color</button>
                 </div>
@@ -229,7 +259,6 @@
             </div>
         </div>
 
-
         <!--overlay UI :  subsetview-->
         <div id="subsetview-overlay-UI">
             <div class="title-area">
@@ -242,7 +271,6 @@
 
             <!--hm info -->
             <div id="sub-side-info-area">
-                <div class="go-to-archive-hover-popup">Opens in new tab</div>
                 <div class="header-dash-line"></div>
                 <div id="sub-name-info"></div>
                 <div id="sub-achivement-info-area">
@@ -250,8 +278,9 @@
                     <div id="sub-short-bio" class="hm-font-light fade-bottom"> </div>
                     <div id="sub-info-area-break"></div>
                 </div>
-                <button id="sub-go-to-archive-btn" class="digital-archive-btn">
+                <button id="sub-go-to-archive-btn" class="digital-archive-btn custom-btn">
                     Learn More
+                    <span class="tooltip-text">Opens in new tab</span>
                 </button>
             </div>
         </div>

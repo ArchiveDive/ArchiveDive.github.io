@@ -2,7 +2,10 @@
 #explore-more-btn{
     position: fixed;
     bottom: 30%;
-    left: 30%;
+    transform: translateX(-50%);
+    left: var(--main-content-position-left);
+    padding-left: 3vw;
+    padding-right: 3vw;
 }
 
 #overlay-root {
@@ -21,7 +24,7 @@
     text-align: center;
     color: #dfdfdf;
     bottom: 20vh;
-    left: 50%;
+    left: var(--main-content-position-left);
     transform: translate(-50%, 0%);
     font-size: var(--match-num-font-size);
     width: 80vw;
@@ -31,7 +34,7 @@
     position: fixed;
     width: 100%;
     height: 100%;
-    background-image: url('../images/bg_detailView.png');
+    background-image: var(--bkgd-img-url);
     background-size: 100% 100%;
 }
 
@@ -66,6 +69,7 @@
     padding-right: 20px;
     padding-bottom: 50px;
     overflow-x: hidden;
+    overflow-y: hidden; /* disables scroll */
 }
 
 #fav-info-area {
@@ -91,30 +95,27 @@
 /* ring arrows */
 #ring-control-area{
     position: fixed;
-    left: 50%;
-    bottom:30%;
+    left: var(--main-content-position-left);
+    bottom: 30%;
     transform: translate(-50%, 0%);
 }
 
 #ring-control-right, #ring-control-left {
-    height: 5vh;
-    min-height: 30px;
-    max-height: 47px;
-    width: 5vh;
-    min-width: 30px;
-    max-width: 47px;
+    height: var(--ring-arrow-size);
+    min-height: var(--ring-arrow-size-min);
+    max-height: var(--ring-arrow-size-max);
+    width: var(--ring-arrow-size);
+    min-width: var(--ring-arrow-size-min);
+    max-width: var(--ring-arrow-size-max);
     top: -50px;
 }
 
 #ring-control-left{
     position: fixed;
     border-color: rgba(0, 0, 0, 0);
-    /* top: -50px; */
-    left: -200px;
-    /* width: 34px;
-    height: 38px; */
+    left: var(--ring-ctrl-padding-x);
     margin: auto;
-    background: url('../images/white-arrow-icon-left.png');
+    background: var(--left-arrow-icon-url);
     background-size: 100%;
     background-repeat: no-repeat;
 }
@@ -125,18 +126,16 @@
 #ring-control-right{
     position: fixed;
     border-color: rgba(0, 0, 0, 0);
-    /* top: -50px; */
-    right: -200px;
-    /* width: 34px; */
-    /* height: 38px; */
+    right: var(--ring-ctrl-padding-x);
     margin: auto;
-    background: url('../images/white-arrow-icon-right.png');
+    background: var(--right-arrow-icon-url);
     transform: scaleX(-100%);
     background-size: 100%;
     background-repeat: no-repeat;
 }
 #ring-control-right:hover {
-    opacity: 0.5;
+    background-color: var(--hover-bkgd-color);
+    outline: 5px solid var(--hover-bkgd-color);
 }
 
 /* help overlay */
@@ -155,7 +154,7 @@
     width: 3vh;
     min-width: 25px;
     max-width: 34px;
-    background: url('../images/help-icon.png');
+    background: var(--help-icon-url);
     background-size: 100% 100%;
     background-repeat: no-repeat;
 }
@@ -171,7 +170,7 @@
 #close-help-overlay-btn-img {
     width: 30px;
     height: 30px;
-    background: url('../images/white-x-icon.png');
+    background: var(--close-icon-url);
     background-size: 100% 100%;
     background-repeat: no-repeat;
 }
@@ -195,7 +194,7 @@
     top: 50%;
     transform: translate(-50%, -50%);
     position: fixed;
-    background: url('../images/map-placeholder.png');
+    background: var(--region-map-url);
     background-size: 100%;
     background-repeat: no-repeat;
 }

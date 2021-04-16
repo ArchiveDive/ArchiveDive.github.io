@@ -1,6 +1,9 @@
 
 /* pseudo mobile */
 @media screen and (max-width: 880px) {
+    :root {
+        --ring-ctrl-padding-x: -200px;
+    }
     #scroll-filter-row {
         height: 10vh;
     }
@@ -67,6 +70,9 @@
 /* Small screens, Symmetrical layout --> asymmetrical */
 /* 800px */
 @media screen and (min-width: 55.0em) {
+    :root {
+        --main-content-position-left: 31%;
+    }
     #hm-logo {
         left: 1.5%;
         transform: none;
@@ -76,11 +82,11 @@
     }
     #match-number {
         width: 50vw;
-        left: 31%;
+        /* left: 31%; */
     }
-    #ring-control-area {
+    /* #ring-control-area {
         left: 31%;
-    }
+    } */
     #scene-canvas.overview {
         left: -10%;
         top: 5%;
@@ -137,6 +143,9 @@
 
 /* medium screen */
 @media screen and (min-width: 1200px) {
+    :root {
+        --main-content-position-left: 37%;
+    }
     #scene-canvas.detailview {
         left: -13%;
     }
@@ -144,9 +153,9 @@
         left: -10%;
     }
     /* overlay ui */
-    #match-number, #ring-control-area {
+    /* #match-number, #ring-control-area {
         left: 37%;
-    }
+    } */
     #side-info-area, #sub-side-info-area, #tab-area-container {
         width: 25vw;
     }

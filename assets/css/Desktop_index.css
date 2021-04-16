@@ -15,7 +15,33 @@
     --filters-width-3: 58.333333%;
     --dropdown-width-3: 16.666667%;
 
+    --ring-ctrl-padding-x: -20vw;
+    --main-content-position-left: 50%;
+
+    /* element colors */
     --off-white: #dfdfdf;
+    --item-bkgd-color: #221E29;
+    --hover-bkgd-color: #37353B;
+    --tooltip-bkgd-color: #555;
+
+    /* image sizes */
+    --ring-arrow-size: 4vh;
+    --ring-arrow-size-min: 35px;
+    --ring-arrow-size-max: 54px;
+    
+    --scroll-arrow-size: 2.5vh;
+    --scroll-arrow-size-min: 15px;
+    --scroll-arrow-size-max: 27px;
+
+    /* images */
+    --bkgd-img-url: url('../images/bg_detailView.png');
+    --down-arrow-icon-url: url('../images/white-arrow-icon-down.svg');
+    --left-arrow-icon-url: url('../images/grey-arrow-icon-left.svg');
+    --right-arrow-icon-url: url('../images/grey-arrow-icon-right.svg');
+    --shuffle-icon-url: url('../images/grey-shuffle-icon.svg');
+    --help-icon-url: url('../images/grey-help-icon.svg');
+    --close-icon-url: url('../images/white-x-icon.svg');
+    --region-map-url: url('../images/map-placeholder.png');
 }
 
 body {
@@ -211,17 +237,12 @@ canvas.overview {
     display: none;
 }
 
-/* go to digital archive button */
-.digital-archive-btn{
+.custom-btn {
     position: fixed;
-    width: 13vw;
-    min-width: 190px;
-    max-width: 200px;
     height: 5vh;
     min-height: 40px;
     max-height:50px;
-    bottom: 0px;
-    color: white;
+    color: var(--off-white);
     font-family: 'Oswald';
     font-weight: bold;
     font-size: var(--button-size);
@@ -230,30 +251,54 @@ canvas.overview {
     background-color: #3B363F;
     box-shadow: 0px 4px 4px rgb(0 0 0 / 25%) !important;
 }
-.digital-archive-btn:hover {
+.custom-btn:hover {
     background: linear-gradient(90deg, #2E2D6F 0%, #682052 100%);
 }
-/* dialog popup */
-.digital-archive-btn:hover + div {
-    opacity: 1.0;
+
+/* go to digital archive button */
+.digital-archive-btn{
+    width: 13vw;
+    min-width: 190px;
+    max-width: 200px;
+    bottom: 0px;
 }
 
-/* Go to archive popup */
-.go-to-archive-hover-popup {
-    opacity: 0.0;
-    width: 200px;
+.digital-archive-btn .tooltip-text {
+    visibility: hidden;
+    width: 13vw;
+    min-width: 190px;
+    max-width: 200px;
+    background-color: var(--tooltip-bkgd-color);
+    color: var(--off-white);
     text-align: center;
-    position: fixed;
-    color: white;
-    position: fixed;
-    bottom: 3.5rem;
-    padding: 0.5rem;
+    border-radius: 6px;
+    padding: 5px 0;
     font-family: 'Source Sans Pro';
-    font-style: normal;
-    font-size: var(--button-size);
-    background-color: rgba(100,100,100);
-}
+    font-weight: normal;
+    font-size: var(--info-text-font-size);
 
+    /* Position the tooltip */
+    position: absolute;
+    z-index: 1;
+    bottom: 130%;
+    left: 50%;
+    transform: translatex(-50%);
+}
+/* decoration */
+.tooltip-text:after {
+    content: ' ';
+    position: absolute;
+    width: 0;
+    height: 0;
+    left: 50%;
+    bottom: -70%;
+    transform: translateX(-50%);
+    border: 1rem solid;
+    border-color: #555 transparent transparent transparent;
+}  
+.digital-archive-btn:hover .tooltip-text {
+    visibility: visible;
+}
 
 /* Reference (remove later)
 0% = #00

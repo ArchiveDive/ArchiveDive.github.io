@@ -14,9 +14,6 @@
     right: 0px;
     margin-bottom: 5vh;
 }
-/* 
-#sub-achivement-info-area {
-} */
 
 #sub-achivement-info-header{
     display: none;
@@ -37,7 +34,7 @@
     margin-bottom: 10px;
 }
 #sub-go-to-archive-btn{
-    position: unset;
+    position: relative;
 }
 /* 
 #sub-go-to-archive-btn{
