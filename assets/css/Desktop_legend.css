@@ -1,5 +1,6 @@
 /* Legend */
-#legend-season {
+/* TODO swtich from screen sizes to variables ?  */
+.legend {
     display: none;
 }
 
@@ -9,14 +10,21 @@
 
 .legend {
     position: fixed;
-    bottom: 10vh;
-    left: 10vh;
+    /* bottom: var(--legend-y);
+    left: var(--legend-x);
+    width: var(--legend-width);
+    text-align: var(--legend-align); */
+    bottom: 30vh;
+    /* left: 50vw; */
+    width: 100%;
+    text-align: center;
+    /* transform: translateX(50%); */
 }
 
 .legend-square {
     display: inline-block;
-    width: 10px;
-    height: 10px;
+    width: var(--legend-square-size);
+    height: var(--legend-square-size);
     transform: translateY(-25%);
 }
 
@@ -27,6 +35,8 @@
 }
 
 .legend-line {
+    display: inline-block;
+    padding: 2%;
 }
 
 #legend-fall { background-color: orange; }

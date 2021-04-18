@@ -1,12 +1,17 @@
 :root {
+    /* font sizes */
     --delta: calc(0.008 * 100vh);
     --dropdown-font-size: calc(var(--delta) + 0.8rem);
     --filter-item-font-size: calc(var(--delta) + 0.8rem);
     --info-header-font-size: calc(var(--delta) + 1rem);
     --info-text-font-size: calc(0.01 * 100vh + 0.6rem);
-    --button-size: calc(var(--delta) + 0.9rem);
+    --button-font-size: calc(var(--delta) + 0.9rem);
     --match-num-font-size: calc(var(--delta) + 1.2rem);
     --tab-font-size: calc(var(--delta) + 1.2rem);
+
+    /* element sizes */
+    --side-info-width: 30vw;
+    --side-info-x: 5%;
 
     --filters-width-1: 50%;
     --dropdown-width-1: 25%;
@@ -15,14 +20,57 @@
     --filters-width-3: 58.333333%;
     --dropdown-width-3: 16.666667%;
 
-    --ring-ctrl-padding-x: -20vw;
+    --btn-height: 5vh;
+    --btn-height-min: 40px;
+    --btn-height-max: 50px;
+
+    --da-btn-width: 13vw;
+    --da-btn-width-min: 190px;
+    --da-btn-width-max: 200px;
+
+    --close-icon-size: 30px;
+
+    --viz-ctrl-area-width: 100%;
+    --viz-btn-width: 13vw;
+
+    --legend-width: auto;
+
+
+    /* element positions and padding */
     --main-content-position-left: 50%;
+
+    --ring-ctrl-y: 35%;
+    --ring-ctrl-padding-x: -20vw;
+
+    --match-num-y: calc( (5*5vh) + (3*1.25em));
+    --filter-title-y: 13%;
+
+    --viz-ctrl-area-y: 4%;
+    --viz-ctrl-area-x: auto;
+
+    --explore-more-btn-y: 86%;
+    --explore-more-btn-padding-x: 3vw;
+
+    --back-btn-y: 13%;
+    --back-btn-x: 3%;
+
+    --da-btn-y: 0%;
+    --sub-da-btn-y: 0%;
+
+    --filter-item-padding-y: 0.5vh;
+
+    --legend-y: 10vh;
+    --legend-x: 10vh;
+    --legend-square-size: 10px;
 
     /* element colors */
     --off-white: #dfdfdf;
+    --info-text-color: #FEFEFEC4;
     --item-bkgd-color: #221E29;
     --hover-bkgd-color: #37353B;
     --tooltip-bkgd-color: #555;
+    --btn-bkgd-color: #3B363F;
+    --gradient-color: linear-gradient(90deg, #2E2D6F 0%, #682052 100%);
 
     /* image sizes */
     --ring-arrow-size: 4vh;
@@ -33,20 +81,46 @@
     --scroll-arrow-size-min: 15px;
     --scroll-arrow-size-max: 27px;
 
+    --hm-logo-width: 20vw;
+    --hm-logo-height: 5vh;
+    --hm-logo-width-min: 200px;
+    --hm-logo-width-max: 300px;
+    --hm-logo-height-min: 20px;
+    --hm-logo-height-max: 30px;
+    
+    --help-icon-size: 3vh;
+    --help-icon-size-min: 25px;
+    --help-icon-size-max: 30px;
+
+    --dropdown-arrow-size: 2.5vh;
+    --dropdown-arrow-size-min: 15px;
+    --dropdown-arrow-size-max: 24px;
+
+    --shuffle-icon-size: 5vh;
+    --shuffle-icon-size-min: 30px;
+    --shuffle-icon-size-max: 50px;
+
+    --back-icon-size: 48px;
+
     /* images */
     --bkgd-img-url: url('../images/bg_detailView.png');
     --down-arrow-icon-url: url('../images/white-arrow-icon-down.svg');
     --left-arrow-icon-url: url('../images/grey-arrow-icon-left.svg');
     --right-arrow-icon-url: url('../images/grey-arrow-icon-right.svg');
+    --back-icon-url: url('../images/white-arrow-icon-left.svg');
     --shuffle-icon-url: url('../images/grey-shuffle-icon.svg');
     --help-icon-url: url('../images/grey-help-icon.svg');
     --close-icon-url: url('../images/white-x-icon.svg');
     --region-map-url: url('../images/map-placeholder.png');
+
+    /* misc */
+    --legend-display: block;
+    --legend-align: left;
 }
 
 body {
     font-family: 'Oswald';
-    color: #dfdfdf;
+    color: var(--off-white);
 }
 
 h2 {
@@ -54,8 +128,10 @@ h2 {
 }
 
 /* override bootstrap */
-.btn {
+.btn, button {
     border-radius: 0px;
+    border-style: none;
+    background-color: rgba(0, 0, 0, 0);
 }
 /* .btn:focus, .dropdown-btn:focus {
     outline-style: none;
@@ -63,22 +139,28 @@ h2 {
     border-color: transparent;
 } */
 
-/* elements */
+/* canvas */
+#scene-root {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-image: var(--bkgd-img-url);
+    background-size: 100% 100%;
+}
+
 #scene-canvas {
     position: absolute;
     width: 100%;
     height: 100%;
 }
-
 #scene-canvas.detailview {
     position: absolute;
     bottom: 40%;
     max-width: 80%;
 }
-
 #scene-canvas.overview {
     position: absolute;
-    transform: scale(0.8);
+    transform: scale(0.6) translateY(-9%);
     left: 0%;
 }
 
@@ -91,213 +173,6 @@ canvas.detailview {
 canvas.overview {
     bottom: 50%;
     transform: translateY(50%);
-}
-
-#hm-logo {
-    position: fixed;
-    left: 50%;
-    transform: translateX(-50%);
-    top: 3%;
-    width: 20vw;
-    height: 5vh;
-    min-width: 200px;
-    max-width: 300px;
-    max-height: 30px;
-    background-image: url('../logos/thm-logo-grey.svg');
-    background-size: 100%, 100%;
-    background-repeat: no-repeat;
-}
-
-/* tabs */
-#tab-area-container{
-    position: fixed;
-    top: 6%;
-    padding: 0px;
-    right: 50%;
-    transform: translateX(50%);
-    width: 50%;
-    text-align: justify;
-}
-#tab-area {
-    width: 100%;
-    height: 100%;
-    margin: 0px;
-}
-
-.tab-item{
-    position: relative;
-    width: 48%;
-    font-family: 'Oswald';
-    font-size: var(--tab-font-size);
-    color: #A687C664;
-    background-color: rgba(0, 0, 0, 0);
-    border-color: rgba(0, 0, 0, 0);
-    font-weight: bold;
-}
-.tab-item:hover {
-    color: white;
-    background-color: rgba(255, 255, 255, 0.15);
-}
-
-.tab-item.selected{
-    position: relative;
-    width: 48%;
-    color: #A687C6;
-    background-color: rgba(0, 0, 0, 0);
-    border-style: none;
-    border-bottom: 3px solid #A687C6;
-}
-
-/* Fonts */
-.font-bold{
-    font-weight:bold;
-}
-
-.hm-font-light{
-    color: white;
-    font-family: 'Source Sans Pro'; 
-    font-style: normal;
-    font-size: large;
-    /* font-weight: lighter; */
-}
-/* 
-.hm-font {
-    color: white;
-    font-family: 'Oswald';
-    font-style: normal;
-    font-size: 24px;
-} */
-
-.hm-font-bold {
-    color: white;
-    font-family: 'Oswald';
-    font-weight: bold;
-    font-size: 18px;
-}
-
-
-.hm-font-xlarge {
-    color: white;
-    font-family: 'Oswald';
-    font-size: x-large;
-    font-style: normal;
-}
-
-
-.hm-font-xxlarge {
-    color: white;
-    font-family: 'Oswald';
-    font-size: xx-large;
-    font-style: normal;
-}
-
-.hm-font-large {
-    color: white;
-    font-family: 'Oswald';
-    font-size: large;
-    font-style: normal;
-}
-
-/* Styles */
-
-/* limited browser support*/
-.fade-bottom {
-    -webkit-mask-image: -webkit-gradient(linear, center top, center bottom, 
-        color-stop(0.75,  rgba(0,0,0,1)),
-        color-stop(1.00,  rgba(0,0,0,0)));
-    mask-image: -webkit-gradient(linear, center top, center bottom, 
-        color-stop(0.75,  rgba(0,0,0,1)),
-        color-stop(1.00,  rgba(0,0,0,0)));
-}
-
-/* Scrollbar */
-/* width */
-::-webkit-scrollbar {
-    width: 7px;
-} 
-/* Track */
-::-webkit-scrollbar-track {
-    /* background: #f1f1f1;  */
-    background: rgba(100, 100, 100, 0.37);
-    border-radius: 10px;
-}
-/* Handle */
-::-webkit-scrollbar-thumb {
-    background: #888; 
-    border-radius: 10px;
-}
-/* Handle on hover */
-::-webkit-scrollbar-thumb:hover {
-    background: #555; 
-}
-
-
-/* dash line */
-.header-dash-line {
-    display: none;
-}
-
-.custom-btn {
-    position: fixed;
-    height: 5vh;
-    min-height: 40px;
-    max-height:50px;
-    color: var(--off-white);
-    font-family: 'Oswald';
-    font-weight: bold;
-    font-size: var(--button-size);
-    border-radius: 0px;
-    border-style: none;
-    background-color: #3B363F;
-    box-shadow: 0px 4px 4px rgb(0 0 0 / 25%) !important;
-}
-.custom-btn:hover {
-    background: linear-gradient(90deg, #2E2D6F 0%, #682052 100%);
-}
-
-/* go to digital archive button */
-.digital-archive-btn{
-    width: 13vw;
-    min-width: 190px;
-    max-width: 200px;
-    bottom: 0px;
-}
-
-.digital-archive-btn .tooltip-text {
-    visibility: hidden;
-    width: 13vw;
-    min-width: 190px;
-    max-width: 200px;
-    background-color: var(--tooltip-bkgd-color);
-    color: var(--off-white);
-    text-align: center;
-    border-radius: 6px;
-    padding: 5px 0;
-    font-family: 'Source Sans Pro';
-    font-weight: normal;
-    font-size: var(--info-text-font-size);
-
-    /* Position the tooltip */
-    position: absolute;
-    z-index: 1;
-    bottom: 130%;
-    left: 50%;
-    transform: translatex(-50%);
-}
-/* decoration */
-.tooltip-text:after {
-    content: ' ';
-    position: absolute;
-    width: 0;
-    height: 0;
-    left: 50%;
-    bottom: -70%;
-    transform: translateX(-50%);
-    border: 1rem solid;
-    border-color: #555 transparent transparent transparent;
-}  
-.digital-archive-btn:hover .tooltip-text {
-    visibility: visible;
 }
 
 /* Reference (remove later)

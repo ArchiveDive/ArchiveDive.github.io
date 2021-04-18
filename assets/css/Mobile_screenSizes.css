@@ -3,6 +3,7 @@
     :root {
         --med-font-size: 1.5rem;
         --large-font-size: 2rem;
+        --match-num-font-size:  calc(var(--delta) + 1rem);
 
         --filter-height: calc(var(--vh) * 10);
         --filter-item-padding-y: calc(var(--filter-height) / 16);

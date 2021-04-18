@@ -1,5 +1,5 @@
 // if onloading is actually finished, decide if wait for the animiton to finished too
-let waitForAnimation = true;
+let waitForAnimation = false;
 
 let isLoadingReady = false;
 let isAnimationFinished = false;

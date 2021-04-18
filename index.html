@@ -124,8 +124,8 @@
                 </div>
 
                 <div id="ring-control-area">
-                    <button id="ring-control-left"> </button>
-                    <button id="ring-control-right"> </button>
+                    <button id="ring-control-left" class="ring-arrow"> </button>
+                    <button id="ring-control-right" class="ring-arrow"> </button>
                 </div>
             </div>
 
@@ -210,6 +210,8 @@
 
         <!--overlay UI :  overview-->
         <div id="overview-overlay-UI">
+            <button id = "overview-home-btn" class="home-btn custom-btn">HOME</button>
+
             <div class="title-area">
                 <h2 class="filter-title"><span id="overview-filter-title"></span></h2>
                 <h2 class="match-title"><span id="overview-match-title"></span></h2>
@@ -228,11 +230,11 @@
             </div>
 
             <button id="back-to-detailview-btn" class="back-btn">
-                <div class="back-arrow-img"></div>Back
+                <div class="back-arrow-img"></div><span class="back-btn-text">Back</span>
             </button>
 
             <button id="back-to-overview-btn" class="back-btn">
-                <div class="back-arrow-img"></div>Back
+                <div class="back-arrow-img"></div><span class="back-btn-text">Back</span>
             </button>
 
             <div id="legend-season" class="legend">
@@ -261,6 +263,8 @@
 
         <!--overlay UI :  subsetview-->
         <div id="subsetview-overlay-UI">
+            <button id = "subsetview-home-btn" class="home-btn">HOME</button>
+
             <div class="title-area">
                 <h2 class="filter-title"><span id="subsetview-filter-title"></span></h2>
                 <h2 class="match-title"><span id="subsetview-match-title"></span></h2>
@@ -275,7 +279,7 @@
                 <div id="sub-name-info"></div>
                 <div id="sub-achivement-info-area">
                     <h2 id="sub-achivement-info-header" class="hm-font">Biography </h2>
-                    <div id="sub-short-bio" class="hm-font-light fade-bottom"> </div>
+                    <div id="sub-short-bio" class="hm-info-box fade-bottom"> </div>
                     <div id="sub-info-area-break"></div>
                 </div>
                 <button id="sub-go-to-archive-btn" class="digital-archive-btn custom-btn">
