@@ -35,16 +35,12 @@
     font-size: var(--match-num-font-size);
     width: 80vw;
 }
-
-/* limited browser support*/
-/* .fade-bottom {
-    -webkit-mask-image: -webkit-gradient(linear, center top, center bottom, 
-        color-stop(0.75,  rgba(0,0,0,1)),
-        color-stop(1.00,  rgba(0,0,0,0)));
-    mask-image: -webkit-gradient(linear, center top, center bottom, 
-        color-stop(0.75,  rgba(0,0,0,1)),
-        color-stop(1.00,  rgba(0,0,0,0)));
-} */
+/* hover thumbnail to see name */
+.subset-hover-name {
+    color: var(--off-white);
+    font-size: var(--button-font-size);
+    background-color: rgba(0, 0, 0, 0.5);
+}
 
 /* Scrollbar */
 ::-webkit-scrollbar { /* width */

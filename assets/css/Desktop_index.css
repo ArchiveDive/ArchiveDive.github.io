@@ -133,6 +133,9 @@ h2 {
     border-style: none;
     background-color: rgba(0, 0, 0, 0);
 }
+button:focus {
+    outline-style: none;
+}
 /* .btn:focus, .dropdown-btn:focus {
     outline-style: none;
     box-shadow: none;

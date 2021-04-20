@@ -9,16 +9,6 @@
     top: 6%;
     left: 50%;
     transform: translateX(-50%); 
-    /* height: 5vh;
-    min-height: 40px;
-    max-height: 55px; */
-    /* margin-top: 1vh; */
-    /* padding: 10px; */
-    /* background-color: #3B363F; */
-    /* border-style: none; */
-    /* font-weight: bold; */
-    /* font-size: var(--button-font-size); */
-    /* color: var(--off-white); */
 }
 .home-btn:hover, .home-btn-selected {
     background: var(--gradient-color)
@@ -89,6 +79,9 @@
 .back-btn:hover {
     opacity: 0.7;
 }
+button.back-btn{
+    overflow: unset;
+}
 .back-arrow-img {
     display: inline-block;
     width: var(--back-icon-size);
@@ -99,7 +92,6 @@
     top: 50%;
     transform: translateY(-50%);
 }
-
 .back-btn-text {
     display: none;
     position: absolute;
