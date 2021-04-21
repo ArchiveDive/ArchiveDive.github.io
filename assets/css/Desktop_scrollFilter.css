@@ -3,7 +3,7 @@
     position: fixed;
     bottom: 0px;
     width: 100vw;
-    z-index: 1;
+    /* z-index: 1; */
 }
 
 /* dropdown */
@@ -43,11 +43,11 @@
 }
 
 #filter-selector-1, #filter-selector-2 {
-    border: 2px solid rgba(200,200,200, 0.3);
-    border-bottom: 0px;
     border-radius: 0px;
+    border-style: none;
     background: var(--item-bkgd-color);
     padding: 0px;
+    margin: 0px;
     width: calc(100% - 40px);
     min-width: 10%;
     position: fixed;
@@ -55,15 +55,14 @@
 }
 
 .dropdown-filter-option{
-    border-color: rgba(200,200,200, 0.3);
     border-style: none;
-    border-bottom-style: solid;
     width: 100%;
     color: white;
     font-family: 'Oswald';
     font-style: normal;
     font-size: var(--dropdown-font-size);
-    padding: 10px 0;
+    padding: 10px 20px;
+    text-align: left;
 }
 
 /* scroll */

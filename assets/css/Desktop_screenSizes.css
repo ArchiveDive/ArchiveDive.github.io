@@ -63,17 +63,11 @@
 @media screen and (min-width: 55.0em) {
     :root {
         --main-content-position-left: 31%;
-        --match-num-y: 20vh;
-        --explore-more-btn-y: 30vh;
+        --match-num-y: 28vh;
+        --explore-more-btn-y: 20vh;
         --viz-ctrl-area-x: 5%;
         --viz-ctrl-area-width: 20%;
-    }
-    .home-btn {
-        top: 20%;
-        width: 7vw;
-        top: calc( var(--back-btn-y) + 5%);
-        left: var(--back-btn-x);
-        transform: unset;
+        --legend-square-size: 10px;
     }
     #hm-logo {
         left: 1.5%;
@@ -87,13 +81,6 @@
         left: -10%;
         top: 5%;
     }
-    #match-number {
-        width: 50vw;
-    }
-    .title-area {
-        width: 50%;
-        left: 40%;
-    }
     
     /* Scroll filters */
     .scroll-btn, .scroll-filter-container {
@@ -106,23 +93,38 @@
         min-width: unset;
     }
 
-    /* Overlay UI */
+    /* Overlay and Overview UI */
     #side-info-area {
-        top: 50vh;
-        height: 60vh;
+        /* top: 50vh; */
+        /* height: 60vh; */
+        top: 45vh;
         transform: translateY(-50%);
     }
     #sub-side-info-area {
-        top: 50vh;
-        max-height: 60vh;
+        /* top: 50vh; */
+        /* max-height: 60vh; */
+        top: 45vh;
         transform: translateY(-50%);
     }
     #achivement-info-area, #fav-info-area {
-        display:block;
+        display: inline-block;
     }
-
+    #go-to-archive-btn, #sub-go-to-archive-btn {
+        bottom: unset;
+        margin-top: 5%;
+        position: relative;
+    }
+    #match-number {
+        width: 50vw;
+    }
+    .title-area {
+        width: 50%;
+        left: 40%;
+    }
+    .back-btn-text {
+        display: block;
+    }
     .back-btn {
-        transform: scale(0.8);
         display: inline-block;
     }
     /* legend */
@@ -136,16 +138,45 @@
         display: block;
         padding: unset;
     }
+    /* help overlay */
+    #help-btn {
+        bottom: 135%;
+    }
+    #ring-example-container, #region-map-container {
+        top: unset;
+        height: 100vh;
+        width: 50vw;
+    }
+    #ring-example-container {
+        left: 0%;
+    }
+    #region-map-container {
+        left: 50%;
+    }
+    #region-map, #ring-example {
+        top: 40%;
+        width: 75%;
+        max-height: 75%;
+        display: block;
+        transform: translate(-50%, -50%);
+    }
+    #region-explanation, #ring-explanation {
+        top: unset;
+        width: 75%;
+        bottom: 20%;
+        text-align: center;
+    }
 }
 
 /* medium screen */
 @media screen and (min-width: 1200px) {
     :root {
-        --main-content-position-left: 37%;
-        --side-info-width: 25vw;
+        --main-content-position-left: 30%;
+        --side-info-width: 38vw;
     }
     #scene-canvas.detailview {
-        left: -13%;
+        /* left: -13%; */
+        left: calc(var(--main-content-position-left) - 50%);
     }
     #scene-canvas.overview {
         left: -10%;
@@ -163,7 +194,7 @@
 /* HD Screens */
 @media screen and (min-width: 1800px) {
     :root {
-        --side-info-width: 20vw;
+        --side-info-width: 38vw;
     }
     .header-dash-line {
         display:block;
@@ -193,7 +224,7 @@
 /* Special case: very short */
 @media screen and (max-height : 630px) and (min-width: 55.0em) {
     :root {
-        --match-num-y: 25vh;
+        /* --match-num-y: 25vh; */
     }
     #fav-info-area {
         display: none;
@@ -203,8 +234,6 @@
         height: 40vh;
     }
     #short-bio {
-        height: 20vh;
+        max-height: 20vh;
     }
 }
-
-

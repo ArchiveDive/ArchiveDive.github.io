@@ -96,7 +96,7 @@
                         <div id="short-bio" class="hm-font-light fade-bottom hm-info-box"> </div>
                         <div id="info-area-break"></div>
                     </div>
-                    <div id="fav-info-area">
+                    <!-- <div id="fav-info-area">
                         <h2 id="fav-info-header" class="hm-font">Favorites</h2>
                         <div id="fav-info-box" class="hm-info-box">
                             <div>
@@ -116,7 +116,7 @@
                                 <span class="fav-info" id="fav-spot-info">Blue</span>
                             </div>
                         </div>
-                    </div>
+                    </div> -->
                     <button id="go-to-archive-btn" class="digital-archive-btn custom-btn">
                         Learn More
                         <span class="tooltip-text">Opens in new tab</span>
@@ -201,9 +201,18 @@
 
             <!-- region filter help overlay -->
             <div id="help-overlay">
-                <div id="region-map"></div>
-                <button id="close-help-overlay-btn">
-                    <div id="close-help-overlay-btn-img"></div>
+                <div  id="region-map-container">
+                    <!-- <div id="region-map"></div> -->
+                    <div id="region-explanation">Map of U.S. Census Bureau Regions</div>
+                    <img src='assets/images/region-map.svg' id="region-map">
+                </div>
+                <div id="ring-example-container">
+                    <!-- <div id="ring-example"></div> -->
+                    <div id="ring-explanation">HistoryMakers are ordered <span style="color:#8A72BB;">alphabetically</span> by their last names</div>
+                    <img src='assets/images/ring-example.png' id="ring-example">
+                </div>
+                <button id="close-help-overlay-btn" class="back-btn">
+                    <div class="back-arrow-img"></div><span class="back-btn-text">Back</span>
                 </button>
             </div>
         </div>
@@ -230,7 +239,7 @@
             </div>
 
             <button id="back-to-detailview-btn" class="back-btn">
-                <div class="back-arrow-img"></div><span class="back-btn-text">Back</span>
+                <div class="back-arrow-img"></div><span class="back-btn-text">Homepage</span>
             </button>
 
             <button id="back-to-overview-btn" class="back-btn">
@@ -249,6 +258,9 @@
                 </div>
                 <div class="legend-line">
                     <div class="legend-square" id="legend-summer"></div><span class="legend-label">Summer</span>
+                </div>
+                <div class="legend-line">
+                    <div class="legend-square" id="legend-others"></div><span class="legend-label">Others</span>
                 </div>
             </div>
             <div id="legend-gender" class="legend">
@@ -270,7 +282,7 @@
                 <h2 class="match-title"><span id="subsetview-match-title"></span></h2>
             </div>
             <button id="back-to-pie-btn" class="back-btn">
-                <div class="back-arrow-img"></div>Back
+                <div class="back-arrow-img"></div><span class="back-btn-text">Back</span>
             </button>
 
             <!--hm info -->

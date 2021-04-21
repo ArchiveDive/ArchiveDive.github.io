@@ -34,6 +34,7 @@
     transform: translate(-50%, 0%);
     font-size: var(--match-num-font-size);
     width: 80vw;
+    max-width: calc(-1.5 * var(--ring-ctrl-padding-x));
 }
 /* hover thumbnail to see name */
 .subset-hover-name {
@@ -70,7 +71,7 @@
     font-size: var(--button-font-size);
     background-color: var(--btn-bkgd-color);
     border-style: none;
-    /* box-shadow: 0px 4px 4px rgb(0 0 0 / 25%) !important; */
+    border-radius: 2px;
 }
 .custom-btn:hover {
     background: var(--gradient-color);
@@ -144,17 +145,18 @@
     position: fixed;
     width: var(--side-info-width);
     right: var(--side-info-x);
+    padding-left: 8%;
 }
 
 .hm-info-box {
     font-size: var(--info-text-font-size);
-    font-family: "Source Sans Pro";
+    /* font-family: "Source Sans Pro"; */
     color: var(--info-text-color);
 }
 
 #achivement-info-area {
     display: none;
-    height: 40%;
+    /* height: 40%; */
 }
 #fav-info-area {
     display: none;
@@ -162,7 +164,7 @@
 }
 
 #achivement-info-header{
-    margin-bottom: 10px;
+    margin-bottom: 5%;
     font-weight: bold;
     font-size: var(--info-header-font-size);
 }
@@ -175,9 +177,10 @@
 }
 
 #short-bio, #sub-short-bio{
-    height: 130px; /* todo */
+    /* todo */
+    max-height: 30vh;
     padding-right: 20px;
-    padding-bottom: 50px;
+    /* padding-bottom: 50px; */
     overflow-x: hidden;
     overflow-y: hidden; /* disables scroll */
 }
@@ -193,7 +196,7 @@
     font-size: var(--info-header-font-size);
     font-weight: bold;
     right: 0px;
-    margin-bottom: 5vh;
+    margin-bottom: 5%;
 }
 
 #sub-achivement-info-header{
@@ -248,8 +251,11 @@
 #help-btn {
     display: none;
     position: fixed;
-    bottom: 135%;
+    bottom: 250%;
     left: 30px;
+}
+#help-btn:hover {
+    opacity: 0.7;
 }
 #help-btn-img {
     height: var(--help-icon-size);;
@@ -264,10 +270,12 @@
 }
 
 #close-help-overlay-btn {
-    display: none;
+    display: block;
     position: fixed;
-    top: 50px;
-    right: 30px;
+    top: var(--help-back-btn-y);
+}
+#close-help-overlay-btn:hover {
+    opacity: 0.7;
 }
 
 #close-help-overlay-btn-img {
@@ -290,14 +298,54 @@
     backdrop-filter: blur(5px);
 }
 
-#region-map {
-    width: 50%;
-    height: 70%;
+#region-map-container, #ring-example-container {
+    display: block;
+    position: absolute;
+    top: 0px;
+    text-align: center;
+    font-size: var(--match-num-font-size);
+}
+#region-map-container {
+    top: 0%;
+    height: 60vh;
+    width: 100vw;
+}
+#ring-example-container {
+    top: 60vh;
+    height: 40vh;
+    width: 100vw;
+}
+
+#region-map, #ring-example {
+    position: absolute;
+    display: block;
+    margin: 0px;
     left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
-    position: fixed;
-    background: var(--region-map-url);
-    background-size: 100%;
-    background-repeat: no-repeat;
+    max-height: 75%;
+    object-fit: contain;
+
+}
+#region-map {
+    top: 35%;
+    max-width: 90%;
+    transform: translate(-50%, 0%);
+}
+#ring-example {
+    max-width: 70%;
+    display: none;
+}
+
+#region-explanation, #ring-explanation {
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, 50%);
+    vertical-align: middle;
+}
+#region-explanation {
+    top: 15%;
+    width: 75%;
+}
+#ring-explanation {
+    top: 0%;
+    text-align: left;
 }

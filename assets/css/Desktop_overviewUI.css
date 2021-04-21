@@ -28,7 +28,7 @@
 .filter-title {
     position: relative;
     font-size: var(--match-num-font-size);
-    color: var(--info-text-color);
+    color: var(--filter-title-color);
 }
 .match-title {
     position: relative;
@@ -55,14 +55,16 @@
     height: 5vh;
     min-height: 40px;
     max-height: 110px;
-    margin-top: 1vh;
+    margin-top: 1.5vh;
     background-color: var(--btn-bkgd-color);
     font-weight: bold;
     font-size: var(--button-font-size);
     color: var(--off-white);
+    border-radius: 2px;
 }
 .viz-btn:hover, .viz-btn-selected {
     background: var(--gradient-color);
+    border: 2px solid var(--off-white);
 }
 
 /* back buttons */
