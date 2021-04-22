@@ -31,6 +31,11 @@
         padding-left: unset;
         margin-left: unset;
     }
+    .dropdown-filter-option {
+        text-align: center;
+        padding-left: unset;
+        margin-left: unset;
+    }
     /* canvas */
     #scene-canvas.detailview {
         transform: scale(0.8) translateY(-3%);
@@ -68,6 +73,8 @@
         --viz-ctrl-area-x: 5%;
         --viz-ctrl-area-width: 20%;
         --legend-square-size: 10px;
+        --help-icon-y: -100%;
+        --filter-selector-width: calc(100% - 40px);
     }
     #hm-logo {
         left: 1.5%;
@@ -126,6 +133,10 @@
     }
     .back-btn {
         display: inline-block;
+        min-width: 95px;
+    }
+    #back-to-detailview-btn {
+        min-width: 135px;
     }
     /* legend */
     .legend {
@@ -139,9 +150,6 @@
         padding: unset;
     }
     /* help overlay */
-    #help-btn {
-        bottom: 135%;
-    }
     #ring-example-container, #region-map-container {
         top: unset;
         height: 100vh;

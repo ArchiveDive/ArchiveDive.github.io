@@ -22,9 +22,6 @@
     background: var(--item-bkgd-color);
     border-style: none;
 }
-/* .dropup{
-    min-width: 100vw;
-} */
 .dropdown-arrow-img {
     display: inline-block;
     position: absolute;
@@ -37,9 +34,7 @@
     max-height: var(--dropdown-arrow-size-max);
     right: 30px;
     transform: translateY(-50%);
-    background: var(--down-arrow-icon-url);
-    background-size: 100%, 100%;
-    background-repeat: no-repeat;
+    padding: 0px;
 }
 
 #filter-selector-1, #filter-selector-2 {
@@ -48,7 +43,7 @@
     background: var(--item-bkgd-color);
     padding: 0px;
     margin: 0px;
-    width: calc(100% - 40px);
+    width: var(--filter-selector-width);
     min-width: 10%;
     position: fixed;
     text-align: left;

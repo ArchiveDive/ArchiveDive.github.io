@@ -9,12 +9,16 @@
         --filter-item-padding-y: calc(var(--filter-height) / 16);
         --filter-item-padding-x: calc(var(--filter-height) / 4);
         --selected-item-width: 20vw;
-        /* --filter-item-shift: 0px; */
 
         --ring-ctrl-area-y: 35%;
         --ring-ctrl-padding-x: 24%;
-        --dropdown-arrow-size-min: 20px;
-        --dropdown-arrow-size-max: 25px;
+        --dropdown-arrow-size-min: 30px;
+        --dropdown-arrow-size-max: 40px;
+
+        --explore-btn-width: 50vw;
+
+        --map-cont-height: 60vh;
+        --map-y: 35%;
     }
 
     #hm-logo {
@@ -29,12 +33,13 @@
     .dropdown-arrow-img {
         right: 3%;
     }
-    
-
-    /* .scroll-filter-row {
-        height: 180px;
+    .back-btn-text {
+        display: block;
     }
-    .scroll-filter-item, .scroll-filter-item-selected {
-        padding-top: 2px !important;
-    } */
+    .back-btn {
+        display: inline-block;
+    }
+    #back-to-detailview-btn {
+        min-width: 135px;
+    }
 }

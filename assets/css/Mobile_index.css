@@ -1,13 +1,15 @@
 /* vars */
 :root {
     /* font sizes */
-    --delta: calc(0.015 * 100vh);
+    --delta: calc(0.015 * 100*var(--vh));
     --med-font-size: calc(var(--delta) + 1rem);
     --large-font-size: calc(var(--delta) + 1rem);
+
     --dropdown-font-size: 45px;
     --match-num-font-size:  calc(var(--delta) + 2rem);
-    --button-font-size:  calc(var(--delta) + 1rem);
-    --info-text-font-size: calc(var(--delta) + 1rem);
+    --button-font-size:  calc(var(--delta) + 0.8rem);
+    --info-text-font-size: calc(var(--delta) + 0.5rem);
+    --filter-item-font-size: calc(var(--delta) + 0.6rem);
 
     --scroll-area-height: 30%;
     --overlay-area-height: 70%;
@@ -29,7 +31,7 @@
     --ring-ctrl-area-y: 30%;
     --ring-ctrl-area-width: 200px;
     --ring-ctrl-padding-x: 8%;
-    --ring-arrow-size: 5vh;
+    --ring-arrow-size: calc(5*var(--vh));
     --ring-arrow-size-min: 50px;
     --ring-arrow-size-max: 90px;
 
@@ -44,7 +46,7 @@
     --viz-btn-width: 50vw;
     --dropdown-width: 90vw;
     
-    --dropdown-arrow-size: 20vh;
+    --dropdown-arrow-size: calc(20 * var(--vh));
     --dropdown-arrow-size-min: 40px;
     --dropdown-arrow-size-max: 50px;
 
@@ -54,38 +56,48 @@
     --selected-item-width: 30vw;
     --filter-item-shift: 160px; /* TODO do not use px in js code */
 
-    --btn-height: 5vh;
+    --btn-height: calc(5*var(--vh));
     --btn-height-min: 40px;
     --btn-height-max: 110px;
 
     --legend-width: 100%;
     --legend-square-size: 20px;
 
+    --explore-btn-width: 60vw;
+
+    --map-cont-height: 55vh;
+
     /* colors */
     --off-white: #dfdfdf;
-    --item-bkgd-color: #221E29;
+    --item-bkgd-color: #282432;
     --hover-bkgd-color: #37353B;
     --tooltip-bkgd-color: #555;
-    --btn-bkgd-color: #3B363F;
+    --btn-bkgd-color: #8A72BB96;
     --gradient-color: linear-gradient(90deg, #2E2D6F 0%, #682052 100%);
 
     /* positions */
     --main-content-position-left: 50%;
     --filter-title-y: 13%;
     --explore-btn-y: 8%;
+
     --back-btn-y: 10%;
     --back-btn-x: 8%;
+    --help-back-btn-y: 8%;
+
     --legend-x: 0%;
-    --legend-y: 30vh;
+    --legend-y: calc(30*var(--vh));
     --legend-padding-x: 5%;
+
+    --help-icon-y: -55%;
+    --help-icon-left: 10%;
+    --map-y: 50%;
 
     /* image sizes */
     --back-icon-size: 48px;
 
-    --help-icon-size: 3.5vh;
-    --help-icon-size-min: 40px;
-    --help-icon-size-max: 50px;
-    --help-icon-y: -35%;
+    --help-icon-size: calc(4 * var(--vh));
+    --help-icon-size-min: 50px;
+    --help-icon-size-max: 80px;
 
     --nav-arrow-size: 10;
     --dropdown-arrow-size: 10;
@@ -99,7 +111,7 @@
     --shuffle-icon-url: url('../images/grey-shuffle-icon.svg');
     --help-icon-url: url('../images/grey-help-icon.svg');
     --close-icon-url: url('../images/white-x-icon.png');
-    --region-map-url: url('../images/map-placeholder.png');
+    --region-map-url: url('../images/region-map.svg');
 
     /* misc */
     --legend-display: inline-block;

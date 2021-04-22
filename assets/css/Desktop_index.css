@@ -18,6 +18,7 @@
     --dropdown-width-2: 20%;
     --filters-width-3: 58.333333%;
     --dropdown-width-3: 16.666667%;
+    --filter-selector-width: calc(100% - 30px);
 
     --btn-height: 5.5vh;
     --btn-height-min: 40px;
@@ -34,6 +35,7 @@
 
     --legend-width: auto;
 
+    --map-cont-height: 60vh;
 
     /* element positions and padding */
     --main-content-position-left: 50%;
@@ -54,6 +56,9 @@
     --back-btn-x: 3%;
     --help-back-btn-y: 8%;
 
+    --help-icon-y: -200%;
+    --help-icon-left: 30px;
+
     --da-btn-y: 0%;
     --sub-da-btn-y: 0%;
 
@@ -62,6 +67,8 @@
     --legend-y: 10vh;
     --legend-x: 10vh;
     --legend-square-size: 10px;
+
+    --map-y: 35%;
 
     /* element colors */
     --off-white: #dfdfdf;
@@ -91,7 +98,7 @@
     --hm-logo-height-max: 30px;
     
     --help-icon-size: 3vh;
-    --help-icon-size-min: 25px;
+    --help-icon-size-min: 20px;
     --help-icon-size-max: 30px;
 
     --dropdown-arrow-size: 2.5vh;
@@ -131,14 +138,14 @@ h2 {
 }
 
 /* override bootstrap */
-.btn, button {
+/* .btn, button {
     border-radius: 0px;
     border-style: none;
     background-color: rgba(0, 0, 0, 0);
 }
 button:focus {
     outline-style: none;
-}
+} */
 /* .btn:focus, .dropdown-btn:focus {
     outline-style: none;
     box-shadow: none;
