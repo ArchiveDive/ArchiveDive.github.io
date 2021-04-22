@@ -117,30 +117,27 @@
 
 /* filter items */
 
-.scroll-filter-item {
-    color: white;
+.scroll-filter-item, .scroll-filter-item-selected {
+    color: var(--off-white);
     font-family: 'Oswald';
     font-style: normal;
     text-align: center;
-    background-color: rgba(0, 0, 0, 0);
+    padding-top: var(--filter-item-padding-y);
+    transform: translateX(var(--filter-item-shift));
+}
+
+.scroll-filter-item {
     overflow-x: hidden;
     white-space: nowrap;
     -webkit-mask-image: linear-gradient(to right, rgba(0,0,0,1) 80%, rgba(0,0,0,0) 100%);
     mask-image: linear-gradient(to right, rgba(0,0,0,1) 80%, rgba(0,0,0,0) 100%);
 }
 
+/* TODO, fix. now width is variable */
 .scroll-filter-item-selected {
-    color: white;
-    font-family: 'Oswald';
-    font-style: normal;
-    text-align: center;
     margin-right: 20px !important;
     margin-left: 20px !important;
     background-image: var(--gradient-color);
     width: var(--selected-item-width) !important;
-}
-
-.scroll-filter-item, .scroll-filter-item-selected {
-    padding-top: var(--filter-item-padding-y);
-    transform: translateX(var(--filter-item-shift));
+    border: var(--btn-border-weight) solid var(--off-white);
 }

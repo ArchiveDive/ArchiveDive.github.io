@@ -8,24 +8,6 @@
     font-family: Oswald;
 }
 
-.custom-btn {
-    position: fixed;
-    height: var(--btn-height);
-    min-height: var(--btn-height-min);
-    max-height: var(--btn-height-max);
-    color: var(--off-white);
-    font-family: 'Oswald';
-    font-weight: bold;
-    font-size: var(--button-font-size);
-    background-color: var(--btn-bkgd-color);
-    border-style: none;
-    border-radius: 2px;
-    overflow: visible;
-}
-.custom-btn:hover {
-    background: var(--gradient-color);
-}
-
 #go-to-archive-btn {
     position: absolute;
     bottom: var(--archive-btn-y);

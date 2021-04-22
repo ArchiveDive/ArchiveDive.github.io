@@ -92,13 +92,14 @@
     color: var(--off-white);
     font-family: 'Oswald';
     font-style: normal;
-    font-size: var(--filter-item-font-size);
     text-align: center;
+    font-size: var(--filter-item-font-size);
     padding-top: var(--filter-item-padding-y);
 }
 
 .scroll-filter-item-selected {
     background-image:linear-gradient(90deg, #2E2D6F 0%, #682052 100%);
+    border: var(--btn-border-weight) solid var(--off-white);
 }
 
 #scroll-filter-1 {

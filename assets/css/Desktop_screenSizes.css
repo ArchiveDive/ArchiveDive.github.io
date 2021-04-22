@@ -133,11 +133,11 @@
     }
     .back-btn {
         display: inline-block;
-        min-width: 95px;
+        min-width: 100px;
     }
-    #back-to-detailview-btn {
+    /* #back-to-detailview-btn {
         min-width: 135px;
-    }
+    } */
     /* legend */
     .legend {
         bottom: 10vh;

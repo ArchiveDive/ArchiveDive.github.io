@@ -116,6 +116,7 @@
     /* misc */
     --legend-display: inline-block;
     --legend-align: center;
+    --btn-border-weight: 2px;
 }
 
 body {

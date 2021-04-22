@@ -60,7 +60,7 @@
 }
 
 /* buttons */
-.custom-btn {
+/* .custom-btn {
     position: fixed;
     height: var(--btn-height);
     min-height: var(--btn-height-min);
@@ -75,7 +75,7 @@
 }
 .custom-btn:hover {
     background: var(--gradient-color);
-}
+} */
 /*placeholder*/
 #explore-more-btn{
     position: fixed;

@@ -126,6 +126,7 @@
     /* misc */
     --legend-display: block;
     --legend-align: left;
+    --btn-border-weight: 2px;
 }
 
 body {

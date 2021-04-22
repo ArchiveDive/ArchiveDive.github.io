@@ -7,6 +7,25 @@
     top: 0%;
 }
 
+/* buttons */
+.custom-btn {
+    position: fixed;
+    height: var(--btn-height);
+    min-height: var(--btn-height-min);
+    max-height: var(--btn-height-max);
+    color: var(--off-white);
+    font-family: 'Oswald';
+    font-weight: bold;
+    font-size: var(--button-font-size);
+    background-color: var(--btn-bkgd-color);
+    border-style: none;
+    border-radius: 2px;
+}
+.custom-btn:hover {
+    background: var(--gradient-color);
+    border: var(--btn-border-weight) solid var(--off-white);
+}
+
 /* override bootstrap button */
 .btn, button {
     border-radius: 0px;
@@ -180,7 +199,7 @@ button:focus {
 }
 .viz-btn:hover, .viz-btn-selected {
     background: var(--gradient-color);
-    border: 2px solid var(--off-white);
+    border: var(--btn-border-weight) solid var(--off-white);
 }
 
 /* back buttons */

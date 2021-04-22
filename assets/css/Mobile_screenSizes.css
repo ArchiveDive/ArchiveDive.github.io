@@ -38,8 +38,9 @@
     }
     .back-btn {
         display: inline-block;
+        min-width: 140px;
     }
-    #back-to-detailview-btn {
+    /* #back-to-detailview-btn {
         min-width: 135px;
-    }
+    } */
 }
