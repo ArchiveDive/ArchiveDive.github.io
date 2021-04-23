@@ -1,47 +1,20 @@
-// if onloading is actually finished, decide if wait for the animiton to finished too
-let waitForAnimation = false;
-
-let isLoadingReady = false;
-let isAnimationFinished = false;
-
 function start() {
     // start play animation
-    playIntroductionWords(playProcessBar);
+    playIntroduction();
 
     // register onload
     $().ready(onLoad);
+
+    $('#loading-page-start-btn').click(endLoadingPage);
+
 }
 
-// first animation 
-function playIntroductionWords(onComplete) {
-    const sustainTime = 2000;
-    setTimeout(() => {
-        $('#loading-page-startwords').fadeOut(3000, onComplete);
-    }, sustainTime);
-}
-
-// second animation 
-function playProcessBar() {
-    const sustainTime = 2000;
-    let processBar =  $('#loading-page-processbar');
-    processBar.fadeIn(
-        2000,() => processBar.fadeOut(sustainTime,onAnimationFinished));
+function playIntroduction() {
+    $('#loading-page-header').fadeIn(4500);
 }
 
 function onLoad() {
-    isLoadingReady = true;
-
-    if (!waitForAnimation || isAnimationFinished) {
-        endLoadingPage();
-    }
-}
-
-function onAnimationFinished() {
-    isAnimationFinished = true;
-
-    if (isLoadingReady) {
-        endLoadingPage();
-    }
+    $('#loading-page-start-btn').show();
 }
 
 function endLoadingPage() {

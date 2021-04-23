@@ -46,23 +46,47 @@
             background-size: 100% 100%;
         }
 
-        #loading-page h1 {
+
+        #loading-page-start-btn {
             position: absolute;
             left: 50%;
-            top: 50%;
+            top: 70%;
             transform: translate(-50%, -50%);
+            z-index: 2;
+            color: white;
+        }
+
+        #header-logo{
+            position: fixed;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            top: 50%;
+            width: 700px;
+            height: 200px;
+            background-image: url('./assets/logos/thm-logo-grey.svg');
+            background-size: 100%, 100%;
+            background-repeat: no-repeat;
+
+        }
+
+        #header-slogan{
+            position: fixed;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            top: 60%;
         }
     </style>
 
     <div id="loading-page">
-        <!-- <h1 style="color:white;">Loading ...</h1> -->
-        <div id="loading-page-startwords" style="color:white; font-size:100px">Placeholder of Introduce words... </div>
-        <div id="loading-page-processbar" style="display:none; color:white; font-size:100px">Placeholder of
-            ProcessBar...HistoryMaker 3000+ </div>
+        <div id="loading-page-header" style="color:white;display:none">
+            <div id = "header-logo"></div>
+            <div id = "header-slogan">Quickly explore thousands of African Americans</div>
+        </div>
+        <button id="loading-page-start-btn" style="display:none">Start</button>
     </div>
 
     <!-- loading page scripts -->
-    <script src='./loadingPage.js'></script>
+    <script src='./loadingPage.js'>Start</script>
 
     <div id="landscape-page" style="display:none">
         <h1 style="color:white;">Please rotate your phone</h1>
@@ -211,18 +235,20 @@
 
             <!-- region filter help overlay -->
             <div id="help-overlay">
-                <div  id="region-map-container">
+                <div id="region-map-container">
                     <!-- <div id="region-map"></div> -->
                     <div id="region-explanation">Map of U.S. Census Bureau Regions</div>
                     <img src='assets/images/region-map.svg' id="region-map">
                 </div>
                 <div id="ring-example-container">
                     <!-- <div id="ring-example"></div> -->
-                    <div id="ring-explanation">HistoryMakers are ordered <span style="color:#8A72BB;">alphabetically</span> by their last names</div>
+                    <div id="ring-explanation">HistoryMakers are ordered <span
+                            style="color:#8A72BB;">alphabetically</span> by their last names</div>
                     <img src='assets/images/ring-example.png' id="ring-example">
                 </div>
                 <button id="close-help-overlay-btn" class="back-btn">
-                    <div class="back-arrow-img"><img src="assets/images/white-arrow-icon-left.svg" class="btn-img"></div>
+                    <div class="back-arrow-img"><img src="assets/images/white-arrow-icon-left.svg" class="btn-img">
+                    </div>
                     <span class="back-btn-text">Back</span>
                 </button>
             </div>
@@ -274,6 +300,9 @@
                 </div>
                 <div class="legend-line">
                     <div class="legend-square" id="legend-others"></div><span class="legend-label">Others</span>
+                </div>
+                <div class="legend-line">
+                    <div class="legend-square" id="legend-multiple"></div><span class="legend-label">Multiple</span>
                 </div>
             </div>
             <div id="legend-gender" class="legend">
