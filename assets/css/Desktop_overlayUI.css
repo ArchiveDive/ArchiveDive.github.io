@@ -24,7 +24,7 @@
     width: 100vw;
 }
 
-#match-number {
+#match-number-container {
     position: fixed;
     font-weight: bold;
     text-align: center;
@@ -34,7 +34,8 @@
     transform: translate(-50%, 0%);
     font-size: var(--match-num-font-size);
     width: 80vw;
-    max-width: calc(-1.5 * var(--ring-ctrl-padding-x));
+    max-width: var(--match-num-width-max);
+    min-height: calc(var(--match-num-font-size) * 2);
 }
 /* hover thumbnail to see name */
 .subset-hover-name {
@@ -87,7 +88,7 @@
 }
 
 /* go to digital archive button */
-.digital-archive-btn{
+/* .digital-archive-btn{
     width: var(--da-btn-width);
     min-width: var(--da-btn-width-min);
     max-width: var(--da-btn-width-max);
@@ -106,34 +107,19 @@
     font-weight: normal;
     font-size: var(--info-text-font-size);
 
-    /* Position the tooltip */
     position: absolute;
     z-index: 1;
     bottom: 130%;
     left: 50%;
     transform: translatex(-50%);
-}
-/* decoration */
-.tooltip-text:after {
-    content: ' ';
-    position: absolute;
-    width: 0;
-    height: 0;
-    left: 50%;
-    bottom: -70%;
-    transform: translateX(-50%);
-    border: 1rem solid;
-    border-color: #555 transparent transparent transparent;
-}  
-.digital-archive-btn:hover .tooltip-text {
-    visibility: visible;
-}
+} */
 
 #go-to-archive-btn {
     bottom: var(--da-btn-y);
 }
 #sub-go-to-archive-btn {
     bottom: var(--sub-da-btn-y);
+    position: relative;
 }
 
 /* Side info (general) */
@@ -206,10 +192,6 @@
 #sub-fav-info-header{
     margin-top: 10px;
     margin-bottom: 10px;
-}
-
-#sub-go-to-archive-btn {
-    position: relative;
 }
 
 /* ring arrows */

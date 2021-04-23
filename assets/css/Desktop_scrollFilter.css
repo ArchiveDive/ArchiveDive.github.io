@@ -88,7 +88,7 @@
     height: 100%;
 }
 
-.scroll-filter-item, .scroll-filter-item-selected {
+/* .scroll-filter-item, .scroll-filter-item-selected {
     color: var(--off-white);
     font-family: 'Oswald';
     font-style: normal;
@@ -100,7 +100,8 @@
 .scroll-filter-item-selected {
     background-image:linear-gradient(90deg, #2E2D6F 0%, #682052 100%);
     border: var(--btn-border-weight) solid var(--off-white);
-}
+    border-radius: var(--btn-border-radius);
+} */
 
 #scroll-filter-1 {
     position: relative;

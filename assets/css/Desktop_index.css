@@ -6,7 +6,8 @@
     --info-header-font-size: calc(var(--delta) + 1.5rem);
     --info-text-font-size: calc(0.01 * 100vh + 0.7rem);
     --button-font-size: calc(var(--delta) + 0.75rem);
-    --match-num-font-size: calc(0.01*100vh + 1.0rem);
+    /* --match-num-font-size: calc(0.01*100vh + 1.0rem); */
+    --match-num-font-size: calc(var(--delta) + 0.9rem);
 
     /* element sizes */
     --side-info-width: 30vw;
@@ -43,13 +44,16 @@
     --ring-ctrl-y: 35%;
     --ring-ctrl-padding-x: -20vw;
 
-    --match-num-y: calc( (5*5vh) + (3*1.25em));
+    /* --match-num-y: calc( (5*5vh) + (3*1.25em)); */
+    --match-num-y: 86%;
+    --match-num-width-max: calc(-1.5 * var(--ring-ctrl-padding-x));
     --filter-title-y: 13%;
 
     --viz-ctrl-area-y: 4%;
     --viz-ctrl-area-x: auto;
 
-    --explore-more-btn-y: 86%;
+    /* --explore-more-btn-y: 86%; */
+    --explore-more-btn-y: calc( (5*5vh) + (3*1.25em));
     --explore-more-btn-padding-x: 3vw;
 
     --back-btn-y: 13%;
@@ -78,6 +82,7 @@
     --hover-bkgd-color: #37353B;
     --tooltip-bkgd-color: #555;
     --btn-bkgd-color: #8A72BB96;
+    --learn-more-color: #8A72BB;
     --gradient-color: linear-gradient(90deg, #2E2D6F 0%, #682052 100%);
     --filter-title-color: #FFFFFF64;
 
@@ -90,7 +95,8 @@
     --scroll-arrow-size-min: 15px;
     --scroll-arrow-size-max: 27px;
 
-    --hm-logo-width: 20vw;
+    /* --hm-logo-width: 20vw; */
+    --hm-logo-width: 300px;
     --hm-logo-height: 5vh;
     --hm-logo-width-min: 200px;
     --hm-logo-width-max: 300px;
@@ -109,7 +115,8 @@
     --shuffle-icon-size-min: 30px;
     --shuffle-icon-size-max: 50px;
 
-    --back-icon-size: 48px;
+    --back-icon-size: 5vh;
+    --back-icon-size-max: 40px;
 
     /* images */
     --bkgd-img-url: url('../images/bg_detailView.png');
@@ -126,7 +133,8 @@
     /* misc */
     --legend-display: block;
     --legend-align: left;
-    --btn-border-weight: 2px;
+    --btn-border-weight: 1px;
+    --btn-border-radius: 3px;
 }
 
 body {

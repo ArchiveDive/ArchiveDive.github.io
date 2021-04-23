@@ -37,52 +37,69 @@
     <style>
         #loading-page {
             position: fixed;
-            z-index: 1;
             left: 0;
             top: 0;
             width: 100%;
             height: 100%;
-            background-image: url('../images/bg_detailView.png');
-            background-size: 100% 100%;
+            background-image: url('assets/images/loading-bkgd.jpg');
+            background-size: cover;
+            z-index: 1;
+            font-size: Oswald;
         }
-
-
         #loading-page-start-btn {
             position: absolute;
             left: 50%;
-            top: 70%;
+            top: 75%;
             transform: translate(-50%, -50%);
+            width: 10vw;
+            min-width: 200px;
+            color: lightgrey;
+            background: linear-gradient(90deg, #2E2D6F 0%, #682052 100%);
             z-index: 2;
-            color: white;
         }
-
         #header-logo{
             position: fixed;
             left: 50%;
-            transform: translate(-50%,-50%);
             top: 50%;
+            transform: translate(-50%,-50%);
             width: 700px;
-            height: 200px;
-            background-image: url('./assets/logos/thm-logo-grey.svg');
+            max-width: 90vw;
+            height: 50px;
+            background-image: url('./assets/logos/thm-logo-white-orange.svg');
             background-size: 100%, 100%;
             background-repeat: no-repeat;
 
         }
-
         #header-slogan{
             position: fixed;
             left: 50%;
+            top: calc(50% + 40px);
+            transform: translateX(-50%);
+            text-align: center;
+            font-size: calc(0.01*100vh + 1.3rem);
+            color: lightgrey;
+        }
+        #footer-credit {
+            position: fixed;
+            left: 50%;
+            bottom: 10%;
             transform: translate(-50%,-50%);
-            top: 60%;
+            font-size: calc(0.01*100vh + 0.5rem);
+            text-align: center;
+            text-decoration: underline;
+        }
+        #footer-credit a {
+            color: grey;
         }
     </style>
 
     <div id="loading-page">
         <div id="loading-page-header" style="color:white;display:none">
-            <div id = "header-logo"></div>
-            <div id = "header-slogan">Quickly explore thousands of African Americans</div>
+            <div id="header-logo"></div>
+            <div id="header-slogan">Quickly explore thousands of African Americans</div>
+            <div id="footer-credit"><a href="https://www.etc.cmu.edu/blog/projects/archive-dive/" target="_blank">Created by CMU Eentertainment Technology Center Students</a></div>
         </div>
-        <button id="loading-page-start-btn" style="display:none">Start</button>
+        <button id="loading-page-start-btn" class="custom-btn" style="display:none">Start</button>
     </div>
 
     <!-- loading page scripts -->
@@ -110,11 +127,10 @@
 
             <div id="middle-display-area">
                 <!--filter titile-->
-                <span id="match-number"></span>
+                <div id="match-number-container"><span id="match-number"></span></div>
 
                 <!--hm info -->
                 <div id="side-info-area">
-                    <div class="header-dash-line"></div>
                     <div id="achivement-info-area">
                         <h2 id="achivement-info-header" class="hm-font">Biography </h2>
                         <div id="short-bio" class="hm-font-light fade-bottom hm-info-box"> </div>
@@ -141,8 +157,9 @@
                             </div>
                         </div>
                     </div> -->
-                    <button id="go-to-archive-btn" class="digital-archive-btn custom-btn">
-                        Learn More
+                    <button id="go-to-archive-btn" class="digital-archive-btn">
+                        <span class="archive-btn-text">Learn More</span>
+                        <span class="archive-btn-decor"><img src="assets/images/purple-arrow-icon-right.svg"></span>
                         <span class="tooltip-text">Opens in new tab</span>
                     </button>
                 </div>
@@ -299,7 +316,7 @@
                     <div class="legend-square" id="legend-summer"></div><span class="legend-label">Summer</span>
                 </div>
                 <div class="legend-line">
-                    <div class="legend-square" id="legend-others"></div><span class="legend-label">Others</span>
+                    <div class="legend-square" id="legend-others"></div><span class="legend-label">Other Responses</span>
                 </div>
                 <div class="legend-line">
                     <div class="legend-square" id="legend-multiple"></div><span class="legend-label">Multiple</span>
@@ -330,15 +347,15 @@
 
             <!--hm info -->
             <div id="sub-side-info-area">
-                <div class="header-dash-line"></div>
                 <div id="sub-name-info"></div>
                 <div id="sub-achivement-info-area">
                     <h2 id="sub-achivement-info-header" class="hm-font">Biography </h2>
                     <div id="sub-short-bio" class="hm-info-box fade-bottom"> </div>
                     <div id="sub-info-area-break"></div>
                 </div>
-                <button id="sub-go-to-archive-btn" class="digital-archive-btn custom-btn">
-                    Learn More
+                <button id="sub-go-to-archive-btn" class="digital-archive-btn">
+                    <span class="archive-btn-text">Learn More</span>
+                    <span class="archive-btn-decor"><img src="assets/images/purple-arrow-icon-right.svg"></span>
                     <span class="tooltip-text">Opens in new tab</span>
                 </button>
             </div>

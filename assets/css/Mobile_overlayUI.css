@@ -33,7 +33,7 @@
     display: none;
 }
 
-#match-number {
+#match-number-container {
     position: absolute;
     bottom: var(--match-num-y);
     left: 50%;

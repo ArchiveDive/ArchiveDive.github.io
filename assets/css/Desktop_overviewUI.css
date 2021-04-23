@@ -7,6 +7,21 @@
     top: 0%;
 }
 
+.scroll-filter-item, .scroll-filter-item-selected {
+    color: var(--off-white);
+    font-family: 'Oswald';
+    font-style: normal;
+    text-align: center;
+    font-size: var(--filter-item-font-size);
+    padding-top: var(--filter-item-padding-y);
+}
+
+.scroll-filter-item-selected {
+    background-image: var(--gradient-color);
+    border: var(--btn-border-weight) solid var(--off-white);
+    border-radius: var(--btn-border-radius);
+}
+
 /* buttons */
 .custom-btn {
     position: fixed;
@@ -25,6 +40,62 @@
     background: var(--gradient-color);
     border: var(--btn-border-weight) solid var(--off-white);
 }
+
+.digital-archive-btn{
+    width: var(--da-btn-width);
+    min-width: var(--da-btn-width-min);
+    max-width: var(--da-btn-width-max);
+    text-align: left;
+    padding: 0%;
+
+    color: var(--learn-more-color);
+    font-size: var(--button-font-size);
+    font-weight: bold;
+}
+.digital-archive-btn:hover .archive-btn-text{
+    text-decoration: underline;
+}
+.digital-archive-btn img {
+    height: calc(var(--button-font-size)/1.4);
+    margin-bottom: 1%;
+    margin-left: 2%;
+}
+.digital-archive-btn .tooltip-text {
+    visibility: hidden;
+    width: var(--da-btn-width);
+    min-width: var(--da-btn-width-min);
+    max-width: var(--da-btn-width-max);
+    background-color: var(--tooltip-bkgd-color);
+    color: var(--off-white);
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+    font-family: 'Source Sans Pro';
+    font-weight: normal;
+    font-size: var(--info-text-font-size);
+
+    position: absolute;
+    z-index: 1;
+    bottom: 130%;
+    left: 50%;
+    transform: translatex(-50%);
+}
+/* decoration */
+.tooltip-text:after {
+    content: ' ';
+    position: absolute;
+    width: 0;
+    height: 0;
+    left: 25%;
+    bottom: -70%;
+    transform: translateX(-50%);
+    border: 1rem solid;
+    border-color: #555 transparent transparent transparent;
+}  
+.digital-archive-btn:hover .tooltip-text {
+    visibility: visible;
+}
+
 
 /* override bootstrap button */
 .btn, button {
@@ -224,7 +295,9 @@ button.back-btn{
 .back-arrow-img {
     display: inline-block;
     width: var(--back-icon-size);
+    max-width: var(--back-icon-size-max);
     height: var(--back-icon-size);
+    max-height: var(--back-icon-size-max);
     position: absolute;
     top: 50%;
     left: 2%;

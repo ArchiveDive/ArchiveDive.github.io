@@ -73,6 +73,7 @@
     --hover-bkgd-color: #37353B;
     --tooltip-bkgd-color: #555;
     --btn-bkgd-color: #8A72BB96;
+    --learn-more-color: #8A72BB;
     --gradient-color: linear-gradient(90deg, #2E2D6F 0%, #682052 100%);
 
     /* positions */
@@ -116,7 +117,8 @@
     /* misc */
     --legend-display: inline-block;
     --legend-align: center;
-    --btn-border-weight: 2px;
+    --btn-border-weight: 1px;
+    --btn-border-radius: 3px;
 }
 
 body {

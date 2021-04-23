@@ -118,11 +118,11 @@
 /* filter items */
 
 .scroll-filter-item, .scroll-filter-item-selected {
-    color: var(--off-white);
+    /* color: var(--off-white);
     font-family: 'Oswald';
     font-style: normal;
     text-align: center;
-    padding-top: var(--filter-item-padding-y);
+    padding-top: var(--filter-item-padding-y); */
     transform: translateX(var(--filter-item-shift));
 }
 
@@ -137,7 +137,7 @@
 .scroll-filter-item-selected {
     margin-right: 20px !important;
     margin-left: 20px !important;
-    background-image: var(--gradient-color);
+    /* background-image: var(--gradient-color); */
     width: var(--selected-item-width) !important;
-    border: var(--btn-border-weight) solid var(--off-white);
+    /* border: var(--btn-border-weight) solid var(--off-white); */
 }

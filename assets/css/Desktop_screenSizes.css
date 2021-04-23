@@ -3,8 +3,12 @@
 @media screen and (max-width: 880px) {
     :root {
         --ring-ctrl-padding-x: -200px;
-        --ring-ctrl-y: calc(7 * (5vh + 1.25em));
-        --da-btn-y: calc( (4*5vh) + (3*1.25em));
+        /* --ring-ctrl-y: calc(7 * (5vh + 1.25em)); */
+        --ring-ctrl-y: 58%;
+        /* --da-btn-y: calc( (4*5vh) + (3*1.25em)); */
+        --da-btn-y: 0%;
+        --match-num-width-max: 100%;
+        --hm-logo-width: 200px;
     }
     /* scroll filters */
     #scroll-filter-row {
@@ -48,8 +52,16 @@
         top: 14%;
     }
     #go-to-archive-btn {
-        left: 50vw;
-        transform: translateX(-50%);
+        transform: translateY(50%);
+        text-align: center;
+    }
+    #side-info-area {
+        bottom: calc( (8*5vh) + (3*1.25em));
+        width: unset;
+        padding: unset;
+        left: var(--main-content-position-left);
+        transform: translate(-50%, 50%);
+        text-align: center;
     }
     #sub-achivement-info-area {
         display: none;
@@ -121,7 +133,7 @@
         margin-top: 5%;
         position: relative;
     }
-    #match-number {
+    #match-number-container {
         width: 50vw;
     }
     .title-area {
@@ -133,7 +145,7 @@
     }
     .back-btn {
         display: inline-block;
-        min-width: 100px;
+        min-width: calc(var(--back-icon-size) + 3*var(--button-font-size));;
     }
     /* #back-to-detailview-btn {
         min-width: 135px;
@@ -181,6 +193,7 @@
     :root {
         --main-content-position-left: 30%;
         --side-info-width: 38vw;
+        --viz-ctrl-area-x: 0%;
     }
     #scene-canvas.detailview {
         /* left: -13%; */
@@ -203,6 +216,13 @@
 @media screen and (min-width: 1800px) {
     :root {
         --side-info-width: 38vw;
+        /* --delta: calc(0.02 * 100vh); */
+        --filter-item-font-size: calc(calc(0.011 * 100vh) + 0.8rem);
+        --dropdown-font-size: calc(calc(0.011 * 100vh) + 0.8rem);
+        --info-header-font-size: calc(0.02*100vh + 1.5rem);
+        --info-text-font-size: calc(0.01 * 100vh + 0.7rem);
+        --match-num-font-size: calc(0.011*100vh + 1.0rem);
+        --button-font-size: calc(0.011*100vh + 0.75rem);
     }
     .header-dash-line {
         display:block;
