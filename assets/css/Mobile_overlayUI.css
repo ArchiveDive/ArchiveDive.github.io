@@ -38,7 +38,7 @@
     top: var(--match-num-y);
     left: 50%;
     font-size: var(--match-num-font-size);
-    color:white;
+    color: var(--off-white);
     transform: translate(-50%);
 }
 

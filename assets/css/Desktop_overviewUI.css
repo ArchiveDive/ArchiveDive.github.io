@@ -253,14 +253,14 @@ button:focus {
 }
 
 /* viz control */
-#viz-control-area {
+#viz-control-area, #viz-control-area-dummy {
     position: fixed;
     text-align: center;
     width: var(--viz-ctrl-area-width);
     bottom: var(--viz-ctrl-area-y);
     right: var(--viz-ctrl-area-x);
 }
-#viz-header {
+#viz-header, #viz-header-dummy {
     font-weight: bold;
     font-size: var(--match-num-font-size);
 }
@@ -281,6 +281,16 @@ button:focus {
 .viz-btn:hover, .viz-btn-selected {
     background: var(--gradient-color);
     border: var(--btn-border-weight) solid var(--off-white);
+}
+#viz-control-area-dummy {
+    display: none;
+}
+#viz-control-area-dummy > div > .viz-btn {
+    background: var(--gradient-color);
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    border: 3px solid white;
 }
 
 /* back buttons */
