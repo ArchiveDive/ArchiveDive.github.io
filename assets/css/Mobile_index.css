@@ -19,14 +19,16 @@
     --disabled-opacity: 38%;
 
     /* positioning */
-    --viz-ctrl-area-y: 4%;
-    --viz-ctrl-area-x: 0%;
-
     --canvas-top: -30%;
+    --main-content-position-left: 50%;
+    --filter-title-y: 13%;
+    --explore-btn-y: 5%;
 
     --nav-bar-height: 10%;
     --content-height: 50%;
     --filter-container-height: 40%;
+    
+    --match-num-y: 8%;
 
     --ring-ctrl-area-y: 30%;
     --ring-ctrl-area-width: 200px;
@@ -35,11 +37,24 @@
     --ring-arrow-size-min: 50px;
     --ring-arrow-size-max: 90px;
 
-    --match-num-y: 15%;
-
-    --archive-btn-y: 5%;
+    --archive-btn-y: 15%;
     --btn-padding-y: calc(var(--large-font-size) / 2);
     --btn-padding-x: calc(var(--large-font-size) * 2);
+
+    --viz-ctrl-area-y: 4%;
+    --viz-ctrl-area-x: 0%;
+
+    --back-btn-y: 10%;
+    --back-btn-x: 8%;
+    --help-back-btn-y: 8%;
+
+    --legend-x: 0%;
+    --legend-y: calc(30*var(--vh));
+    --legend-padding-x: 5%;
+
+    --help-icon-y: -50%;
+    --help-icon-left: 5%;
+    --map-y: 50%;
 
     /* elem sizing */
     --viz-ctrl-area-width: 100%;
@@ -51,7 +66,7 @@
     --dropdown-arrow-size-max: 50px;
 
     --filter-height: calc(var(--vh) * 12);
-    --filter-item-padding-y: calc(var(--filter-height) / 16);
+    --filter-item-padding-y: calc(var(--filter-height) / 12);
     --filter-item-padding-x: calc(var(--filter-height) / 4);
     --selected-item-width: 30vw;
     --filter-item-shift: 160px; /* TODO do not use px in js code */
@@ -75,23 +90,7 @@
     --btn-bkgd-color: #8A72BB96;
     --learn-more-color: #8A72BB;
     --gradient-color: linear-gradient(90deg, #2E2D6F 0%, #682052 100%);
-
-    /* positions */
-    --main-content-position-left: 50%;
-    --filter-title-y: 13%;
-    --explore-btn-y: 8%;
-
-    --back-btn-y: 10%;
-    --back-btn-x: 8%;
-    --help-back-btn-y: 8%;
-
-    --legend-x: 0%;
-    --legend-y: calc(30*var(--vh));
-    --legend-padding-x: 5%;
-
-    --help-icon-y: -55%;
-    --help-icon-left: 10%;
-    --map-y: 50%;
+    --inactive-title-color: #FFFFFF64;
 
     /* image sizes */
     --back-icon-size: 48px;
@@ -117,7 +116,8 @@
     /* misc */
     --legend-display: inline-block;
     --legend-align: center;
-    --btn-border-weight: 1px;
+    --learn-more-align: center;
+    --btn-border-weight: 1.5px;
     --btn-border-radius: 3px;
 }
 

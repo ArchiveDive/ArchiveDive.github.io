@@ -17,7 +17,7 @@
 }
 #explore-more-btn {
     position: absolute;
-    top: var(--explore-btn-y);
+    bottom: var(--explore-btn-y);
     left: 50%;
     transform: translateX(-50%); 
     width: var(--explore-btn-width);
@@ -35,7 +35,7 @@
 
 #match-number-container {
     position: absolute;
-    bottom: var(--match-num-y);
+    top: var(--match-num-y);
     left: 50%;
     font-size: var(--match-num-font-size);
     color:white;
