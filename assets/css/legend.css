@@ -10,15 +10,9 @@
 
 .legend {
     position: fixed;
-    /* bottom: var(--legend-y);
-    left: var(--legend-x);
-    width: var(--legend-width);
-    text-align: var(--legend-align); */
     bottom: 30vh;
-    /* left: 50vw; */
-    width: 100%;
+    width: 95%;
     text-align: center;
-    /* transform: translateX(50%); */
 }
 
 .legend-square {
@@ -36,7 +30,7 @@
 
 .legend-line {
     display: inline-block;
-    padding: 2%;
+    padding: 0 2%;
 }
 
 #legend-fall { background-color: orange; }

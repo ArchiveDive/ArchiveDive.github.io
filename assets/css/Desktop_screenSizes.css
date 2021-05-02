@@ -3,9 +3,7 @@
 @media screen and (max-width: 880px) {
     :root {
         --ring-ctrl-padding-x: -200px;
-        /* --ring-ctrl-y: calc(7 * (5vh + 1.25em)); */
         --ring-ctrl-y: 58%;
-        /* --da-btn-y: calc( (4*5vh) + (3*1.25em)); */
         --da-btn-y: 0%;
         --match-num-width-max: 100%;
         --hm-logo-width: 200px;
@@ -30,19 +28,10 @@
     #scroll-filter-1 {
         transform: translate(-50%, -100%);
     }
-    .dropdown-btn {
-        text-align: center;
-        padding-left: unset;
-        margin-left: unset;
-    }
-    .dropdown-filter-option {
-        text-align: center;
-        padding-left: unset;
-        margin-left: unset;
-    }
     /* canvas */
     #scene-canvas.detailview {
-        transform: scale(0.8) translateY(-3%);
+        transform: translateY(-8%);
+        /* bottom: 30%; */
     }
     /* overview */
     .back-btn {
@@ -50,18 +39,6 @@
     }
     .title-area {
         top: 14%;
-    }
-    #go-to-archive-btn {
-        transform: translateY(50%);
-        text-align: center;
-    }
-    #side-info-area {
-        bottom: calc( (8*5vh) + (3*1.25em));
-        width: unset;
-        padding: unset;
-        left: var(--main-content-position-left);
-        transform: translate(-50%, 50%);
-        text-align: center;
     }
     #sub-achivement-info-area {
         display: none;
@@ -80,18 +57,19 @@
 @media screen and (min-width: 55.0em) {
     :root {
         --main-content-position-left: 31%;
-        /* --match-num-y: 28vh; */
         --match-num-y: var(--ring-ctrl-y);
         --explore-more-btn-y: 20vh;
         --viz-ctrl-area-x: 5%;
         --viz-ctrl-area-width: 20%;
         --legend-square-size: 10px;
         --help-icon-y: -100%;
-        --filter-selector-width: calc(100% - 40px);
+        --filter-selector-width: calc(100% - 50px);
     }
     #hm-logo {
         left: 1.5%;
         transform: none;
+        width: var(--hm-logo-width);
+        height: var(--hm-logo-height);
     }
     #scene-canvas.detailview {
         left: -18%;
@@ -109,32 +87,40 @@
     .shuffle-btn {
         display: block !important;
     }
-    .dropup{
-        min-width: unset;
+    .dropdown-btn {
+        text-align: left;
+        padding-left: 20px;
+        margin-left: 20px;
+    }
+    .dropdown-filter-option {
+        text-align: left;
+        padding: 10px 20px;
     }
 
     /* Overlay and Overview UI */
-    #side-info-area {
-        /* top: 50vh; */
-        /* height: 60vh; */
-        top: 45vh;
+    #side-info-area, #sub-side-info-area {
+        width: var(--side-info-width);
+        height: 50vh;
+        right: var(--side-info-x);
+        left: unset;
+        top: 50vh;
         transform: translateY(-50%);
-        /* transform: translateY(100%); */
-        padding-left: 2%;
+        text-align: left;
     }
-    #sub-side-info-area {
-        /* top: 50vh; */
-        /* max-height: 60vh; */
-        top: 45vh;
-        transform: translateY(-50%);
+    #side-info-area {
+        padding-left: 2%;
     }
     #achivement-info-area, #fav-info-area {
         display: inline-block;
     }
     #go-to-archive-btn, #sub-go-to-archive-btn {
         bottom: unset;
+        left: unset;
+        width: unset;
         margin-top: 5%;
         position: relative;
+        transform: unset;
+        text-align: left;
     }
     #match-number-container {
         width: 50vw;
@@ -150,9 +136,6 @@
         display: inline-block;
         min-width: calc(var(--back-icon-size) + 3*var(--button-font-size));;
     }
-    /* #back-to-detailview-btn {
-        min-width: 135px;
-    } */
     /* legend */
     .legend {
         bottom: 10vh;
@@ -195,11 +178,11 @@
 @media screen and (min-width: 1200px) {
     :root {
         --main-content-position-left: 30%;
-        --side-info-width: 38vw;
+        --side-info-width: 30vw;
+        --side-info-x: 10%;
         --viz-ctrl-area-x: 0%;
     }
     #scene-canvas.detailview {
-        /* left: -13%; */
         left: calc(var(--main-content-position-left) - 50%);
     }
     #scene-canvas.overview {
@@ -222,14 +205,13 @@
 /* HD Screens */
 @media screen and (min-width: 1800px) {
     :root {
-        --side-info-width: 38vw;
-        /* --delta: calc(0.02 * 100vh); */
         --filter-item-font-size: calc(calc(0.011 * 100vh) + 0.8rem);
         --dropdown-font-size: calc(calc(0.011 * 100vh) + 0.8rem);
         --info-header-font-size: calc(0.02*100vh + 1.5rem);
         --info-text-font-size: calc(0.01 * 100vh + 0.7rem);
         --match-num-font-size: calc(0.011*100vh + 1.2rem);
         --button-font-size: calc(0.011*100vh + 0.75rem);
+        --side-info-x: 15%;
     }
     .col-7 {
         flex: 0 0 var(--filters-width-3);
@@ -246,13 +228,8 @@
 
 
 /* VERTICAL*/
-/* @media screen and (max-height: 450px) {
-} */
 /* Special case: very short */
 @media screen and (max-height : 630px) and (min-width: 55.0em) {
-    :root {
-        /* --match-num-y: 25vh; */
-    }
     #fav-info-area {
         display: none;
     }

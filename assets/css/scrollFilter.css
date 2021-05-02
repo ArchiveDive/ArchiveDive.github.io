@@ -1,0 +1,82 @@
+/* scroll filters */
+.dropdown-btn[aria-expanded="true"] .dropdown-arrow{ /* flip arrow on expand */
+    transform: scaleY(-1);
+}
+.scroll-filter-item, .scroll-filter-item-selected {
+    color: var(--off-white);
+    font-family: 'Oswald';
+    font-style: normal;
+    text-align: center;
+    font-size: var(--filter-item-font-size);
+    padding-top: var(--filter-item-padding-y);
+}
+.scroll-filter-item-selected {
+    background-image: var(--gradient-color);
+    border: var(--btn-border-weight) solid var(--off-white);
+    border-radius: var(--btn-border-radius);
+}
+
+#scroll-filter-area {
+    position: fixed;
+    bottom: 10px;
+    width: 100%;
+}
+.dropdown-btn {
+    color: var(--off-white);
+    font-family: 'Oswald';
+    font-weight: bold;
+    font-size: var(--filter-item-font-size);
+    text-align: center;
+
+    display: inline-block !important;
+    width: var(--dropdown-width);
+    margin-left: var(--dropdown-margin-left);
+
+    background: var(--item-bkgd-color);
+    border-style: none;
+}
+.dropdown-arrow-img {
+    position: absolute;
+    display: inline-block;
+    right: var(--dropdown-arrow-right);
+    top: 50%;
+    padding: 0px;
+    transform: translateY(-50%);
+
+    width: var(--dropdown-arrow-size);
+    min-width: var(--dropdown-arrow-size-min);
+    max-width: var(--dropdown-arrow-size-max);
+    height: var(--dropdown-arrow-size);
+    min-height: var(--dropdown-arrow-size-min);
+    max-height: var(--dropdown-arrow-size-max);
+}
+#filter-selector-1, #filter-selector-2 {
+    border-radius: 0px;
+    border-style: none;
+
+    background: var(--item-bkgd-color);
+
+    position: fixed;
+    padding: 0px;
+    margin: 0px;
+
+    width: var(--filter-selector-width);
+    min-width: 10%;
+
+    text-align: left;
+}
+.dropdown-filter-option{
+    color: var(--off-white);
+    font-family: 'Oswald';
+    font-style: normal;
+    font-size: var(--dropdown-font-size);
+    text-align: center;
+
+    padding: 2.5% 20px;
+    padding-left: 0;
+    margin-left: 0;
+
+    width: 100%;
+
+    border-style: none;
+}

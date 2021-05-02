@@ -1,0 +1,190 @@
+:root {
+    /* image urls */
+    --bkgd-img-url: url('../images/bg_detailView.png');
+    --shuffle-icon-url: url('../images/grey-shuffle-icon.svg');
+    --left-arrow-icon-url: url('../images/grey-arrow-icon-left.svg');
+    --right-arrow-icon-url: url('../images/grey-arrow-icon-right.svg');
+    /* colors */
+    --off-white: #dfdfdf;
+    --info-text-color: #FFFFFF96;
+    --item-bkgd-color: #282432;
+    --hover-bkgd-color: #37353B;
+    --tooltip-bkgd-color: #555;
+    --btn-bkgd-color: #8A72BB96;
+    --learn-more-color: #8A72BB;
+    --gradient-color: linear-gradient(90deg, #2E2D6F 0%, #682052 100%);
+    --inactive-title-color: #FFFFFF64;
+}
+
+/* index */
+body {
+    font-family: 'Oswald';
+    color: var(--off-white);
+    background-color: black;
+}
+h2 { /* TODO still need this? */
+    font-weight: bold;
+}
+
+#hm-logo {
+    position: fixed;
+    left: 50%;
+    top: 2%;
+    transform: translateX(-50%);
+
+    width: 50vw;
+    height: 5vw;
+    min-width: var(--hm-logo-width-min);
+    max-width: var(--hm-logo-width-max);
+    min-height: var(--hm-logo-height-min);
+    max-height: var(--hm-logo-height-max);
+    
+    background-image: url('../logos/thm-logo-grey.svg');
+    background-size: 100%, 100%;
+    background-repeat: no-repeat;
+}
+
+/* canvas scene */
+#scene-root {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-image: var(--bkgd-img-url);
+    background-size: 100% 100%;
+}
+#scene-canvas {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    /* border: 5px solid green; */
+}
+#scene-canvas.detailview {
+    position: absolute;
+    bottom: var(--detailview-bottom);
+}
+#scene-canvas.overview {
+    position: absolute;
+    transform: scale(0.6) translateY(-9%);
+    left: 0%;
+}
+canvas {
+    position: absolute;
+    /* border: 5px solid red; */
+}
+canvas.detailview {
+    bottom: 0%;
+}
+canvas.overview {
+    bottom: 50%;
+    transform: translateY(50%);
+}
+
+/* landscape css */
+#landscape-page{
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('../images/bg_detailView.png');
+    background-size: 100% 100%;
+}
+#landscape-page h1{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* buttons */
+.btn-img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0%;
+    top: 0%;
+}
+/* override bootstrap button */
+.btn, button {
+    border-radius: 0px;
+    border-style: none;
+    background-color: rgba(0, 0, 0, 0);
+}
+button:focus {
+    outline-style: none;
+}
+/* buttons base */
+.custom-btn {
+    position: fixed;
+    height: var(--btn-height);
+    min-height: var(--btn-height-min);
+    max-height: var(--btn-height-max);
+    color: var(--off-white);
+    font-family: 'Oswald';
+    font-weight: bold;
+    font-size: var(--button-font-size);
+    background-color: var(--btn-bkgd-color);
+    border-style: none;
+    border-radius: 2px;
+}
+.custom-btn:hover {
+    background: var(--gradient-color);
+    border: var(--btn-border-weight) solid var(--off-white);
+}
+ 
+
+/* digital archive btn TODO trim, many styles not needed after design change */
+.digital-archive-btn{
+    width: var(--da-btn-width);
+    min-width: var(--da-btn-width-min);
+    max-width: var(--da-btn-width-max);
+    text-align: var(--learn-more-align);
+    padding: 0%;
+
+    color: var(--learn-more-color);
+    font-size: var(--button-font-size);
+    font-weight: bold;
+}
+.digital-archive-btn:hover .archive-btn-text{
+    text-decoration: underline;
+}
+.digital-archive-btn img {
+    height: calc(var(--button-font-size)/1.4);
+    margin-bottom: 1%;
+    margin-left: 2%;
+}
+.digital-archive-btn .tooltip-text {
+    visibility: hidden;
+    width: var(--da-btn-width);
+    min-width: var(--da-btn-width-min);
+    max-width: var(--da-btn-width-max);
+    background-color: var(--tooltip-bkgd-color);
+    color: var(--off-white);
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+    font-family: 'Source Sans Pro';
+    font-weight: normal;
+    font-size: var(--info-text-font-size);
+
+    position: absolute;
+    z-index: 1;
+    bottom: 130%;
+    left: 50%;
+    transform: translatex(-50%);
+}
+.tooltip-text:after { /* decoration */
+    content: ' ';
+    position: absolute;
+    width: 0;
+    height: 0;
+    left: 25%;
+    bottom: -70%;
+    transform: translateX(-50%);
+    border: 1rem solid;
+    border-color: #555 transparent transparent transparent;
+}  
+.digital-archive-btn:hover .tooltip-text {
+    visibility: visible;
+}

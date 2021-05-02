@@ -10,26 +10,24 @@
 
     <!-- fonts -->
     <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href='http://fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+    <link href='https://fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'>
     <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap" rel="stylesheet">
 
     <!-- libraries -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <script id="jq-script" src="https://cdn.bootcdn.net/ajax/libs/jquery/3.6.0/jquery.js"></script>
-    <!-- not sure if this slows stuff down -->
-    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script> 
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>  
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
     <!-- CSS -->
+    <link id="css-platformIndex" rel="stylesheet">
     <link id="css-index" rel="stylesheet">
-    <link id="css-scrollFilter" rel="stylesheet">
     <link id="css-overlayUI" rel="stylesheet">
     <link id="css-overviewUI" rel="stylesheet">
-    <link id="css-subsetviewUI" rel="stylesheet">
     <link id="css-legend" rel="stylesheet">
+    <link id="css-scrollFilter" rel="stylesheet">
     <link id="css-screenSizes" rel="stylesheet"> <!-- needs to go last -->
 
 </head>
@@ -95,6 +93,7 @@
         }
     </style>
 
+    <!-- loading page -->
     <div id="loading-page">
         <div id="loading-page-header" style="color:white;display:none">
             <div id="header-logo"></div>
@@ -107,11 +106,12 @@
     <!-- loading page scripts -->
     <script src='./loadingPage.js'>Start</script>
 
+    <!-- mobile landscape mask-->
     <div id="landscape-page" style="display:none">
-        <h1 style="color:white;">Please rotate your phone</h1>
+        <h1 style="color:white;">Please rotate your device</h1>
     </div>
 
-    <!--scene-->
+    <!--3D scene canvas-->
     <div id="scene-root">
         <div id="scene-canvas" style="display:none"></div>
     </div>
@@ -127,6 +127,21 @@
                 Explore more
             </button>
 
+            <!--TBD: move this to css file!-->
+            <style>
+                #zero-result-warning{
+                    position: fixed;
+                    left: 50%;
+                    top: 50%;
+                    font-size: xx-large;
+                    color:white;
+                    display:none;
+                }
+            </style>
+            <div id = "zero-result-warning">
+                Try a different set of filters
+            </div>
+
             <div id="middle-display-area">
                 <!--filter titile-->
                 <div id="match-number-container"><div id="match-number"></div></div>
@@ -138,27 +153,6 @@
                         <div id="short-bio" class="hm-font-light fade-bottom hm-info-box"> </div>
                         <div id="info-area-break"></div>
                     </div>
-                    <!-- <div id="fav-info-area">
-                        <h2 id="fav-info-header" class="hm-font">Favorites</h2>
-                        <div id="fav-info-box" class="hm-info-box">
-                            <div>
-                                <span class="fav-tag">Color:</span>
-                                <span class="fav-info" id="fav-color-info">Blue</span>
-                            </div>
-                            <div>
-                                <span class="fav-tag">Food:</span>
-                                <span class="fav-info" id="fav-food-info">Blue</span>
-                            </div>
-                            <div>
-                                <span class="fav-tag">Season:</span>
-                                <span class="fav-info" id="fav-season-info">Blue</span>
-                            </div>
-                            <div>
-                                <span class="fav-tag">Vacation Spot:</span>
-                                <span class="fav-info" id="fav-spot-info">Blue</span>
-                            </div>
-                        </div>
-                    </div> -->
                     <button id="go-to-archive-btn" class="digital-archive-btn">
                         <span class="archive-btn-text">Learn More</span>
                         <span class="archive-btn-decor"><img src="assets/images/purple-arrow-icon-right.svg"></span>
@@ -275,12 +269,11 @@
 
         <!--overlay UI :  overview-->
         <div id="overview-overlay-UI">
-            <!-- <button id = "overview-home-btn" class="home-btn custom-btn">HOME</button> -->
-
             <div class="title-area">
                 <h2 class="filter-title"><span id="overview-filter-title"></span></h2>
                 <h2 class="match-title"><span id="overview-match-title"></span></h2>
             </div>
+
             <div id="viz-control-area">
                 <h3 id="viz-header">Explore By</h3>
                 <div>
@@ -293,6 +286,7 @@
                     <button id="viz-gender-btn" class="viz-btn">Gender</button>
                 </div>
             </div>
+            
             <div id="viz-control-area-dummy">
                 <h3 id="viz-header-dummy">Explore By</h3>
                 <div>
@@ -376,7 +370,7 @@
         </div>
     </div>
 
-    <!--three js-->
+    <!--scripts from webpack-->
     <script src="main.js"></script>
 </body>
 
