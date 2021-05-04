@@ -114,6 +114,10 @@
     --btn-border-radius: 3px;
 }
 
+#zero-result-warning {
+    top: 40vh;
+}
+
 /* side info */
 .hm-info-box {
     font-size: var(--info-text-font-size);

@@ -42,6 +42,8 @@ h2 { /* TODO still need this? */
     background-image: url('../logos/thm-logo-grey.svg');
     background-size: 100%, 100%;
     background-repeat: no-repeat;
+
+    cursor: pointer;
 }
 
 /* canvas scene */
@@ -64,7 +66,7 @@ h2 { /* TODO still need this? */
 }
 #scene-canvas.overview {
     position: absolute;
-    transform: scale(0.6) translateY(-9%);
+    transform: translateY(-9%);
     left: 0%;
 }
 canvas {
@@ -187,4 +189,15 @@ button:focus {
 }  
 .digital-archive-btn:hover .tooltip-text {
     visibility: visible;
+}
+
+/* misc */
+#zero-result-warning{
+    position: fixed;
+    left: 50vw;
+    font-size: var(--match-num-font-size);
+    color: var(--off-white);
+    display: none;
+    transform: translateX(-50%);
+    text-align: center;
 }

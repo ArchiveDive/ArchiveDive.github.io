@@ -4,10 +4,6 @@
     display: none;
 }
 
-#legend-gender {
-    display: none;
-}
-
 .legend {
     position: fixed;
     bottom: 30vh;
@@ -37,5 +33,6 @@
 #legend-winter { background-color: blue; }
 #legend-spring { background-color: green; }
 #legend-summer { background-color: red; }
+
 #legend-male { background-color: blue; }
 #legend-female { background-color: purple; }

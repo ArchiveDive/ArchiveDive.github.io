@@ -79,7 +79,9 @@
         left: -10%;
         top: 5%;
     }
-    
+    #zero-result-warning {
+        left: var(--main-content-position-left);
+    }
     /* Scroll filters */
     .scroll-btn, .scroll-filter-container {
         display: block !important;

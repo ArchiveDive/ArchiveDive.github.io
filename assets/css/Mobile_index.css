@@ -105,6 +105,10 @@
     --btn-border-radius: 3px;
 }
 
+#zero-result-warning {
+    top: calc(40 * var(--vh));
+}
+
 /* side info */
 #achivement-info-header {
     display: none;

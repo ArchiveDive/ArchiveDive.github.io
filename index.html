@@ -4,9 +4,9 @@
 <head>
     <title>Archive Dive</title>
     <!-- icon -->
-    <link rel="icon" href="assets/logos/thm-logo-favicon.png">
-    <link rel="mask-icon" href="assets/logos/thm-logo-favicon.png" color="#000000">
-    <link rel="apple-touch-icon" href="assets/logos/thm-logo-favicon.png">
+    <link rel="icon" href="assets/logos/thm-logo-favicon-purple.png">
+    <link rel="mask-icon" href="assets/logos/thm-logo-favicon-purple.png" color="#000000">
+    <link rel="apple-touch-icon" href="assets/logos/thm-logo-favicon-purple.png">
 
     <!-- fonts -->
     <link rel="preconnect" href="https://fonts.gstatic.com">
@@ -118,7 +118,7 @@
 
     <!--overlay UI -->
     <div id="overlay-root" style="display:none">
-        <div id="hm-logo"></div>
+        <a id="hm-logo"></a>
 
         <!--overlay UI : detail view-->
         <div id="detailview-overlay-UI">
@@ -126,18 +126,6 @@
             <button id="explore-more-btn" class="custom-btn">
                 Explore more
             </button>
-
-            <!--TBD: move this to css file!-->
-            <style>
-                #zero-result-warning{
-                    position: fixed;
-                    left: 50%;
-                    top: 50%;
-                    font-size: xx-large;
-                    color:white;
-                    display:none;
-                }
-            </style>
             <div id = "zero-result-warning">
                 Try a different set of filters
             </div>
@@ -310,6 +298,38 @@
                 <span class="back-btn-text">Back</span>
             </button>
 
+            <div id="legend-color" class="legend">
+                <div class="legend-line">
+                    <div class="legend-square" id="legend-red"></div><span class="legend-label">Red</span>
+                </div>
+                <div class="legend-line">
+                    <div class="legend-square" id="legend-orange"></div><span class="legend-label">Orange</span>
+                </div>
+                <div class="legend-line">
+                    <div class="legend-square" id="legend-yellow"></div><span class="legend-label">Yellow</span>
+                </div>
+                <div class="legend-line">
+                    <div class="legend-square" id="legend-green"></div><span class="legend-label">Green</span>
+                </div>
+                <div class="legend-line">
+                    <div class="legend-square" id="legend-blue"></div><span class="legend-label">Blue</span>
+                </div>
+                <div class="legend-line">
+                    <div class="legend-square" id="legend-purple"></div><span class="legend-label">Purple</span>
+                </div>
+                <div class="legend-line">
+                    <div class="legend-square" id="legend-pink"></div><span class="legend-label">Pink</span>
+                </div>
+                <div class="legend-line">
+                    <div class="legend-square" id="legend-black"></div><span class="legend-label">Black</span>
+                </div>
+                <div class="legend-line">
+                    <div class="legend-square" id="legend-others-color"></div><span class="legend-label">Other Responses</span>
+                </div>
+                <div class="legend-line">
+                    <div class="legend-square" id="legend-multiple-color"></div><span class="legend-label">Multiple</span>
+                </div>
+            </div>
             <div id="legend-season" class="legend">
                 <div class="legend-line">
                     <div class="legend-square" id="legend-fall"></div><span class="legend-label">Fall</span>
@@ -324,10 +344,10 @@
                     <div class="legend-square" id="legend-summer"></div><span class="legend-label">Summer</span>
                 </div>
                 <div class="legend-line">
-                    <div class="legend-square" id="legend-others"></div><span class="legend-label">Other Responses</span>
+                    <div class="legend-square" id="legend-others-season"></div><span class="legend-label">Other Responses</span>
                 </div>
                 <div class="legend-line">
-                    <div class="legend-square" id="legend-multiple"></div><span class="legend-label">Multiple</span>
+                    <div class="legend-square" id="legend-multiple-season"></div><span class="legend-label">Multiple</span>
                 </div>
             </div>
             <div id="legend-gender" class="legend">
