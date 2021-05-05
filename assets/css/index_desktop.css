@@ -1,12 +1,12 @@
 :root {
     /* font sizes */
     --delta: calc(0.008 * 100vh);
-    --dropdown-font-size: calc(var(--delta) + 0.8rem);
     --filter-item-font-size: calc(0.012 * 100vh + 0.8rem);
     --info-header-font-size: calc(var(--delta) + 1.5rem);
     --info-text-font-size: calc(0.01 * 100vh + 0.7rem);
     --button-font-size: calc(0.01 * 100vh + 0.75rem);
-    --match-num-font-size: calc(var(--delta) + 1.2rem);
+    --match-num-font-size: calc(var(--delta) + 0.9rem);
+    --sub-match-num-font-size: calc(var(--delta) + 1.2rem);
 
     /* element sizes */
     --side-info-width: 30vw;
@@ -48,6 +48,8 @@
     --match-num-y: 89%;
     --match-num-width-max: calc(-1.5 * var(--ring-ctrl-padding-x));
     --filter-title-y: 10%;
+    --side-info-bottom: 45%;
+    --sub-da-btn-y: 0%;
 
     --viz-ctrl-area-y: 4%;
     --viz-ctrl-area-x: auto;
@@ -61,9 +63,6 @@
 
     --help-icon-y: -200%;
     --help-icon-left: 30px;
-
-    /* --da-btn-y: 0%; */
-    --sub-da-btn-y: 0%;
 
     --filter-item-padding-y: 0.5vh;
     --dropdown-arrow-right: 30px;
@@ -107,6 +106,7 @@
     --back-icon-size-max: 40px;
 
     /* misc */
+    --vh: 1vh;
     --legend-display: block;
     --legend-align: left;
     --learn-more-align: left;
@@ -114,14 +114,12 @@
     --btn-border-radius: 3px;
 }
 
-#zero-result-warning {
-    top: 40vh;
-}
-
 /* side info */
-.hm-info-box {
-    font-size: var(--info-text-font-size);
-    color: var(--info-text-color);
+#sub-side-info-area{
+    position: fixed;
+    transform: translate(-50%, 50%);
+    bottom: calc( (8*5vh) + (2*1.25em));
+    text-align: center;
 }
 #achivement-info-area {
     display: none;
@@ -131,25 +129,11 @@
     font-weight: bold;
     font-size: var(--info-header-font-size);
 }
-#short-bio, #sub-short-bio{
-    padding-right: 20px;
-    overflow-x: hidden;
-    overflow-y: hidden;
-}
-
-/* subset side info */
-#sub-name-info{
-    font-size: var(--info-header-font-size);
-    font-weight: bold;
-    right: 0px;
-    margin-bottom: 5%;
-}
-#sub-achivement-info-header{ /* TODO remove this? */
+#sub-hm-headshot {
     display: none;
 }
-#sub-fav-info-header{
-    margin-top: 10px;
-    margin-bottom: 10px;
+#sub-occupation {
+    display: none;
 }
 
 /* ring arrows */
@@ -159,31 +143,20 @@
     bottom: var(--ring-ctrl-y);
     transform: translate(-50%, 50%);
 }
-.ring-arrow {
-    height: var(--ring-arrow-size);
-    min-height: var(--ring-arrow-size-min);
-    max-height: var(--ring-arrow-size-max);
-    width: var(--ring-arrow-size);
-    min-width: var(--ring-arrow-size-min);
-    max-width: var(--ring-arrow-size-max);
-    border-color: rgba(0, 0, 0, 0);
-    padding: 0px;
-    transform: translateY(-50%);
-}
 #ring-control-right:hover, #ring-control-left:hover {
     background-color: var(--hover-bkgd-color);
     outline: 5px solid var(--hover-bkgd-color);
 }
-#ring-control-left{
+.ring-arrow {
     position: fixed;
-    left: var(--ring-ctrl-padding-x);
-}
-#ring-control-right{
-    position: fixed;
-    right: var(--ring-ctrl-padding-x);
+    transform: translateY(-50%);
 }
 
 /* scroll filters */
+#filter-selector-1, #filter-selector-2 {
+    filter: drop-shadow(4px -2.5px 1.5px #111);
+}
+
 /* scroll left and right buttons */
 .scroll-btn {
     padding: 0px;
@@ -208,23 +181,6 @@
     max-width: var(--scroll-arrow-size-max);
     margin: auto;
     margin-top: -3px;
-}
-/* hover */
-.dropdown-btn:hover {
-    background-color: var(--hover-bkgd-color);
-}
-.scroll-btn:hover {
-    background-color: var(--hover-bkgd-color) !important;
-}
-.scroll-filter-item-selected:hover {
-    cursor: context-menu; /* avoid type cursor */
-}
-.scroll-filter-item:hover {
-    background-color: var(--hover-bkgd-color);
-    cursor: pointer;
-}
-.dropdown-filter-option:hover {
-    background-color: var(--hover-bkgd-color);
 }
 
 /* custom columns */

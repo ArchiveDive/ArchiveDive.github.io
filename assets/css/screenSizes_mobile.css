@@ -1,9 +1,8 @@
 /* Tablets */
 @media screen and (min-device-width: 700px){
     :root {
-        --med-font-size: 1.5rem;
-        --large-font-size: 2rem;
         --match-num-font-size:  calc(var(--delta) + 1rem);
+        --filter-item-font-size: calc(var(--delta) + 0.6rem);
 
         --filter-height: calc(var(--vh) * 10);
         --filter-item-padding-y: calc(var(--filter-height) / 16);
@@ -20,18 +19,12 @@
         --map-cont-height: 60vh;
         --map-y: 35%;
     }
-
     #hm-logo {
         width: 40vw;
         height: 4vw;
     }
-
     .scroll-filter-body {
         transform: translateX(5vw);
-    }
-
-    .dropdown-arrow-img {
-        right: 3%;
     }
     .back-btn-text {
         display: block;
@@ -40,7 +33,13 @@
         display: inline-block;
         min-width: 140px;
     }
-    /* #back-to-detailview-btn {
-        min-width: 135px;
-    } */
+    #side-info-area {
+        bottom: calc( (38*var(--vh)) + (2*1.25em));
+    }
+    #sub-hm-headshot {
+        margin-top: 10%;
+    }
+    #sub-hm-headshot, #sub-occupation #sub-hm-headshot {
+        margin-bottom: 5%;
+    }
 }

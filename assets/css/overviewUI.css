@@ -12,7 +12,7 @@
 }
 .filter-title {
     position: relative;
-    font-size: var(--match-num-font-size);
+    font-size: var(--sub-match-num-font-size);
 }
 #overview-filter-title {
     color: var(--off-white);
@@ -22,7 +22,7 @@
 }
 .match-title {
     position: relative;
-    font-size: var(--match-num-font-size);
+    font-size: var(--sub-match-num-font-size);
     color: var(--off-white);
 }
 
@@ -36,7 +36,7 @@
 }
 #viz-header, #viz-header-dummy {
     font-weight: bold;
-    font-size: var(--match-num-font-size);
+    font-size: var(--sub-match-num-font-size);
 }
 .viz-btn {
     width: var(--viz-btn-width);

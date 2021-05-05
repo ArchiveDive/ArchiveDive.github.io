@@ -59,17 +59,19 @@
     position: fixed;
     padding: 0px;
     margin: 0px;
+    margin-bottom: -1%;
 
     width: var(--filter-selector-width);
     min-width: 10%;
 
     text-align: left;
+
 }
 .dropdown-filter-option{
     color: var(--off-white);
     font-family: 'Oswald';
     font-style: normal;
-    font-size: var(--dropdown-font-size);
+    font-size: var(--filter-item-font-size);
     text-align: center;
 
     padding: 2.5% 20px;

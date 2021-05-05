@@ -1,0 +1,39 @@
+/* Legend */
+/* TODO swtich from screen sizes to variables ?  */
+.legend {
+    display: none;
+}
+
+.legend {
+    position: fixed;
+    bottom: calc(25*var(--vh));
+    width: 100vw;
+    text-align: center;
+}
+.legend-square {
+    display: none;
+}
+.legend-label {
+    display: inline-block;
+    /* margin-left: 10px; */
+    font-size: var(--info-text-font-size);
+}
+.legend-line {
+    display: inline-block;
+    text-align: center;
+    font-weight: bold;
+    margin: 1vw;
+    padding: 0.5rem 0;
+    width: 20vw;
+    background-color: var(--btn-bkgd-color);
+}
+.legend-line:hover {
+    opacity: 0.6;
+}
+.legend-other {
+    width: 42.5vw;
+}
+.inactive-legend {
+    opacity: 0.43;
+    pointer-events: none;
+}

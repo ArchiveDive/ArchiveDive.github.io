@@ -55,7 +55,7 @@
     color: white;
     font-family: 'Oswald';
     font-style: normal;
-    font-size: var(--dropdown-font-size);
+    font-size: var(--filter-option-font-size);
     padding: 10px 20px;
     text-align: left;
 }
