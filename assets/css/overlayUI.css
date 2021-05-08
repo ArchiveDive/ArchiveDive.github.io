@@ -31,7 +31,7 @@
     width: 30vw;
 }
 /* subset side info */
-#sub-name-info{
+#sub-name-info, #achivement-info-header, #overview-name-info{
     font-size: var(--info-header-font-size);
     font-weight: bold;
     right: 0px;

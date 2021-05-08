@@ -4,7 +4,7 @@
     --delta: calc(0.015 * 100*var(--vh));
 
     --match-num-font-size:  calc(var(--delta) + 2rem);
-    --sub-match-num-font-size:  var(--match-num-font-size);
+    --sub-match-num-font-size:  calc(var(--delta) + 1.1rem);
     --button-font-size:  calc(var(--delta) + 0.8rem);
     --info-header-font-size: calc(var(--delta) + 2rem);
     --info-text-font-size: calc(var(--delta) + 0.7rem);
@@ -105,7 +105,12 @@
     --btn-border-weight: 1.5px;
     --btn-border-radius: 3px;
 }
-
+/* misc */
+/* .fade-bottom { */
+canvas.overview {
+    -webkit-mask-image: linear-gradient(to top, transparent 0%, black 5%);
+    mask-image: linear-gradient(to top, transparent 0%, black 5%);
+}
 #zero-result-warning {
     top: calc(40 * var(--vh));
 }

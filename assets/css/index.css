@@ -66,7 +66,7 @@ h2 { /* TODO still need this? */
 }
 #scene-canvas.overview {
     position: absolute;
-    transform: translateY(-9%);
+    transform: scale(0.9) translateY(-9%);
     left: 0%;
 }
 canvas {
@@ -93,6 +93,24 @@ canvas.overview {
     background-size: 100% 100%;
 }
 #landscape-page h1{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* narrow screen mask css */
+#narrow-screen-mask{
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('../images/bg_detailView.png');
+    background-size: 100% 100%;
+}
+#narrow-screen-mask h1{
     position: absolute;
     left: 50%;
     top: 50%;
@@ -146,6 +164,7 @@ button:focus {
     color: var(--learn-more-color);
     font-size: var(--button-font-size);
     font-weight: bold;
+    z-index: 9;
 }
 .digital-archive-btn:hover .archive-btn-text{
     text-decoration: underline;
@@ -170,7 +189,6 @@ button:focus {
     font-size: var(--info-text-font-size);
 
     position: absolute;
-    z-index: 1;
     bottom: -180%;
     left: 50%;
     transform: translatex(-50%);

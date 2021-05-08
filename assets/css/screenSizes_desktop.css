@@ -7,6 +7,11 @@
         --da-btn-y: 0%;
         --match-num-width-max: 100%;
         --hm-logo-width: 200px;
+        --sub-match-num-font-size: calc(var(--delta) + 0.9rem);
+        --info-text-font-size: calc(0.01 * 100vh + 0.5rem);
+    }
+    #header-slogan {
+        font-size: calc(0.01*100vh + 1.0rem) !important;
     }
     /* scroll filters */
     #scroll-filter-row {
@@ -37,9 +42,6 @@
     .back-btn {
         transform: scale(0.7);
     }
-    .title-area {
-        top: 14%;
-    }
     #sub-achivement-info-area {
         display: none;
     }
@@ -64,6 +66,7 @@
         --legend-square-size: 10px;
         --help-icon-y: -100%;
         --filter-selector-width: calc(100% - 50px);
+        --back-btn-y: 13%;
     }
     #hm-logo {
         left: 1.5%;
@@ -83,6 +86,10 @@
         left: var(--main-content-position-left);
     }
     /* Scroll filters */
+    #scroll-filter-2 {
+        margin-top: 1%;
+        margin-bottom: 1%;
+    }
     .scroll-btn, .scroll-filter-container {
         display: block !important;
     }
@@ -100,7 +107,7 @@
     }
 
     /* Overlay and Overview UI */
-    #side-info-area, #sub-side-info-area {
+    #side-info-area, #sub-side-info-area, #overview-side-info-area {
         width: var(--side-info-width);
         height: 50vh;
         right: var(--side-info-x);
@@ -112,10 +119,10 @@
     #side-info-area {
         padding-left: 2%;
     }
-    #achivement-info-area, #fav-info-area {
+    #achivement-info-area, #fav-info-area, #overview-achivement-info-area {
         display: inline-block;
     }
-    #go-to-archive-btn, #sub-go-to-archive-btn {
+    #go-to-archive-btn, #sub-go-to-archive-btn, #overview-go-to-archive-btn {
         bottom: unset;
         left: unset;
         width: unset;
@@ -187,9 +194,6 @@
     #scene-canvas.detailview {
         left: calc(var(--main-content-position-left) - 50%);
     }
-    #scene-canvas.overview {
-        left: -10%;
-    }
     #side-info-area {
         padding-left: 3%;
     }
@@ -205,14 +209,14 @@
 }
 
 /* HD Screens */
-@media screen and (min-width: 1800px) {
+@media screen and (min-width: 1600px) {
     :root {
         --filter-item-font-size: calc(calc(0.011 * 100vh) + 0.8rem);
         --info-header-font-size: calc(0.02*100vh + 1.5rem);
         --info-text-font-size: calc(0.01 * 100vh + 0.7rem);
         --match-num-font-size: calc(0.011*100vh + 1.2rem);
         --button-font-size: calc(0.011*100vh + 0.75rem);
-        --side-info-x: 15%;
+        --side-info-x: 10%;
     }
     .col-7 {
         flex: 0 0 var(--filters-width-3);
@@ -225,6 +229,9 @@
     .back-btn {
         transform: scale(1);
     }
+    #sub-side-info-area, #overview-side-info-area {
+        right: 8%;
+    }
 }
 
 
@@ -235,11 +242,11 @@
         display: none;
     }
     #side-info-area {
-        top: 45vh;
+        top: 40vh;
         height: 40vh;
     }
     #short-bio {
-        max-height: 20vh;
+        max-height: 30vh;
     }
 }
 

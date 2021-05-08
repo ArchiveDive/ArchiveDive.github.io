@@ -1,12 +1,11 @@
 /* Legend */
-/* TODO swtich from screen sizes to variables ?  */
 .legend {
     display: none;
 }
-
 .legend {
     position: fixed;
-    bottom: calc(25*var(--vh));
+    /* bottom: calc(25*var(--vh)); */
+    bottom: calc(5 * var(--vh));
     width: 100vw;
     text-align: center;
 }
@@ -15,11 +14,10 @@
 }
 .legend-label {
     display: inline-block;
-    /* margin-left: 10px; */
     font-size: var(--info-text-font-size);
 }
 .legend-line {
-    display: inline-block;
+    display: none;
     text-align: center;
     font-weight: bold;
     margin: 1vw;
@@ -30,10 +28,20 @@
 .legend-line:hover {
     opacity: 0.6;
 }
+.active-legend {
+    display: inline-block;
+}
+.legend-other-container {
+    width: 100vw;
+}
 .legend-other {
     width: 42.5vw;
 }
-.inactive-legend {
-    opacity: 0.43;
-    pointer-events: none;
+#legend-loading {
+    width: 100vw;
+    color: white;
+    bottom: calc(20 * var(--vh));
+    text-align: center;
+    position: fixed;
+    font-size: var(--info-header-font-size);
 }

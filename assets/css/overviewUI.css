@@ -9,6 +9,7 @@
     transform: translateX(-50%);
     margin: auto;
     text-align: center;
+    width: 60vw;
 }
 .filter-title {
     position: relative;

@@ -57,7 +57,7 @@
     --explore-more-btn-y: calc( (5*5vh) + (2*1.25em));
     --explore-more-btn-padding-x: 3vw;
 
-    --back-btn-y: 13%;
+    --back-btn-y: 10%;
     --back-btn-x: 3%;
     --help-back-btn-y: 8%;
 
@@ -115,7 +115,10 @@
 }
 
 /* side info */
-#sub-side-info-area{
+#side-info-area {
+    z-index: 9;
+}
+#sub-side-info-area, #overview-side-info-area{
     position: fixed;
     transform: translate(-50%, 50%);
     bottom: calc( (8*5vh) + (2*1.25em));
@@ -124,15 +127,18 @@
 #achivement-info-area {
     display: none;
 }
-#achivement-info-header{
+/* #achivement-info-header{
     margin-bottom: 5%;
     font-weight: bold;
     font-size: var(--info-header-font-size);
-}
+} */
 #sub-hm-headshot {
     display: none;
 }
 #sub-occupation {
+    display: none;
+}
+#back-to-subsetview-btn {
     display: none;
 }
 
@@ -221,6 +227,9 @@
     background-position: center;
 }
 /* scroll filters */
+#scroll-filter-area {
+    z-index: 0;
+}
 #scroll-filter-area .row {
     flex-wrap: nowrap !important;
     margin-left: 0px !important;
@@ -255,8 +264,8 @@
 
 #scroll-filter-2 {
     position: relative;
-    margin-top: 20px;
-    margin-bottom: 20px;
+    margin-top: 3%;
+    margin-bottom: 2%;
     left: 50%;
     transform: translate(-50%, 0%);
 }

@@ -17,7 +17,7 @@
     <!-- libraries -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <script id="jq-script" src="https://cdn.bootcdn.net/ajax/libs/jquery/3.6.0/jquery.js"></script>
-    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>  
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
@@ -46,6 +46,7 @@
             z-index: 1;
             font-size: Oswald;
         }
+
         #loading-page-start-btn {
             position: absolute;
             left: 50%;
@@ -57,11 +58,12 @@
             background: linear-gradient(90deg, #2E2D6F 0%, #682052 100%);
             z-index: 2;
         }
-        #header-logo{
+
+        #header-logo {
             position: fixed;
             left: 50%;
             top: 50%;
-            transform: translate(-50%,-50%);
+            transform: translate(-50%, -50%);
             width: 700px;
             max-width: 90vw;
             height: 50px;
@@ -70,24 +72,27 @@
             background-repeat: no-repeat;
 
         }
-        #header-slogan{
+
+        #header-slogan {
             position: fixed;
             left: 50%;
             top: calc(50% + 40px);
             transform: translateX(-50%);
             text-align: center;
-            font-size: calc(0.01*100vh + 1.3rem);
+            font-size: calc(0.01*100vh + 1.2rem);
             color: lightgrey;
         }
+
         #footer-credit {
             position: fixed;
             left: 50%;
             bottom: 10%;
-            transform: translate(-50%,-50%);
+            transform: translate(-50%, -50%);
             font-size: calc(0.01*100vh + 0.5rem);
             text-align: center;
             text-decoration: underline;
         }
+
         #footer-credit a {
             color: grey;
         }
@@ -98,7 +103,8 @@
         <div id="loading-page-header" style="color:white;display:none">
             <div id="header-logo"></div>
             <div id="header-slogan">Explore <i><b> the </i></b> Digital Repository for the Black Experience</div>
-            <div id="footer-credit"><a href="https://www.etc.cmu.edu/blog/projects/archive-dive/" target="_blank">Created by CMU Entertainment Technology Center Students</a></div>
+            <div id="footer-credit"><a href="https://www.etc.cmu.edu/blog/projects/archive-dive/"
+                    target="_blank">Created by CMU Entertainment Technology Center Students</a></div>
         </div>
         <button id="loading-page-start-btn" class="custom-btn" style="display:none">Start</button>
     </div>
@@ -109,6 +115,11 @@
     <!-- mobile landscape mask-->
     <div id="landscape-page" style="display:none">
         <h1 style="color:white;">Please rotate your device</h1>
+    </div>
+
+    <!-- narrow screen mask-->
+    <div id="narrow-screen-mask" style="display:none">
+        <h1 style="color:white;">Please resize your browser window</h1>
     </div>
 
     <!--3D scene canvas-->
@@ -126,19 +137,21 @@
             <button id="explore-more-btn" class="custom-btn">
                 Explore more
             </button>
-            <div id = "zero-result-warning">
+            <div id="zero-result-warning">
                 Try a different set of filters
             </div>
 
             <div id="middle-display-area">
                 <!--filter titile-->
-                <div id="match-number-container"><div id="match-number"></div></div>
+                <div id="match-number-container">
+                    <div id="match-number"></div>
+                </div>
 
                 <!--hm info -->
                 <div id="side-info-area">
                     <div id="achivement-info-area">
-                        <h2 id="achivement-info-header" class="hm-font">Biography </h2>
-                        <div id="short-bio" class="hm-font-light fade-bottom hm-info-box"> </div>
+                        <h2 id="achivement-info-header"></h2>
+                        <div id="short-bio" class="hm-info-box"> </div>
                         <div id="info-area-break"></div>
                     </div>
                     <button id="go-to-archive-btn" class="digital-archive-btn">
@@ -257,6 +270,23 @@
 
         <!--overlay UI :  overview-->
         <div id="overview-overlay-UI">
+            <!--hm info -->
+            <div id="overview-side-info-container">
+                <div id="overview-side-info-area">
+                    <div id="overview-name-info"></div>
+                    <div id="overview-achivement-info-area">
+                        <div id="overview-occupation"></div>
+                        <div id="overview-short-bio" class="hm-info-box"></div>
+                        <div id="overview-info-area-break"></div>
+                    </div>
+                    <button id="overview-go-to-archive-btn" class="digital-archive-btn">
+                        <span class="archive-btn-text">Learn More</span>
+                        <span class="archive-btn-decor"><img src="assets/images/purple-arrow-icon-right.svg"></span>
+                        <span class="tooltip-text">Opens in new tab</span>
+                    </button>
+                </div>
+            </div>
+
             <div class="title-area">
                 <h2 class="filter-title"><span id="overview-filter-title"></span></h2>
                 <h2 class="match-title"><span id="overview-match-title"></span></h2>
@@ -274,7 +304,7 @@
                     <button id="viz-gender-btn" class="viz-btn">Gender</button>
                 </div>
             </div>
-            
+
             <div id="viz-control-area-dummy">
                 <h3 id="viz-header-dummy">Explore By</h3>
                 <div>
@@ -298,64 +328,74 @@
                 <span class="back-btn-text">Back</span>
             </button>
 
-            <div id="legend-color" class="legend">
-                <div class="legend-line" id="legend-red-btn">
-                    <div class="legend-square" id="legend-red"></div><span class="legend-label">Red</span>
+            <div id="legend-container">
+                <div id="legend-color" class="legend">
+                    <div class="legend-line" id="legend-red-btn">
+                        <div class="legend-square" id="legend-red"></div><span class="legend-label">Red</span>
+                    </div>
+                    <div class="legend-line" id="legend-orange-btn">
+                        <div class="legend-square" id="legend-orange"></div><span class="legend-label">Orange</span>
+                    </div>
+                    <div class="legend-line" id="legend-yellow-btn">
+                        <div class="legend-square" id="legend-yellow"></div><span class="legend-label">Yellow</span>
+                    </div>
+                    <div class="legend-line" id="legend-green-btn">
+                        <div class="legend-square" id="legend-green"></div><span class="legend-label">Green</span>
+                    </div>
+                    <div class="legend-line" id="legend-blue-btn">
+                        <div class="legend-square" id="legend-blue"></div><span class="legend-label">Blue</span>
+                    </div>
+                    <div class="legend-line" id="legend-purple-btn">
+                        <div class="legend-square" id="legend-purple"></div><span class="legend-label">Purple</span>
+                    </div>
+                    <div class="legend-line" id="legend-black-btn">
+                        <div class="legend-square" id="legend-black"></div><span class="legend-label">Black</span>
+                    </div>
+                    <div class="legend-line" id="legend-brown-btn">
+                        <div class="legend-square" id="legend-brown"></div><span class="legend-label">Brown</span>
+                    </div>
+                    <div class="legend-other-container">
+                        <div class="legend-line legend-other" id="legend-others-color-btn">
+                            <div class="legend-square" id="legend-others-color"></div><span class="legend-label">Other
+                                Responses</span>
+                        </div>
+                        <div class="legend-line legend-other" id="legend-multiple-color-btn">
+                            <div class="legend-square" id="legend-multiple-color"></div><span
+                                class="legend-label">Multiple</span>
+                        </div>
+                    </div>
                 </div>
-                <div class="legend-line" id="legend-orange-btn">
-                    <div class="legend-square" id="legend-orange"></div><span class="legend-label">Orange</span>
+                <div id="legend-season" class="legend">
+                    <div class="legend-line" id="legend-fall-btn">
+                        <div class="legend-square" id="legend-fall"></div><span class="legend-label">Fall</span>
+                    </div>
+                    <div class="legend-line" id="legend-winter-btn">
+                        <div class="legend-square" id="legend-winter"></div><span class="legend-label">Winter</span>
+                    </div>
+                    <div class="legend-line" id="legend-spring-btn">
+                        <div class="legend-square" id="legend-spring"></div><span class="legend-label">Spring</span>
+                    </div>
+                    <div class="legend-line" id="legend-summer-btn">
+                        <div class="legend-square" id="legend-summer"></div><span class="legend-label">Summer</span>
+                    </div>
+                    <div class="legend-other-container">
+                        <div class="legend-line legend-other" id="legend-others-season-btn">
+                            <div class="legend-square" id="legend-others-season"></div><span class="legend-label">Other
+                                Responses</span>
+                        </div>
+                        <div class="legend-line legend-other" id="legend-multiple-season-btn">
+                            <div class="legend-square" id="legend-multiple-season"></div><span
+                                class="legend-label">Multiple</span>
+                        </div>
+                    </div>
                 </div>
-                <div class="legend-line" id="legend-yellow-btn">
-                    <div class="legend-square" id="legend-yellow"></div><span class="legend-label">Yellow</span>
-                </div>
-                <div class="legend-line" id="legend-green-btn">
-                    <div class="legend-square" id="legend-green"></div><span class="legend-label">Green</span>
-                </div>
-                <div class="legend-line" id="legend-blue-btn">
-                    <div class="legend-square" id="legend-blue"></div><span class="legend-label">Blue</span>
-                </div>
-                <div class="legend-line" id="legend-purple-btn">
-                    <div class="legend-square" id="legend-purple"></div><span class="legend-label">Purple</span>
-                </div>
-                <div class="legend-line" id="legend-pink-btn">
-                    <div class="legend-square" id="legend-pink"></div><span class="legend-label">Pink</span>
-                </div>
-                <div class="legend-line" id="legend-black-btn">
-                    <div class="legend-square" id="legend-black"></div><span class="legend-label">Black</span>
-                </div>
-                <div class="legend-line legend-other" id="legend-others-color-btn">
-                    <div class="legend-square" id="legend-others-color"></div><span class="legend-label">Other Responses</span>
-                </div>
-                <div class="legend-line legend-other" id="legend-multiple-color-btn">
-                    <div class="legend-square" id="legend-multiple-color"></div><span class="legend-label">Multiple</span>
-                </div>
-            </div>
-            <div id="legend-season" class="legend">
-                <div class="legend-line" id="legend-fall-btn">
-                    <div class="legend-square" id="legend-fall"></div><span class="legend-label">Fall</span>
-                </div>
-                <div class="legend-line" id="legend-winter-btn">
-                    <div class="legend-square" id="legend-winter"></div><span class="legend-label">Winter</span>
-                </div>
-                <div class="legend-line" id="legend-spring-btn">
-                    <div class="legend-square" id="legend-spring"></div><span class="legend-label">Spring</span>
-                </div>
-                <div class="legend-line" id="legend-summer-btn">
-                    <div class="legend-square" id="legend-summer"></div><span class="legend-label">Summer</span>
-                </div>
-                <div class="legend-line legend-other" id="legend-others-season-btn">
-                    <div class="legend-square" id="legend-others-season"></div><span class="legend-label">Other Responses</span>
-                </div>
-                <div class="legend-line legend-other" id="legend-multiple-season-btn">
-                    <div class="legend-square" id="legend-multiple-season"></div><span class="legend-label">Multiple</span>
-                </div>
-            </div>
-            <div id="legend-gender" class="legend">
-                <div class="legend-line" id="legend-female-btn">
-                    <div class="legend-square" id="legend-female"></div><span class="legend-label">Female</span>
-                </div>
-                <div class="legend-line" id="legend-male-btn">
-                    <div class="legend-square" id="legend-male"></div><span class="legend-label">Male</span>
+                <div id="legend-gender" class="legend">
+                    <div class="legend-line" id="legend-female-btn">
+                        <div class="legend-square" id="legend-female"></div><span class="legend-label">Female</span>
+                    </div>
+                    <div class="legend-line" id="legend-male-btn">
+                        <div class="legend-square" id="legend-male"></div><span class="legend-label">Male</span>
+                    </div>
                 </div>
             </div>
         </div>
@@ -376,14 +416,15 @@
             <!--hm info -->
             <div id="sub-side-info-container">
                 <button id="back-to-subsetview-btn" class="back-btn">
-                    <div class="back-arrow-img"><img src="assets/images/white-arrow-icon-left.svg" class="btn-img"></div>
+                    <div class="back-arrow-img"><img src="assets/images/white-arrow-icon-left.svg" class="btn-img">
+                    </div>
                 </button>
                 <div id="sub-side-info-area">
                     <div id="sub-name-info"></div>
                     <img id="sub-hm-headshot" src="assets/images/default-hm.png">
                     <div id="sub-achivement-info-area">
                         <div id="sub-occupation"></div>
-                        <div id="sub-short-bio" class="hm-info-box fade-bottom"></div>
+                        <div id="sub-short-bio" class="hm-info-box"></div>
                         <div id="sub-info-area-break"></div>
                     </div>
                     <button id="sub-go-to-archive-btn" class="digital-archive-btn">
