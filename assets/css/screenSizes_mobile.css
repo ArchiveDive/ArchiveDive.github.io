@@ -3,6 +3,7 @@
     :root {
         --match-num-font-size:  calc(var(--delta) + 1rem);
         --filter-item-font-size: calc(var(--delta) + 0.6rem);
+        --sub-match-num-font-size:  calc(var(--delta) + 0.9rem);
 
         --filter-height: calc(var(--vh) * 10);
         --filter-item-padding-y: calc(var(--filter-height) / 16);
@@ -26,13 +27,6 @@
     .scroll-filter-body {
         transform: translateX(5vw);
     }
-    .back-btn-text {
-        display: block;
-    }
-    .back-btn {
-        display: inline-block;
-        min-width: 140px;
-    }
     #side-info-area {
         bottom: calc( (38*var(--vh)) + (2*1.25em));
     }
@@ -41,5 +35,13 @@
     }
     #sub-hm-headshot, #sub-occupation #sub-hm-headshot {
         margin-bottom: 5%;
+    }
+}
+
+/* Very narrow screens, e.g. Galaxy Fold */
+@media screen and (max-device-width: 300px){
+    :root {
+        --button-font-size:  calc(var(--delta) + 0.6rem);
+        --sub-match-num-font-size:  calc(var(--delta) + 0.9rem);
     }
 }

@@ -59,7 +59,6 @@
     position: fixed;
     padding: 0px;
     margin: 0px;
-    margin-bottom: -1%;
 
     width: var(--filter-selector-width);
     min-width: 10%;
@@ -74,7 +73,6 @@
     font-size: var(--filter-item-font-size);
     text-align: center;
 
-    padding: 2.5% 20px;
     padding-left: 0;
     margin-left: 0;
 

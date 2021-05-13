@@ -75,7 +75,7 @@
     --filter-item-padding-y: calc(var(--filter-height) / 12);
     --filter-item-padding-x: calc(var(--filter-height) / 4);
     --selected-item-width: 30vw;
-    --filter-item-shift: 160px; /* TODO do not use px in js code */
+    --filter-item-shift: 160px;
 
     --btn-height: calc(5*var(--vh));
     --btn-height-min: 40px;
@@ -106,7 +106,6 @@
     --btn-border-radius: 3px;
 }
 /* misc */
-/* .fade-bottom { */
 canvas.overview {
     -webkit-mask-image: linear-gradient(to top, transparent 0%, black 5%);
     mask-image: linear-gradient(to top, transparent 0%, black 5%);
@@ -152,6 +151,9 @@ canvas.overview {
 /* scroll filters */
 #filter-selector-1, #filter-selector-2 {
     filter: drop-shadow(0px -4px 4px #111);
+}
+.dropdown-filter-option {
+    padding: 2.5% 20px;
 }
 .shuffle-btn {
     display: none !important;

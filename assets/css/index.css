@@ -13,7 +13,7 @@
     --btn-bkgd-color: #8A72BB96;
     --learn-more-color: #8A72BB;
     --gradient-color: linear-gradient(90deg, #2E2D6F 0%, #682052 100%);
-    --inactive-title-color: #FFFFFF64;
+    --inactive-title-color: #CFCFCF;
 }
 
 /* index */
@@ -22,7 +22,7 @@ body {
     color: var(--off-white);
     background-color: black;
 }
-h2 { /* TODO still need this? */
+h2 {
     font-weight: bold;
 }
 
@@ -58,7 +58,6 @@ h2 { /* TODO still need this? */
     position: absolute;
     width: 100%;
     height: 100%;
-    /* border: 5px solid green; */
 }
 #scene-canvas.detailview {
     position: absolute;
@@ -71,7 +70,6 @@ h2 { /* TODO still need this? */
 }
 canvas {
     position: absolute;
-    /* border: 5px solid red; */
 }
 canvas.detailview {
     bottom: 0%;
@@ -102,6 +100,7 @@ canvas.overview {
 /* narrow screen mask css */
 #narrow-screen-mask{
     position: fixed;
+    text-align: center;
     z-index: 1;
     left: 0;
     top: 0;
@@ -153,7 +152,7 @@ button:focus {
     border: var(--btn-border-weight) solid var(--off-white);
 }
  
-/* digital archive btn TODO trim, many styles not needed after design change */
+/* digital archive btn */
 .digital-archive-btn{
     width: var(--da-btn-width);
     min-width: var(--da-btn-width-min);
