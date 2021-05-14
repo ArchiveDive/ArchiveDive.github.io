@@ -55,6 +55,7 @@
     display: none;
     transform: translateX(-50%);
     text-align: center;
+    top: 50vh;
 }
 
 #match-number-container {

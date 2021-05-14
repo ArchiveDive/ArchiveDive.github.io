@@ -106,7 +106,7 @@ canvas.overview {
     top: 0;
     width: 100%;
     height: 100%;
-    background-image: url('../images/bg_detailView.png');
+    background-image: url('../images/bg_detailView.jpg');
     background-size: 100% 100%;
 }
 #narrow-screen-mask h1{
